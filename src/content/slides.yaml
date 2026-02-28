@@ -1,0 +1,620 @@
+# ============================================
+# CAMINHO DAS ÍNDIAS - Slideshow Content
+# ============================================
+#
+# This is the main content file for your slideshow!
+# Edit this file to change slides, add photos, or update captions.
+#
+# TIP: Your partner can also ask Claude Code for help editing this file.
+#      Just describe what you want to change!
+#
+# ============================================
+# SLIDE TYPES - Quick Reference
+# ============================================
+#
+# type: title      - Opening slide with big title
+# type: divider    - Day/section divider with optional background
+# type: photo      - Single photo with caption
+# type: gallery    - Grid of multiple photos
+# type: story      - Photo + text side by side
+# type: video      - Video with play button
+# type: comparison - Before/after or side-by-side photos
+# type: closing    - Ending slide with message
+#
+# See EDITING-GUIDE.md for detailed examples!
+# ============================================
+
+# ============================================
+# TITLE SLIDE
+# ============================================
+- type: title
+  title: "Caminho das Índias"
+  subtitle: "February 15–23, 2026 — Jaipur & Agra"
+  photo: "photos/hero.jpg"
+  # TIP: Replace "photos/hero.jpg" with your best photo from the trip!
+  # This is the opening slide everyone will see first.
+
+# ============================================
+# DAY 1 - FEBRUARY 15, 2026
+# Family Reception & Preparations
+# ============================================
+- type: divider
+  day: 1
+  title: "Arrival & Welcome"
+  date: "February 15, 2026"
+  subtitle: "The journey begins"
+  photo: "photos/day1-arrival.jpg"
+  notes: "Talk about the long flight and excitement of finally arriving"
+
+- type: story
+  photo: "photos/family-reception.jpg"
+  title: "Family Reception"
+  text: |
+    After the long journey, we were welcomed with open arms at the family reception.
+    The warmth of the greeting made all the travel fatigue disappear instantly.
+
+    **Replace this text** with your own memories of arriving and meeting the family!
+  layout: "photo-left"
+  location: "Jaipur, Rajasthan"
+
+- type: gallery
+  title: "Shopping for Wedding Attire"
+  photos:
+    - src: "photos/clothes-shop-1.jpg"
+      caption: "Exploring the fabric options"
+    - src: "photos/clothes-shop-2.jpg"
+      caption: "Trying on sherwanis"
+    - src: "photos/clothes-shop-3.jpg"
+      caption: "Selecting the perfect outfit"
+  caption: "Renting and purchasing traditional outfits for the wedding ceremonies"
+  location: "Jaipur Markets"
+
+- type: photo
+  photo: "photos/bombay-house-dinner.jpg"
+  caption: "First dinner together at Bombay House"
+  subcaption: "A feast to welcome the guests"
+  location: "Bombay House Restaurant"
+
+# ============================================
+# DAY 2 - FEBRUARY 16, 2026
+# Albert Hall Museum & Ceremony
+# ============================================
+- type: divider
+  day: 2
+  title: "Culture & Ceremony"
+  date: "February 16, 2026"
+  subtitle: "Discovering Jaipur's heritage"
+  photo: "photos/day2-divider.jpg"
+
+- type: story
+  photo: "photos/albert-hall.jpg"
+  title: "Albert Hall Museum"
+  text: |
+    The **Albert Hall Museum** is one of the oldest museums in Rajasthan,
+    housed in a stunning Indo-Saracenic building.
+
+    We spent the morning exploring its incredible collection of artifacts,
+    sculptures, and paintings that tell the story of Rajasthan's rich history.
+  layout: "photo-right"
+  location: "Albert Hall Museum, Jaipur"
+  fun_fact: "Albert Hall was designed by Sir Samuel Swinton Jacob and opened in 1887!"
+
+- type: gallery
+  title: "The Ceremony"
+  photos:
+    - src: "photos/ceremony-1.jpg"
+      caption: "Preparations"
+    - src: "photos/ceremony-2.jpg"
+      caption: "Traditional rituals"
+    - src: "photos/ceremony-3.jpg"
+      caption: "Family blessings"
+    - src: "photos/ceremony-4.jpg"
+      caption: "Celebration"
+  caption: "A beautiful ceremony at the family home"
+  location: "Family Home, Jaipur"
+  notes: "Mention the significance of each ritual if you remember"
+
+# ============================================
+# DAY 3 - FEBRUARY 17, 2026
+# Jaipur Tourism Day (Most slides!)
+# ============================================
+- type: divider
+  day: 3
+  title: "Exploring Jaipur"
+  date: "February 17, 2026"
+  subtitle: "The Pink City in all its glory"
+  photo: "photos/jaipur-skyline.jpg"
+
+- type: story
+  photo: "photos/walking-tour.jpg"
+  title: "Morning Walking Tour"
+  text: |
+    We started the day with a walking tour through the heart of the old city.
+    The narrow streets buzzed with life as vendors set up their stalls and
+    locals went about their morning routines.
+
+    Every corner revealed something new — a hidden temple, a colorful doorway,
+    or a friendly face eager to share a story.
+  layout: "photo-left"
+  location: "Old Jaipur"
+
+- type: gallery
+  title: "City Palace"
+  photos:
+    - src: "photos/city-palace-1.jpg"
+      caption: "The grand entrance"
+    - src: "photos/city-palace-2.jpg"
+      caption: "Intricate doorways"
+    - src: "photos/city-palace-3.jpg"
+      caption: "Courtyard views"
+    - src: "photos/city-palace-4.jpg"
+      caption: "Royal artifacts"
+  caption: "A royal residence that's been home to the Jaipur royal family since 1727"
+  location: "City Palace, Jaipur"
+  fun_fact: "Part of the palace is still a residence for the royal family today!"
+
+- type: photo
+  photo: "photos/flower-bazaar.jpg"
+  caption: "The Flower Bazaar"
+  subcaption: "Vibrant marigolds everywhere — the flower of celebrations"
+  location: "Flower Market, Jaipur"
+
+- type: gallery
+  title: "Local Markets"
+  photos:
+    - src: "photos/produce-market.jpg"
+      caption: "Fresh produce stacked high"
+    - src: "photos/spice-stall.jpg"
+      caption: "Spice stalls filling the air with fragrance"
+    - src: "photos/street-vendor.jpg"
+      caption: "Street food we had to try"
+  caption: "The colors, smells, and sounds of Jaipur's markets"
+
+- type: photo
+  photo: "photos/hawa-mahal.jpg"
+  caption: "Hawa Mahal — The Palace of Winds"
+  subcaption: "953 small windows designed to let royal women observe street life unseen"
+  location: "Hawa Mahal, Jaipur"
+  fun_fact: "Built in 1799 by Maharaja Sawai Pratap Singh, it's shaped like Lord Krishna's crown!"
+
+- type: story
+  photo: "photos/school-visit.jpg"
+  title: "Local School Visit"
+  text: |
+    One of the most memorable parts of the day was an impromptu visit to a local public school.
+    The children's curiosity and enthusiasm were infectious, and we spent time
+    learning about their studies and sharing stories.
+
+    *A reminder of why travel is so meaningful.*
+  layout: "photo-right"
+  location: "Local School, Jaipur"
+  notes: "Share any specific interactions or moments that stood out"
+
+- type: photo
+  photo: "photos/shiva-procession.jpg"
+  caption: "Shiva Procession"
+  subcaption: "Unexpected street celebration with drums, dancing, and devotion"
+  location: "Jaipur Streets"
+
+- type: gallery
+  title: "Amber Fort"
+  photos:
+    - src: "photos/amber-fort-1.jpg"
+      caption: "The approach to the fort"
+    - src: "photos/amber-fort-2.jpg"
+      caption: "Intricate mirror work"
+    - src: "photos/amber-fort-3.jpg"
+      caption: "Panoramic views"
+    - src: "photos/amber-fort-4.jpg"
+      caption: "Sunset from the ramparts"
+  caption: "A majestic fort-palace overlooking Maota Lake"
+  location: "Amber Fort, Jaipur"
+  fun_fact: "Amber Fort took nearly 100 years to build, from 1592 to 1600s!"
+
+- type: photo
+  photo: "photos/jantar-mantar.jpg"
+  caption: "Jantar Mantar"
+  subcaption: "The world's largest stone sundial — accurate to 2 seconds!"
+  location: "Jantar Mantar, Jaipur"
+  fun_fact: "Built by Maharaja Sawai Jai Singh II in 1734 for astronomical observations"
+
+- type: photo
+  photo: "photos/jal-mahal.jpg"
+  caption: "Jal Mahal — The Water Palace"
+  subcaption: "A serene palace floating in Man Sagar Lake"
+  location: "Jal Mahal, Jaipur"
+
+- type: photo
+  photo: "photos/day3-dinner.jpg"
+  caption: "Dinner at the Family Home"
+  subcaption: "Ending a perfect day with homemade Rajasthani cuisine"
+  location: "Family Home, Jaipur"
+
+# ============================================
+# DAY 4 - FEBRUARY 18, 2026
+# Wedding Venue & Pre-Events
+# ============================================
+- type: divider
+  day: 4
+  title: "Wedding Venue"
+  date: "February 18, 2026"
+  subtitle: "The celebrations begin"
+  photo: "photos/wedding-venue.jpg"
+
+- type: story
+  photo: "photos/venue-checkin.jpg"
+  title: "Arriving at the Venue"
+  text: |
+    Checking in at the wedding venue felt like stepping into a dream.
+    The grounds were already being decorated with marigolds and lights,
+    and the excitement in the air was palpable.
+
+    Over the next few days, this would be our home for one of the most
+    memorable celebrations of our lives.
+  layout: "photo-left"
+  location: "Wedding Venue, Jaipur"
+
+- type: gallery
+  title: "Pre-Engagement Ceremony"
+  photos:
+    - src: "photos/pre-engagement-1.jpg"
+      caption: "Traditional blessings"
+    - src: "photos/pre-engagement-2.jpg"
+      caption: "Family gathering"
+    - src: "photos/pre-engagement-3.jpg"
+      caption: "Joyful moments"
+  caption: "Celebrating the upcoming union"
+  notes: "This was for the fiancée's brother"
+
+- type: story
+  photo: "photos/mehendi-1.jpg"
+  title: "Mehendi Night"
+  text: |
+    As the sun set, the **Mehendi ceremony** began — one of the most beautiful
+    traditions of Indian weddings.
+
+    Skilled artists painted intricate henna designs on hands and feet,
+    each pattern telling a story of love and blessings. The evening was filled
+    with music, laughter, and the sweet scent of henna.
+  layout: "photo-right"
+  location: "Wedding Venue"
+
+- type: gallery
+  title: "Mehendi Designs"
+  photos:
+    - src: "photos/mehendi-hands-1.jpg"
+      caption: "Bridal mehendi"
+    - src: "photos/mehendi-hands-2.jpg"
+      caption: "Intricate patterns"
+    - src: "photos/mehendi-hands-3.jpg"
+      caption: "Traditional motifs"
+    - src: "photos/mehendi-feet.jpg"
+      caption: "Feet designs"
+  caption: "The artistry of henna"
+
+# ============================================
+# DAY 5 - FEBRUARY 19, 2026
+# Haldi & Sangeet
+# ============================================
+- type: divider
+  day: 5
+  title: "Haldi & Sangeet"
+  date: "February 19, 2026"
+  subtitle: "Colors, music, and dance"
+  photo: "photos/day5-divider.jpg"
+
+- type: story
+  photo: "photos/haldi-ceremony.jpg"
+  title: "Haldi Ceremony"
+  text: |
+    The morning started with the **Haldi ceremony** — a ritual where turmeric paste
+    is applied to the bride and groom for blessings and good luck.
+
+    What starts as a solemn ritual quickly turned into a joyful mess of yellow
+    turmeric everywhere! By the end, everyone was covered in the golden paste,
+    laughing and celebrating together.
+  layout: "photo-left"
+  location: "Wedding Venue"
+  notes: "Warn people that turmeric stains everything!"
+
+- type: gallery
+  title: "Haldi Moments"
+  photos:
+    - src: "photos/haldi-1.jpg"
+      caption: "The turmeric paste"
+    - src: "photos/haldi-2.jpg"
+      caption: "Family participation"
+    - src: "photos/haldi-3.jpg"
+      caption: "Joyful chaos"
+  caption: "A ceremony that's as fun as it is meaningful"
+
+- type: story
+  photo: "photos/sangeet-stage.jpg"
+  title: "Sangeet Night"
+  text: |
+    The **Sangeet** is the night of music and dance — and what a night it was!
+
+    Both families prepared performances, from traditional folk dances to
+    Bollywood numbers. The friendly competition between families made for
+    an unforgettable evening of entertainment.
+  layout: "photo-right"
+  location: "Wedding Venue"
+
+- type: video
+  src: "videos/sangeet-dance.mp4"
+  caption: "The surprise dance number"
+  poster: "photos/sangeet-dance-thumb.jpg"
+  notes: "This was the highlight of the evening!"
+
+- type: gallery
+  title: "Sangeet Performances"
+  photos:
+    - src: "photos/sangeet-1.jpg"
+      caption: "Traditional dance"
+    - src: "photos/sangeet-2.jpg"
+      caption: "Family performance"
+    - src: "photos/sangeet-3.jpg"
+      caption: "The finale"
+    - src: "photos/sangeet-4.jpg"
+      caption: "Everyone on the floor"
+  caption: "An evening of music, dance, and celebration"
+
+# ============================================
+# DAY 6 - FEBRUARY 20, 2026
+# THE WEDDING DAY
+# ============================================
+- type: divider
+  day: 6
+  title: "The Wedding Day"
+  date: "February 20, 2026"
+  subtitle: "The moment we've all been waiting for"
+  photo: "photos/wedding-day-hero.jpg"
+
+- type: story
+  photo: "photos/maayra.jpg"
+  title: "Maayra Ceremony"
+  text: |
+    The day began with the **Maayra** — a beautiful ritual where the maternal
+    uncle of the bride brings gifts and blessings.
+
+    It's a touching reminder of the love and support that surrounds the couple
+    as they begin their new life together.
+  layout: "photo-left"
+  location: "Wedding Venue"
+
+- type: story
+  photo: "photos/barat-arrival.jpg"
+  title: "The Barat"
+  text: |
+    The **Barat** — the groom's procession — arrived with all the fanfare
+    and energy you'd expect from an Indian wedding!
+
+    Dancing through the streets with a live band, the groom made his grand
+    entrance on horseback, surrounded by family and friends celebrating
+    with dhol drums and fireworks.
+  layout: "photo-right"
+  location: "Wedding Venue"
+
+- type: gallery
+  title: "Barat Celebrations"
+  photos:
+    - src: "photos/barat-1.jpg"
+      caption: "The procession begins"
+    - src: "photos/barat-2.jpg"
+      caption: "Dancing in the streets"
+    - src: "photos/barat-3.jpg"
+      caption: "The grand arrival"
+    - src: "photos/barat-4.jpg"
+      caption: "Welcome ceremonies"
+  caption: "The groom's joyful procession to the venue"
+
+- type: photo
+  photo: "photos/wedding-ceremony.jpg"
+  caption: "The Wedding Ceremony"
+  subcaption: "Two families becoming one"
+  location: "Wedding Venue"
+  notes: "This is THE photo — make sure it's a great one!"
+
+- type: gallery
+  title: "Sacred Rituals"
+  photos:
+    - src: "photos/ceremony-fire.jpg"
+      caption: "The sacred fire"
+    - src: "photos/pheras.jpg"
+      caption: "The seven vows"
+    - src: "photos/sindoor.jpg"
+      caption: "Sindoor ceremony"
+    - src: "photos/mangalsutra.jpg"
+      caption: "Tying the mangalsutra"
+  caption: "Moments from the wedding rituals"
+
+- type: comparison
+  title: "Before & After"
+  photos:
+    - src: "photos/outfit-before.jpg"
+      label: "Day 1"
+    - src: "photos/outfit-wedding.jpg"
+      label: "Wedding Day"
+  caption: "The transformation!"
+
+- type: story
+  photo: "photos/reception.jpg"
+  title: "The Grand Reception"
+  text: |
+    As evening fell, the **reception** began — a glamorous celebration
+    welcoming the newlyweds as a married couple.
+
+    Hundreds of guests gathered for dinner, dancing, and congratulations
+    in a beautifully decorated banquet hall.
+  layout: "photo-left"
+  location: "Wedding Venue"
+
+- type: gallery
+  title: "Reception Highlights"
+  photos:
+    - src: "photos/reception-1.jpg"
+      caption: "The newlyweds"
+    - src: "photos/reception-2.jpg"
+      caption: "Dinner celebration"
+    - src: "photos/reception-3.jpg"
+      caption: "Dancing the night away"
+  caption: "Celebrating into the night"
+
+# ============================================
+# DAY 7 - FEBRUARY 21, 2026
+# Post-Wedding & Journey to Agra
+# ============================================
+- type: divider
+  day: 7
+  title: "Journey to Agra"
+  date: "February 21, 2026"
+  subtitle: "From one wonder to another"
+  photo: "photos/day7-divider.jpg"
+
+- type: story
+  photo: "photos/post-wedding.jpg"
+  title: "Morning After"
+  text: |
+    After the celebrations, we gathered one more time at the family home
+    for a post-wedding ceremony and final blessings.
+
+    Saying goodbye was bittersweet, but the memories we made together
+    will last a lifetime.
+  layout: "photo-right"
+  location: "Family Home, Jaipur"
+
+- type: photo
+  photo: "photos/road-to-agra.jpg"
+  caption: "On the Road to Agra"
+  subcaption: "A scenic drive through Rajasthan"
+  location: "NH 48"
+
+# ============================================
+# DAY 8 - FEBRUARY 22, 2026
+# Agra: Taj Mahal & More
+# ============================================
+- type: divider
+  day: 8
+  title: "Agra"
+  date: "February 22, 2026"
+  subtitle: "The city of the Taj"
+  photo: "photos/agra-divider.jpg"
+
+- type: story
+  photo: "photos/taj-mahal-sunrise.jpg"
+  title: "The Taj Mahal"
+  text: |
+    No words can truly capture the experience of seeing the **Taj Mahal**
+    for the first time.
+
+    Built by Emperor Shah Jahan as a monument to his beloved wife Mumtaz Mahal,
+    it stands as one of the most beautiful expressions of love ever created.
+    In the soft morning light, the white marble seemed to glow from within.
+  layout: "photo-left"
+  location: "Taj Mahal, Agra"
+  fun_fact: "It took 22 years and 20,000 workers to build the Taj Mahal!"
+
+- type: gallery
+  title: "Taj Mahal"
+  photos:
+    - src: "photos/taj-1.jpg"
+      caption: "The iconic view"
+    - src: "photos/taj-2.jpg"
+      caption: "Intricate marble inlay"
+    - src: "photos/taj-3.jpg"
+      caption: "Reflecting pool"
+    - src: "photos/taj-4.jpg"
+      caption: "Details up close"
+  caption: "A monument to eternal love"
+  location: "Taj Mahal, Agra"
+
+- type: photo
+  photo: "photos/agra-fort.jpg"
+  caption: "Agra Fort"
+  subcaption: "A UNESCO World Heritage Site with views of the Taj"
+  location: "Agra Fort"
+  fun_fact: "Shah Jahan spent his final years imprisoned here, gazing at his wife's tomb"
+
+- type: story
+  photo: "photos/baby-taj.jpg"
+  title: "Baby Taj"
+  text: |
+    The **Itimad-ud-Daulah**, often called the "Baby Taj," is sometimes
+    overlooked by visitors, but it's a gem in its own right.
+
+    This delicate tomb was actually a predecessor to the Taj Mahal,
+    and many of the same design elements can be seen here — including
+    the beautiful pietra dura (marble inlay) work.
+  layout: "photo-right"
+  location: "Itimad-ud-Daulah, Agra"
+
+- type: gallery
+  title: "Evening with Friends"
+  photos:
+    - src: "photos/agra-dinner-1.jpg"
+      caption: "Local restaurant find"
+    - src: "photos/agra-shopping.jpg"
+      caption: "Souvenir shopping"
+    - src: "photos/agra-friends.jpg"
+      caption: "Cheers to the trip!"
+  caption: "Dinner and shopping in Agra with friends"
+  location: "Agra"
+
+# ============================================
+# DAY 9 - FEBRUARY 23, 2026
+# Fatehpur Sikri & Departure
+# ============================================
+- type: divider
+  day: 9
+  title: "Final Day"
+  date: "February 23, 2026"
+  subtitle: "One last adventure"
+  photo: "photos/day9-divider.jpg"
+
+- type: story
+  photo: "photos/fatehpur-sikri.jpg"
+  title: "Fatehpur Sikri"
+  text: |
+    On our final morning, we visited **Fatehpur Sikri** — the abandoned
+    Mughal capital that feels frozen in time.
+
+    Built by Emperor Akbar in the 16th century, this "City of Victory"
+    was mysteriously abandoned just 14 years after completion.
+    Walking through its empty palaces and courtyards was hauntingly beautiful.
+  layout: "photo-left"
+  location: "Fatehpur Sikri"
+  fun_fact: "The city was abandoned due to lack of water — a problem still being studied today"
+
+- type: gallery
+  title: "Fatehpur Sikri"
+  photos:
+    - src: "photos/fatehpur-1.jpg"
+      caption: "Buland Darwaza (Victory Gate)"
+    - src: "photos/fatehpur-2.jpg"
+      caption: "Palace courtyards"
+    - src: "photos/fatehpur-3.jpg"
+      caption: "Architectural details"
+  caption: "The ghost city of the Mughals"
+  location: "Fatehpur Sikri"
+
+- type: photo
+  photo: "photos/farewell.jpg"
+  caption: "Until Next Time"
+  subcaption: "Leaving India with full hearts and countless memories"
+  location: "Jaipur Airport"
+  notes: "This was an emotional goodbye!"
+
+# ============================================
+# CLOSING SLIDE
+# ============================================
+- type: closing
+  title: "Thank You"
+  text: |
+    For being part of this journey with us.
+
+    These memories will stay with us forever —
+    the colors, the celebrations, the love.
+
+    Here's to family, friendship, and the magic of India.
+  photo: "photos/group-final.jpg"
+  # TIP: Use your favorite group photo here!

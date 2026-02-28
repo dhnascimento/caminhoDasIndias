@@ -1,0 +1,27 @@
+# ============================================
+# FLY.IO CONFIGURATION
+# ============================================
+# Deploy to Fly.io with:
+#   fly launch
+#   fly deploy
+#
+# See https://fly.io/docs for more info
+# ============================================
+
+app = "caminho-das-indias"
+primary_region = "iad"  # US East - change to your preferred region
+
+[build]
+  dockerfile = "Dockerfile"
+
+[http_service]
+  internal_port = 80
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256

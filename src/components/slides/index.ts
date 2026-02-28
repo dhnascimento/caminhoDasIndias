@@ -1,0 +1,9 @@
+export { TitleSlide } from './TitleSlide';
+export { DividerSlide } from './DividerSlide';
+export { PhotoSlide } from './PhotoSlide';
+export { GallerySlide } from './GallerySlide';
+export { StorySlide } from './StorySlide';
+export { VideoSlide } from './VideoSlide';
+export { ClosingSlide } from './ClosingSlide';
+export { ComparisonSlide } from './ComparisonSlide';
+export { SlideEnrichments } from './SlideEnrichments';

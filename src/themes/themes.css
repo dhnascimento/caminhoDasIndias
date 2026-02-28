@@ -1,0 +1,288 @@
+/* ============================================
+   THEME SYSTEM
+   ============================================
+   All themes are defined using CSS custom properties.
+   Switch themes by changing the data-theme attribute on <html>.
+
+   Available themes:
+   - festive (default): Warm, vibrant Indian wedding colors
+   - minimal-light: Clean white/cream background
+   - minimal-dark: Clean dark background
+   - warm-documentary: Muted earth tones, editorial feel
+   ============================================ */
+
+/* ============================================
+   FESTIVE THEME (Default)
+   Rich, warm colors inspired by Indian weddings
+   ============================================ */
+:root,
+[data-theme="festive"] {
+  /* Primary palette */
+  --color-primary: #F59E0B;          /* Marigold/Saffron */
+  --color-secondary: #EC4899;        /* Magenta/Fuchsia */
+  --color-accent: #14B8A6;           /* Rich Teal */
+  --color-gold: #D4AF37;             /* Gold accents */
+
+  /* Background colors */
+  --color-background: #1A1A2E;       /* Deep navy/purple-black */
+  --color-surface: #16213E;          /* Slightly lighter surface */
+  --color-surface-elevated: #1F2937; /* Cards and overlays */
+
+  /* Text colors */
+  --color-text: #FAFAFA;             /* Bright white */
+  --color-text-muted: #A1A1AA;       /* Subtle gray */
+  --color-text-accent: #FCD34D;      /* Gold text */
+
+  /* Decorative */
+  --color-border: rgba(245, 158, 11, 0.3);
+  --color-glow: rgba(236, 72, 153, 0.2);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #F59E0B 0%, #EC4899 100%);
+  --gradient-overlay: linear-gradient(to top, rgba(26, 26, 46, 0.9) 0%, transparent 50%);
+  --gradient-subtle: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px rgba(245, 158, 11, 0.3);
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* Decorative elements visibility */
+  --decorative-opacity: 1;
+
+  /* Specific element styles */
+  --caption-bg: rgba(26, 26, 46, 0.85);
+  --progress-bar-bg: rgba(255, 255, 255, 0.1);
+  --progress-bar-fill: var(--gradient-primary);
+  --button-bg: rgba(255, 255, 255, 0.1);
+  --button-hover-bg: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   MINIMAL LIGHT THEME
+   Clean, white/cream background
+   ============================================ */
+[data-theme="minimal-light"] {
+  /* Primary palette */
+  --color-primary: #374151;          /* Dark gray */
+  --color-secondary: #6B7280;        /* Medium gray */
+  --color-accent: #111827;           /* Near black */
+  --color-gold: #92400E;             /* Dark amber */
+
+  /* Background colors */
+  --color-background: #FEFEFE;       /* Pure white */
+  --color-surface: #F9FAFB;          /* Off-white */
+  --color-surface-elevated: #FFFFFF;
+
+  /* Text colors */
+  --color-text: #111827;             /* Near black */
+  --color-text-muted: #6B7280;       /* Gray */
+  --color-text-accent: #374151;
+
+  /* Decorative */
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-glow: rgba(0, 0, 0, 0.05);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #374151 0%, #1F2937 100%);
+  --gradient-overlay: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, transparent 50%);
+  --gradient-subtle: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.05) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-glow: none;
+
+  /* Decorative elements visibility */
+  --decorative-opacity: 0;
+
+  /* Specific element styles */
+  --caption-bg: rgba(255, 255, 255, 0.9);
+  --progress-bar-bg: rgba(0, 0, 0, 0.1);
+  --progress-bar-fill: linear-gradient(90deg, #374151, #1F2937);
+  --button-bg: rgba(0, 0, 0, 0.05);
+  --button-hover-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   MINIMAL DARK THEME
+   Clean dark background
+   ============================================ */
+[data-theme="minimal-dark"] {
+  /* Primary palette */
+  --color-primary: #E5E7EB;          /* Light gray */
+  --color-secondary: #9CA3AF;        /* Medium gray */
+  --color-accent: #FFFFFF;           /* White */
+  --color-gold: #FCD34D;             /* Gold */
+
+  /* Background colors */
+  --color-background: #0A0A0A;       /* Near black */
+  --color-surface: #141414;          /* Dark surface */
+  --color-surface-elevated: #1F1F1F;
+
+  /* Text colors */
+  --color-text: #FAFAFA;             /* White */
+  --color-text-muted: #9CA3AF;       /* Gray */
+  --color-text-accent: #E5E7EB;
+
+  /* Decorative */
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-glow: rgba(255, 255, 255, 0.05);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #E5E7EB 0%, #9CA3AF 100%);
+  --gradient-overlay: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, transparent 50%);
+  --gradient-subtle: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.05) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-glow: none;
+
+  /* Decorative elements visibility */
+  --decorative-opacity: 0;
+
+  /* Specific element styles */
+  --caption-bg: rgba(10, 10, 10, 0.9);
+  --progress-bar-bg: rgba(255, 255, 255, 0.1);
+  --progress-bar-fill: linear-gradient(90deg, #E5E7EB, #9CA3AF);
+  --button-bg: rgba(255, 255, 255, 0.1);
+  --button-hover-bg: rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================
+   WARM DOCUMENTARY THEME
+   Muted earth tones, editorial magazine feel
+   ============================================ */
+[data-theme="warm-documentary"] {
+  /* Primary palette */
+  --color-primary: #A16207;          /* Warm ochre */
+  --color-secondary: #92400E;        /* Rust */
+  --color-accent: #78716C;           /* Warm gray */
+  --color-gold: #CA8A04;             /* Mustard */
+
+  /* Background colors */
+  --color-background: #292524;       /* Warm dark brown */
+  --color-surface: #1C1917;          /* Darker surface */
+  --color-surface-elevated: #44403C;
+
+  /* Text colors */
+  --color-text: #FAFAF9;             /* Warm white */
+  --color-text-muted: #A8A29E;       /* Warm gray */
+  --color-text-accent: #D6D3D1;
+
+  /* Decorative */
+  --color-border: rgba(161, 98, 7, 0.3);
+  --color-glow: rgba(161, 98, 7, 0.1);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #A16207 0%, #92400E 100%);
+  --gradient-overlay: linear-gradient(to top, rgba(28, 25, 23, 0.95) 0%, transparent 50%);
+  --gradient-subtle: linear-gradient(135deg, rgba(161, 98, 7, 0.05) 0%, rgba(146, 64, 14, 0.05) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px rgba(161, 98, 7, 0.2);
+
+  /* Decorative elements visibility */
+  --decorative-opacity: 0.3;
+
+  /* Specific element styles */
+  --caption-bg: rgba(28, 25, 23, 0.9);
+  --progress-bar-bg: rgba(255, 255, 255, 0.1);
+  --progress-bar-fill: linear-gradient(90deg, #A16207, #92400E);
+  --button-bg: rgba(255, 255, 255, 0.08);
+  --button-hover-bg: rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================
+   DECORATIVE PATTERNS
+   Mandala-inspired corner decorations
+   ============================================ */
+.decorative-corner {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  opacity: var(--decorative-opacity);
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0,0 Q50,20 100,0 Q80,50 100,100 Q50,80 0,100 Q20,50 0,0' fill='none' stroke='%23F59E0B' stroke-width='0.5' opacity='0.4'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23EC4899' stroke-width='0.3' opacity='0.3'/%3E%3Ccircle cx='50' cy='50' r='20' fill='none' stroke='%23F59E0B' stroke-width='0.3' opacity='0.3'/%3E%3Ccircle cx='50' cy='50' r='10' fill='none' stroke='%23EC4899' stroke-width='0.3' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: contain;
+  transition: opacity var(--transition-normal);
+}
+
+.decorative-corner.top-left {
+  top: 0;
+  left: 0;
+}
+
+.decorative-corner.top-right {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.decorative-corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+
+.decorative-corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1);
+}
+
+/* Subtle border decoration */
+.decorative-border {
+  position: absolute;
+  inset: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: var(--decorative-opacity);
+  transition: opacity var(--transition-normal);
+}
+
+/* ============================================
+   GLOBAL TRANSITIONS
+   ============================================ */
+.slide-enter {
+  animation: fadeIn var(--transition-slow) ease-out;
+}
+
+.slide-exit {
+  animation: fadeOut var(--transition-slow) ease-out;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Smooth theme transitions */
+* {
+  transition:
+    background-color var(--transition-normal),
+    border-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+/* Exclude transitions for elements that shouldn't animate */
+img, video, .no-transition {
+  transition: none;
+}

@@ -3,5 +3,6 @@ export { Navigation } from './Navigation';
 export { ProgressBar } from './ProgressBar';
 export { SlideOverview } from './SlideOverview';
 export { ThemeSwitcher } from './ThemeSwitcher';
+export { LanguageSwitcher } from './LanguageSwitcher';
 export { PresenterNotes } from './PresenterNotes';
 export { Controls } from './Controls';

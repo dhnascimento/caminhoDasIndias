@@ -1,12 +1,14 @@
 import type { DividerSlide as DividerSlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface DividerSlideProps {
   slide: DividerSlideType;
 }
 
 export function DividerSlide({ slide }: DividerSlideProps) {
+  const { lang, t } = useLanguage();
   const backgroundImage = slide.photo ? resolvePhotoPath(slide.photo) : null;
 
   return (
@@ -33,7 +35,7 @@ export function DividerSlide({ slide }: DividerSlideProps) {
         {slide.day !== undefined && (
           <div className="inline-flex items-center justify-center mb-6">
             <span className="px-6 py-2 rounded-full bg-[var(--gradient-subtle)] border border-[var(--color-border)] text-[var(--color-primary)] font-medium tracking-widest uppercase text-sm">
-              Day {slide.day}
+              {lang === 'pt' ? 'Dia' : 'Day'} {slide.day}
             </span>
           </div>
         )}
@@ -41,19 +43,19 @@ export function DividerSlide({ slide }: DividerSlideProps) {
         {/* Date */}
         {slide.date && (
           <p className="text-[var(--color-text-muted)] text-lg mb-4 tracking-wide">
-            {slide.date}
+            {t(slide.date)}
           </p>
         )}
 
         {/* Title */}
         <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-medium mb-4 text-[var(--color-text)]">
-          {slide.title}
+          {t(slide.title)}
         </h2>
 
         {/* Subtitle */}
         {slide.subtitle && (
           <p className="text-xl md:text-2xl text-[var(--color-text-muted)] italic font-light">
-            {slide.subtitle}
+            {t(slide.subtitle)}
           </p>
         )}
       </div>

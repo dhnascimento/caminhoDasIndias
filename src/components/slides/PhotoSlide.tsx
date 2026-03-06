@@ -2,12 +2,14 @@ import { useState } from 'react';
 import type { PhotoSlide as PhotoSlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface PhotoSlideProps {
   slide: PhotoSlideType;
 }
 
 export function PhotoSlide({ slide }: PhotoSlideProps) {
+  const { t } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
   const photoUrl = resolvePhotoPath(slide.photo);
 
@@ -24,7 +26,7 @@ export function PhotoSlide({ slide }: PhotoSlideProps) {
 
           <img
             src={photoUrl}
-            alt={slide.caption || ''}
+            alt={t(slide.caption)}
             className={`max-h-[70vh] md:max-h-[75vh] w-auto object-contain rounded transition-opacity duration-500 ${
               isLoaded ? 'opacity-100' : 'opacity-0'
             }`}
@@ -37,12 +39,12 @@ export function PhotoSlide({ slide }: PhotoSlideProps) {
           <div className="mt-6 text-center max-w-2xl">
             {slide.caption && (
               <p className="text-xl md:text-2xl text-[var(--color-text)] font-display">
-                {slide.caption}
+                {t(slide.caption)}
               </p>
             )}
             {slide.subcaption && (
               <p className="mt-2 text-base text-[var(--color-text-muted)]">
-                {slide.subcaption}
+                {t(slide.subcaption)}
               </p>
             )}
           </div>

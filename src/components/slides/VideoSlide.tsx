@@ -2,12 +2,14 @@ import { useRef, useState } from 'react';
 import type { VideoSlide as VideoSlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface VideoSlideProps {
   slide: VideoSlideType;
 }
 
 export function VideoSlide({ slide }: VideoSlideProps) {
+  const { t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoUrl = resolvePhotoPath(slide.src);
@@ -69,7 +71,7 @@ export function VideoSlide({ slide }: VideoSlideProps) {
       {/* Caption */}
       {slide.caption && (
         <p className="mt-6 text-xl md:text-2xl text-[var(--color-text)] font-display text-center max-w-2xl">
-          {slide.caption}
+          {t(slide.caption)}
         </p>
       )}
 

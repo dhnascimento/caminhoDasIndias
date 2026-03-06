@@ -1,4 +1,5 @@
 import { ThemeSwitcher } from './ThemeSwitcher';
+import { LanguageSwitcher } from './LanguageSwitcher';
 import {
   GridIcon,
   ExpandIcon,
@@ -71,6 +72,9 @@ export function Controls({
       >
         <ExpandIcon className="w-5 h-5" />
       </button>
+
+      {/* Language switcher */}
+      <LanguageSwitcher />
 
       {/* Theme switcher */}
       <ThemeSwitcher />

@@ -5,6 +5,9 @@
  * The slides.yaml file should match these structures.
  */
 
+// Bilingual string: either a plain string (no translation) or a locale object
+export type LocalizedString = string | { en: string; pt: string };
+
 // Common optional fields that any slide can have
 export interface SlideEnrichments {
   /** Spotify track URL - shows a small embed or link */
@@ -14,7 +17,7 @@ export interface SlideEnrichments {
   /** Google Maps embed URL */
   map_embed?: string;
   /** Fun fact shown as an overlay or callout */
-  fun_fact?: string;
+  fun_fact?: LocalizedString;
   /** Presenter notes - not shown in slides, only in presenter mode */
   notes?: string;
 }
@@ -27,8 +30,8 @@ interface BaseSlide extends SlideEnrichments {
 // 1. Title Slide
 export interface TitleSlide extends BaseSlide {
   type: 'title';
-  title: string;
-  subtitle?: string;
+  title: LocalizedString;
+  subtitle?: LocalizedString;
   photo?: string;
 }
 
@@ -36,9 +39,9 @@ export interface TitleSlide extends BaseSlide {
 export interface DividerSlide extends BaseSlide {
   type: 'divider';
   day?: number;
-  title: string;
-  date?: string;
-  subtitle?: string;
+  title: LocalizedString;
+  date?: LocalizedString;
+  subtitle?: LocalizedString;
   photo?: string;
 }
 
@@ -46,29 +49,29 @@ export interface DividerSlide extends BaseSlide {
 export interface PhotoSlide extends BaseSlide {
   type: 'photo';
   photo: string;
-  caption?: string;
-  subcaption?: string;
+  caption?: LocalizedString;
+  subcaption?: LocalizedString;
 }
 
 // 4. Photo Gallery (grid)
 export interface GalleryPhoto {
   src: string;
-  caption?: string;
+  caption?: LocalizedString;
 }
 
 export interface GallerySlide extends BaseSlide {
   type: 'gallery';
-  title?: string;
+  title?: LocalizedString;
   photos: GalleryPhoto[];
-  caption?: string;
+  caption?: LocalizedString;
 }
 
 // 5. Photo + Text Side by Side
 export interface StorySlide extends BaseSlide {
   type: 'story';
   photo: string;
-  title?: string;
-  text: string;
+  title?: LocalizedString;
+  text: LocalizedString;
   layout?: 'photo-left' | 'photo-right';
 }
 
@@ -76,29 +79,29 @@ export interface StorySlide extends BaseSlide {
 export interface VideoSlide extends BaseSlide {
   type: 'video';
   src: string;
-  caption?: string;
+  caption?: LocalizedString;
   poster?: string;
 }
 
 // 7. Closing/Credits Slide
 export interface ClosingSlide extends BaseSlide {
   type: 'closing';
-  title: string;
-  text?: string;
+  title: LocalizedString;
+  text?: LocalizedString;
   photo?: string;
 }
 
 // 8. Comparison / Before-After
 export interface ComparisonPhoto {
   src: string;
-  label?: string;
+  label?: LocalizedString;
 }
 
 export interface ComparisonSlide extends BaseSlide {
   type: 'comparison';
-  title?: string;
+  title?: LocalizedString;
   photos: ComparisonPhoto[];
-  caption?: string;
+  caption?: LocalizedString;
 }
 
 // Union of all slide types

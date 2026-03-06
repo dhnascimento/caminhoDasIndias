@@ -2,12 +2,14 @@ import { useState } from 'react';
 import type { GallerySlide as GallerySlideType, GalleryPhoto } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface GallerySlideProps {
   slide: GallerySlideType;
 }
 
 function GalleryImage({ photo, onClick }: { photo: GalleryPhoto; onClick: () => void }) {
+  const { t } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
@@ -20,7 +22,7 @@ function GalleryImage({ photo, onClick }: { photo: GalleryPhoto; onClick: () => 
       )}
       <img
         src={resolvePhotoPath(photo.src)}
-        alt={photo.caption || ''}
+        alt={t(photo.caption)}
         className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
@@ -29,7 +31,7 @@ function GalleryImage({ photo, onClick }: { photo: GalleryPhoto; onClick: () => 
       {/* Per-photo caption overlay */}
       {photo.caption && (
         <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-          <p className="text-white text-sm">{photo.caption}</p>
+          <p className="text-white text-sm">{t(photo.caption)}</p>
         </div>
       )}
     </div>
@@ -37,6 +39,7 @@ function GalleryImage({ photo, onClick }: { photo: GalleryPhoto; onClick: () => 
 }
 
 export function GallerySlide({ slide }: GallerySlideProps) {
+  const { t } = useLanguage();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const photoCount = slide.photos.length;
 
@@ -72,7 +75,7 @@ export function GallerySlide({ slide }: GallerySlideProps) {
       {/* Title */}
       {slide.title && (
         <h2 className="font-display text-3xl md:text-4xl text-[var(--color-text)] mb-6 text-center animate-fade-in">
-          {slide.title}
+          {t(slide.title)}
         </h2>
       )}
 
@@ -90,7 +93,7 @@ export function GallerySlide({ slide }: GallerySlideProps) {
       {/* Overall caption */}
       {slide.caption && (
         <p className="mt-6 text-lg text-[var(--color-text-muted)] text-center max-w-2xl">
-          {slide.caption}
+          {t(slide.caption)}
         </p>
       )}
 
@@ -111,7 +114,7 @@ export function GallerySlide({ slide }: GallerySlideProps) {
 
           <img
             src={resolvePhotoPath(slide.photos[lightboxIndex].src)}
-            alt={slide.photos[lightboxIndex].caption || ''}
+            alt={t(slide.photos[lightboxIndex].caption)}
             className="max-w-[90vw] max-h-[90vh] object-contain"
             onClick={(e) => e.stopPropagation()}
           />
@@ -137,7 +140,7 @@ export function GallerySlide({ slide }: GallerySlideProps) {
           {/* Photo caption in lightbox */}
           {slide.photos[lightboxIndex].caption && (
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 glass px-6 py-3 rounded-lg">
-              <p className="text-white text-center">{slide.photos[lightboxIndex].caption}</p>
+              <p className="text-white text-center">{t(slide.photos[lightboxIndex].caption)}</p>
             </div>
           )}
         </div>

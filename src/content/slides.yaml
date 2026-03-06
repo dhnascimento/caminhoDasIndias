@@ -9,6 +9,21 @@
 #      Just describe what you want to change!
 #
 # ============================================
+# BILINGUAL CONTENT
+# ============================================
+#
+# Text fields support two languages (PT-BR and EN).
+# Use nested keys to provide both versions:
+#
+#   title:
+#     pt: "Título em Português"
+#     en: "Title in English"
+#
+# You can also use a plain string if no translation is needed:
+#
+#   title: "Caminho das Índias"
+#
+# ============================================
 # SLIDE TYPES - Quick Reference
 # ============================================
 #
@@ -29,335 +44,571 @@
 # ============================================
 - type: title
   title: "Caminho das Índias"
-  subtitle: "February 15–23, 2026 — Jaipur & Agra"
+  subtitle:
+    pt: "15–23 de fevereiro de 2026 — Jaipur e Agra"
+    en: "February 15–23, 2026 — Jaipur & Agra"
   photo: "photos/hero.jpg"
-  # TIP: Replace "photos/hero.jpg" with your best photo from the trip!
-  # This is the opening slide everyone will see first.
 
 # ============================================
 # DAY 1 - FEBRUARY 15, 2026
-# Family Reception & Preparations
 # ============================================
 - type: divider
   day: 1
-  title: "Arrival & Welcome"
-  date: "February 15, 2026"
-  subtitle: "The journey begins"
+  title:
+    pt: "Chegada e Boas-Vindas"
+    en: "Arrival & Welcome"
+  date:
+    pt: "15 de fevereiro de 2026"
+    en: "February 15, 2026"
+  subtitle:
+    pt: "A jornada começa"
+    en: "The journey begins"
   photo: "photos/day1-arrival.jpg"
   notes: "Talk about the long flight and excitement of finally arriving"
 
 - type: story
   photo: "photos/family-reception.jpg"
-  title: "Family Reception"
-  text: |
-    After the long journey, we were welcomed with open arms at the family reception.
-    The warmth of the greeting made all the travel fatigue disappear instantly.
+  title:
+    pt: "Recepção da Família"
+    en: "Family Reception"
+  text:
+    pt: |
+      Após a longa jornada, fomos recebidos de braços abertos na recepção da família.
+      O calor do acolhimento fez toda a fadiga da viagem desaparecer instantaneamente.
 
-    **Replace this text** with your own memories of arriving and meeting the family!
+      **Substitua este texto** com suas próprias memórias da chegada e do encontro com a família!
+    en: |
+      After the long journey, we were welcomed with open arms at the family reception.
+      The warmth of the greeting made all the travel fatigue disappear instantly.
+
+      **Replace this text** with your own memories of arriving and meeting the family!
   layout: "photo-left"
   location: "Jaipur, Rajasthan"
 
 - type: gallery
-  title: "Shopping for Wedding Attire"
+  title:
+    pt: "Compras para o Casamento"
+    en: "Shopping for Wedding Attire"
   photos:
     - src: "photos/clothes-shop-1.jpg"
-      caption: "Exploring the fabric options"
+      caption:
+        pt: "Explorando as opções de tecido"
+        en: "Exploring the fabric options"
     - src: "photos/clothes-shop-2.jpg"
-      caption: "Trying on sherwanis"
+      caption:
+        pt: "Experimentando sherwanis"
+        en: "Trying on sherwanis"
     - src: "photos/clothes-shop-3.jpg"
-      caption: "Selecting the perfect outfit"
-  caption: "Renting and purchasing traditional outfits for the wedding ceremonies"
+      caption:
+        pt: "Escolhendo o traje perfeito"
+        en: "Selecting the perfect outfit"
+  caption:
+    pt: "Alugando e comprando trajes tradicionais para as cerimônias do casamento"
+    en: "Renting and purchasing traditional outfits for the wedding ceremonies"
   location: "Jaipur Markets"
 
 - type: photo
   photo: "photos/bombay-house-dinner.jpg"
-  caption: "First dinner together at Bombay House"
-  subcaption: "A feast to welcome the guests"
+  caption:
+    pt: "Primeiro jantar juntos no Bombay House"
+    en: "First dinner together at Bombay House"
+  subcaption:
+    pt: "Um banquete para receber os convidados"
+    en: "A feast to welcome the guests"
   location: "Bombay House Restaurant"
 
 # ============================================
 # DAY 2 - FEBRUARY 16, 2026
-# Albert Hall Museum & Ceremony
 # ============================================
 - type: divider
   day: 2
-  title: "Culture & Ceremony"
-  date: "February 16, 2026"
-  subtitle: "Discovering Jaipur's heritage"
+  title:
+    pt: "Cultura e Cerimônia"
+    en: "Culture & Ceremony"
+  date:
+    pt: "16 de fevereiro de 2026"
+    en: "February 16, 2026"
+  subtitle:
+    pt: "Descobrindo o patrimônio de Jaipur"
+    en: "Discovering Jaipur's heritage"
   photo: "photos/day2-divider.jpg"
 
 - type: story
   photo: "photos/albert-hall.jpg"
-  title: "Albert Hall Museum"
-  text: |
-    The **Albert Hall Museum** is one of the oldest museums in Rajasthan,
-    housed in a stunning Indo-Saracenic building.
+  title:
+    pt: "Museu Albert Hall"
+    en: "Albert Hall Museum"
+  text:
+    pt: |
+      O **Museu Albert Hall** é um dos museus mais antigos do Rajasthan,
+      instalado em um deslumbrante edifício indo-sarraceno.
 
-    We spent the morning exploring its incredible collection of artifacts,
-    sculptures, and paintings that tell the story of Rajasthan's rich history.
+      Passamos a manhã explorando sua incrível coleção de artefatos,
+      esculturas e pinturas que contam a história da rica herança do Rajasthan.
+    en: |
+      The **Albert Hall Museum** is one of the oldest museums in Rajasthan,
+      housed in a stunning Indo-Saracenic building.
+
+      We spent the morning exploring its incredible collection of artifacts,
+      sculptures, and paintings that tell the story of Rajasthan's rich history.
   layout: "photo-right"
   location: "Albert Hall Museum, Jaipur"
-  fun_fact: "Albert Hall was designed by Sir Samuel Swinton Jacob and opened in 1887!"
+  fun_fact:
+    pt: "O Albert Hall foi projetado por Sir Samuel Swinton Jacob e inaugurado em 1887!"
+    en: "Albert Hall was designed by Sir Samuel Swinton Jacob and opened in 1887!"
 
 - type: gallery
-  title: "The Ceremony"
+  title:
+    pt: "A Cerimônia"
+    en: "The Ceremony"
   photos:
     - src: "photos/ceremony-1.jpg"
-      caption: "Preparations"
+      caption:
+        pt: "Preparativos"
+        en: "Preparations"
     - src: "photos/ceremony-2.jpg"
-      caption: "Traditional rituals"
+      caption:
+        pt: "Rituais tradicionais"
+        en: "Traditional rituals"
     - src: "photos/ceremony-3.jpg"
-      caption: "Family blessings"
+      caption:
+        pt: "Bênçãos da família"
+        en: "Family blessings"
     - src: "photos/ceremony-4.jpg"
-      caption: "Celebration"
-  caption: "A beautiful ceremony at the family home"
+      caption:
+        pt: "Celebração"
+        en: "Celebration"
+  caption:
+    pt: "Uma bela cerimônia na casa da família"
+    en: "A beautiful ceremony at the family home"
   location: "Family Home, Jaipur"
   notes: "Mention the significance of each ritual if you remember"
 
 # ============================================
 # DAY 3 - FEBRUARY 17, 2026
-# Jaipur Tourism Day (Most slides!)
 # ============================================
 - type: divider
   day: 3
-  title: "Exploring Jaipur"
-  date: "February 17, 2026"
-  subtitle: "The Pink City in all its glory"
+  title:
+    pt: "Explorando Jaipur"
+    en: "Exploring Jaipur"
+  date:
+    pt: "17 de fevereiro de 2026"
+    en: "February 17, 2026"
+  subtitle:
+    pt: "A Cidade Rosa em todo seu esplendor"
+    en: "The Pink City in all its glory"
   photo: "photos/jaipur-skyline.jpg"
 
 - type: story
   photo: "photos/walking-tour.jpg"
-  title: "Morning Walking Tour"
-  text: |
-    We started the day with a walking tour through the heart of the old city.
-    The narrow streets buzzed with life as vendors set up their stalls and
-    locals went about their morning routines.
+  title:
+    pt: "Passeio a Pé pela Manhã"
+    en: "Morning Walking Tour"
+  text:
+    pt: |
+      Começamos o dia com um passeio a pé pelo coração da cidade antiga.
+      As ruas estreitas fervilhavam de vida enquanto os vendedores montavam suas
+      bancas e os moradores seguiam suas rotinas matinais.
 
-    Every corner revealed something new — a hidden temple, a colorful doorway,
-    or a friendly face eager to share a story.
+      A cada esquina uma nova descoberta — um templo escondido, uma porta colorida,
+      ou um rosto amigável ansioso para compartilhar uma história.
+    en: |
+      We started the day with a walking tour through the heart of the old city.
+      The narrow streets buzzed with life as vendors set up their stalls and
+      locals went about their morning routines.
+
+      Every corner revealed something new — a hidden temple, a colorful doorway,
+      or a friendly face eager to share a story.
   layout: "photo-left"
   location: "Old Jaipur"
 
 - type: gallery
-  title: "City Palace"
+  title:
+    pt: "Palácio da Cidade"
+    en: "City Palace"
   photos:
     - src: "photos/city-palace-1.jpg"
-      caption: "The grand entrance"
+      caption:
+        pt: "A grande entrada"
+        en: "The grand entrance"
     - src: "photos/city-palace-2.jpg"
-      caption: "Intricate doorways"
+      caption:
+        pt: "Portas elaboradas"
+        en: "Intricate doorways"
     - src: "photos/city-palace-3.jpg"
-      caption: "Courtyard views"
+      caption:
+        pt: "Vistas do pátio"
+        en: "Courtyard views"
     - src: "photos/city-palace-4.jpg"
-      caption: "Royal artifacts"
-  caption: "A royal residence that's been home to the Jaipur royal family since 1727"
+      caption:
+        pt: "Artefatos reais"
+        en: "Royal artifacts"
+  caption:
+    pt: "Uma residência real que é lar da família real de Jaipur desde 1727"
+    en: "A royal residence that's been home to the Jaipur royal family since 1727"
   location: "City Palace, Jaipur"
-  fun_fact: "Part of the palace is still a residence for the royal family today!"
+  fun_fact:
+    pt: "Parte do palácio ainda é residência da família real nos dias de hoje!"
+    en: "Part of the palace is still a residence for the royal family today!"
 
 - type: photo
   photo: "photos/flower-bazaar.jpg"
-  caption: "The Flower Bazaar"
-  subcaption: "Vibrant marigolds everywhere — the flower of celebrations"
+  caption:
+    pt: "O Bazar das Flores"
+    en: "The Flower Bazaar"
+  subcaption:
+    pt: "Calêndulas vibrantes por toda parte — a flor das celebrações"
+    en: "Vibrant marigolds everywhere — the flower of celebrations"
   location: "Flower Market, Jaipur"
 
 - type: gallery
-  title: "Local Markets"
+  title:
+    pt: "Mercados Locais"
+    en: "Local Markets"
   photos:
     - src: "photos/produce-market.jpg"
-      caption: "Fresh produce stacked high"
+      caption:
+        pt: "Produtos frescos empilhados"
+        en: "Fresh produce stacked high"
     - src: "photos/spice-stall.jpg"
-      caption: "Spice stalls filling the air with fragrance"
+      caption:
+        pt: "Barracas de especiarias perfumando o ar"
+        en: "Spice stalls filling the air with fragrance"
     - src: "photos/street-vendor.jpg"
-      caption: "Street food we had to try"
-  caption: "The colors, smells, and sounds of Jaipur's markets"
+      caption:
+        pt: "Comida de rua que tínhamos que experimentar"
+        en: "Street food we had to try"
+  caption:
+    pt: "As cores, cheiros e sons dos mercados de Jaipur"
+    en: "The colors, smells, and sounds of Jaipur's markets"
 
 - type: photo
   photo: "photos/hawa-mahal.jpg"
-  caption: "Hawa Mahal — The Palace of Winds"
-  subcaption: "953 small windows designed to let royal women observe street life unseen"
+  caption:
+    pt: "Hawa Mahal — O Palácio dos Ventos"
+    en: "Hawa Mahal — The Palace of Winds"
+  subcaption:
+    pt: "953 janelas pequenas projetadas para que as mulheres reais observassem a rua sem serem vistas"
+    en: "953 small windows designed to let royal women observe street life unseen"
   location: "Hawa Mahal, Jaipur"
-  fun_fact: "Built in 1799 by Maharaja Sawai Pratap Singh, it's shaped like Lord Krishna's crown!"
+  fun_fact:
+    pt: "Construído em 1799 pelo Maharaja Sawai Pratap Singh, tem o formato da coroa do Senhor Krishna!"
+    en: "Built in 1799 by Maharaja Sawai Pratap Singh, it's shaped like Lord Krishna's crown!"
 
 - type: story
   photo: "photos/school-visit.jpg"
-  title: "Local School Visit"
-  text: |
-    One of the most memorable parts of the day was an impromptu visit to a local public school.
-    The children's curiosity and enthusiasm were infectious, and we spent time
-    learning about their studies and sharing stories.
+  title:
+    pt: "Visita a uma Escola Local"
+    en: "Local School Visit"
+  text:
+    pt: |
+      Uma das partes mais memoráveis do dia foi uma visita improvisada a uma escola pública local.
+      A curiosidade e o entusiasmo das crianças eram contagiantes, e passamos um tempo
+      aprendendo sobre seus estudos e trocando histórias.
 
-    *A reminder of why travel is so meaningful.*
+      *Um lembrete de por que viajar é tão significativo.*
+    en: |
+      One of the most memorable parts of the day was an impromptu visit to a local public school.
+      The children's curiosity and enthusiasm were infectious, and we spent time
+      learning about their studies and sharing stories.
+
+      *A reminder of why travel is so meaningful.*
   layout: "photo-right"
   location: "Local School, Jaipur"
   notes: "Share any specific interactions or moments that stood out"
 
 - type: photo
   photo: "photos/shiva-procession.jpg"
-  caption: "Shiva Procession"
-  subcaption: "Unexpected street celebration with drums, dancing, and devotion"
+  caption:
+    pt: "Procissão de Shiva"
+    en: "Shiva Procession"
+  subcaption:
+    pt: "Celebração de rua inesperada com tambores, dança e devoção"
+    en: "Unexpected street celebration with drums, dancing, and devotion"
   location: "Jaipur Streets"
 
 - type: gallery
-  title: "Amber Fort"
+  title:
+    pt: "Forte Amber"
+    en: "Amber Fort"
   photos:
     - src: "photos/amber-fort-1.jpg"
-      caption: "The approach to the fort"
+      caption:
+        pt: "A aproximação do forte"
+        en: "The approach to the fort"
     - src: "photos/amber-fort-2.jpg"
-      caption: "Intricate mirror work"
+      caption:
+        pt: "Delicado trabalho com espelhos"
+        en: "Intricate mirror work"
     - src: "photos/amber-fort-3.jpg"
-      caption: "Panoramic views"
+      caption:
+        pt: "Vistas panorâmicas"
+        en: "Panoramic views"
     - src: "photos/amber-fort-4.jpg"
-      caption: "Sunset from the ramparts"
-  caption: "A majestic fort-palace overlooking Maota Lake"
+      caption:
+        pt: "Pôr do sol das muralhas"
+        en: "Sunset from the ramparts"
+  caption:
+    pt: "Um majestoso forte-palácio com vista para o Lago Maota"
+    en: "A majestic fort-palace overlooking Maota Lake"
   location: "Amber Fort, Jaipur"
-  fun_fact: "Amber Fort took nearly 100 years to build, from 1592 to 1600s!"
+  fun_fact:
+    pt: "O Forte Amber levou quase 100 anos para ser construído, de 1592 até os anos 1600!"
+    en: "Amber Fort took nearly 100 years to build, from 1592 to 1600s!"
 
 - type: photo
   photo: "photos/jantar-mantar.jpg"
   caption: "Jantar Mantar"
-  subcaption: "The world's largest stone sundial — accurate to 2 seconds!"
+  subcaption:
+    pt: "O maior relógio solar de pedra do mundo — preciso a 2 segundos!"
+    en: "The world's largest stone sundial — accurate to 2 seconds!"
   location: "Jantar Mantar, Jaipur"
-  fun_fact: "Built by Maharaja Sawai Jai Singh II in 1734 for astronomical observations"
+  fun_fact:
+    pt: "Construído pelo Maharaja Sawai Jai Singh II em 1734 para observações astronômicas"
+    en: "Built by Maharaja Sawai Jai Singh II in 1734 for astronomical observations"
 
 - type: photo
   photo: "photos/jal-mahal.jpg"
-  caption: "Jal Mahal — The Water Palace"
-  subcaption: "A serene palace floating in Man Sagar Lake"
+  caption:
+    pt: "Jal Mahal — O Palácio das Águas"
+    en: "Jal Mahal — The Water Palace"
+  subcaption:
+    pt: "Um sereno palácio flutuando no Lago Man Sagar"
+    en: "A serene palace floating in Man Sagar Lake"
   location: "Jal Mahal, Jaipur"
 
 - type: photo
   photo: "photos/day3-dinner.jpg"
-  caption: "Dinner at the Family Home"
-  subcaption: "Ending a perfect day with homemade Rajasthani cuisine"
+  caption:
+    pt: "Jantar na Casa da Família"
+    en: "Dinner at the Family Home"
+  subcaption:
+    pt: "Encerrando um dia perfeito com culinária rajastani caseira"
+    en: "Ending a perfect day with homemade Rajasthani cuisine"
   location: "Family Home, Jaipur"
 
 # ============================================
 # DAY 4 - FEBRUARY 18, 2026
-# Wedding Venue & Pre-Events
 # ============================================
 - type: divider
   day: 4
-  title: "Wedding Venue"
-  date: "February 18, 2026"
-  subtitle: "The celebrations begin"
+  title:
+    pt: "Local do Casamento"
+    en: "Wedding Venue"
+  date:
+    pt: "18 de fevereiro de 2026"
+    en: "February 18, 2026"
+  subtitle:
+    pt: "As celebrações começam"
+    en: "The celebrations begin"
   photo: "photos/wedding-venue.jpg"
 
 - type: story
   photo: "photos/venue-checkin.jpg"
-  title: "Arriving at the Venue"
-  text: |
-    Checking in at the wedding venue felt like stepping into a dream.
-    The grounds were already being decorated with marigolds and lights,
-    and the excitement in the air was palpable.
+  title:
+    pt: "Chegando ao Local"
+    en: "Arriving at the Venue"
+  text:
+    pt: |
+      Fazer o check-in no local do casamento foi como entrar em um sonho.
+      Os jardins já estavam sendo decorados com calêndulas e luzes,
+      e a animação no ar era palpável.
 
-    Over the next few days, this would be our home for one of the most
-    memorable celebrations of our lives.
+      Nos próximos dias, esse seria nosso lar para uma das celebrações
+      mais memoráveis de nossas vidas.
+    en: |
+      Checking in at the wedding venue felt like stepping into a dream.
+      The grounds were already being decorated with marigolds and lights,
+      and the excitement in the air was palpable.
+
+      Over the next few days, this would be our home for one of the most
+      memorable celebrations of our lives.
   layout: "photo-left"
   location: "Wedding Venue, Jaipur"
 
 - type: gallery
-  title: "Pre-Engagement Ceremony"
+  title:
+    pt: "Cerimônia de Pré-Noivado"
+    en: "Pre-Engagement Ceremony"
   photos:
     - src: "photos/pre-engagement-1.jpg"
-      caption: "Traditional blessings"
+      caption:
+        pt: "Bênçãos tradicionais"
+        en: "Traditional blessings"
     - src: "photos/pre-engagement-2.jpg"
-      caption: "Family gathering"
+      caption:
+        pt: "Reunião da família"
+        en: "Family gathering"
     - src: "photos/pre-engagement-3.jpg"
-      caption: "Joyful moments"
-  caption: "Celebrating the upcoming union"
+      caption:
+        pt: "Momentos de alegria"
+        en: "Joyful moments"
+  caption:
+    pt: "Celebrando a próxima união"
+    en: "Celebrating the upcoming union"
   notes: "This was for the fiancée's brother"
 
 - type: story
   photo: "photos/mehendi-1.jpg"
-  title: "Mehendi Night"
-  text: |
-    As the sun set, the **Mehendi ceremony** began — one of the most beautiful
-    traditions of Indian weddings.
+  title:
+    pt: "Noite do Mehendi"
+    en: "Mehendi Night"
+  text:
+    pt: |
+      Ao cair do sol, a **cerimônia do Mehendi** começou — uma das tradições
+      mais belas dos casamentos indianos.
 
-    Skilled artists painted intricate henna designs on hands and feet,
-    each pattern telling a story of love and blessings. The evening was filled
-    with music, laughter, and the sweet scent of henna.
+      Artistas habilidosos pintaram designs intrincados de hena nas mãos e pés,
+      cada padrão contando uma história de amor e bênçãos. A noite foi repleta
+      de música, risadas e o suave perfume da hena.
+    en: |
+      As the sun set, the **Mehendi ceremony** began — one of the most beautiful
+      traditions of Indian weddings.
+
+      Skilled artists painted intricate henna designs on hands and feet,
+      each pattern telling a story of love and blessings. The evening was filled
+      with music, laughter, and the sweet scent of henna.
   layout: "photo-right"
   location: "Wedding Venue"
 
 - type: gallery
-  title: "Mehendi Designs"
+  title:
+    pt: "Designs de Mehendi"
+    en: "Mehendi Designs"
   photos:
     - src: "photos/mehendi-hands-1.jpg"
-      caption: "Bridal mehendi"
+      caption:
+        pt: "Mehendi nupcial"
+        en: "Bridal mehendi"
     - src: "photos/mehendi-hands-2.jpg"
-      caption: "Intricate patterns"
+      caption:
+        pt: "Padrões elaborados"
+        en: "Intricate patterns"
     - src: "photos/mehendi-hands-3.jpg"
-      caption: "Traditional motifs"
+      caption:
+        pt: "Motivos tradicionais"
+        en: "Traditional motifs"
     - src: "photos/mehendi-feet.jpg"
-      caption: "Feet designs"
-  caption: "The artistry of henna"
+      caption:
+        pt: "Designs nos pés"
+        en: "Feet designs"
+  caption:
+    pt: "A arte da hena"
+    en: "The artistry of henna"
 
 # ============================================
 # DAY 5 - FEBRUARY 19, 2026
-# Haldi & Sangeet
 # ============================================
 - type: divider
   day: 5
   title: "Haldi & Sangeet"
-  date: "February 19, 2026"
-  subtitle: "Colors, music, and dance"
+  date:
+    pt: "19 de fevereiro de 2026"
+    en: "February 19, 2026"
+  subtitle:
+    pt: "Cores, música e dança"
+    en: "Colors, music, and dance"
   photo: "photos/day5-divider.jpg"
 
 - type: story
   photo: "photos/haldi-ceremony.jpg"
-  title: "Haldi Ceremony"
-  text: |
-    The morning started with the **Haldi ceremony** — a ritual where turmeric paste
-    is applied to the bride and groom for blessings and good luck.
+  title:
+    pt: "Cerimônia do Haldi"
+    en: "Haldi Ceremony"
+  text:
+    pt: |
+      A manhã começou com a **cerimônia do Haldi** — um ritual em que pasta de cúrcuma
+      é aplicada no noivo e na noiva para bênçãos e boa sorte.
 
-    What starts as a solemn ritual quickly turned into a joyful mess of yellow
-    turmeric everywhere! By the end, everyone was covered in the golden paste,
-    laughing and celebrating together.
+      O que começa como um ritual solene rapidamente se transforma em uma bagunça alegre
+      de cúrcuma amarela por todo lado! No final, todos estavam cobertos pela pasta dourada,
+      rindo e comemorando juntos.
+    en: |
+      The morning started with the **Haldi ceremony** — a ritual where turmeric paste
+      is applied to the bride and groom for blessings and good luck.
+
+      What starts as a solemn ritual quickly turned into a joyful mess of yellow
+      turmeric everywhere! By the end, everyone was covered in the golden paste,
+      laughing and celebrating together.
   layout: "photo-left"
   location: "Wedding Venue"
   notes: "Warn people that turmeric stains everything!"
 
 - type: gallery
-  title: "Haldi Moments"
+  title:
+    pt: "Momentos do Haldi"
+    en: "Haldi Moments"
   photos:
     - src: "photos/haldi-1.jpg"
-      caption: "The turmeric paste"
+      caption:
+        pt: "A pasta de cúrcuma"
+        en: "The turmeric paste"
     - src: "photos/haldi-2.jpg"
-      caption: "Family participation"
+      caption:
+        pt: "Participação da família"
+        en: "Family participation"
     - src: "photos/haldi-3.jpg"
-      caption: "Joyful chaos"
-  caption: "A ceremony that's as fun as it is meaningful"
+      caption:
+        pt: "Caos alegre"
+        en: "Joyful chaos"
+  caption:
+    pt: "Uma cerimônia tão divertida quanto significativa"
+    en: "A ceremony that's as fun as it is meaningful"
 
 - type: story
   photo: "photos/sangeet-stage.jpg"
-  title: "Sangeet Night"
-  text: |
-    The **Sangeet** is the night of music and dance — and what a night it was!
+  title:
+    pt: "Noite do Sangeet"
+    en: "Sangeet Night"
+  text:
+    pt: |
+      O **Sangeet** é a noite de música e dança — e que noite foi essa!
 
-    Both families prepared performances, from traditional folk dances to
-    Bollywood numbers. The friendly competition between families made for
-    an unforgettable evening of entertainment.
+      As duas famílias prepararam apresentações, de danças folclóricas tradicionais
+      a números de Bollywood. A competição amistosa entre as famílias resultou em
+      uma noite inesquecível de entretenimento.
+    en: |
+      The **Sangeet** is the night of music and dance — and what a night it was!
+
+      Both families prepared performances, from traditional folk dances to
+      Bollywood numbers. The friendly competition between families made for
+      an unforgettable evening of entertainment.
   layout: "photo-right"
   location: "Wedding Venue"
 
 - type: video
   src: "videos/sangeet-dance.mp4"
-  caption: "The surprise dance number"
+  caption:
+    pt: "O número de dança surpresa"
+    en: "The surprise dance number"
   poster: "photos/sangeet-dance-thumb.jpg"
   notes: "This was the highlight of the evening!"
 
 - type: gallery
-  title: "Sangeet Performances"
+  title:
+    pt: "Apresentações do Sangeet"
+    en: "Sangeet Performances"
   photos:
     - src: "photos/sangeet-1.jpg"
-      caption: "Traditional dance"
+      caption:
+        pt: "Dança tradicional"
+        en: "Traditional dance"
     - src: "photos/sangeet-2.jpg"
-      caption: "Family performance"
+      caption:
+        pt: "Apresentação da família"
+        en: "Family performance"
     - src: "photos/sangeet-3.jpg"
-      caption: "The finale"
+      caption:
+        pt: "O grand final"
+        en: "The finale"
     - src: "photos/sangeet-4.jpg"
-      caption: "Everyone on the floor"
-  caption: "An evening of music, dance, and celebration"
+      caption:
+        pt: "Todos na pista"
+        en: "Everyone on the floor"
+  caption:
+    pt: "Uma noite de música, dança e celebração"
+    en: "An evening of music, dance, and celebration"
 
 # ============================================
 # DAY 6 - FEBRUARY 20, 2026
@@ -365,242 +616,415 @@
 # ============================================
 - type: divider
   day: 6
-  title: "The Wedding Day"
-  date: "February 20, 2026"
-  subtitle: "The moment we've all been waiting for"
+  title:
+    pt: "O Dia do Casamento"
+    en: "The Wedding Day"
+  date:
+    pt: "20 de fevereiro de 2026"
+    en: "February 20, 2026"
+  subtitle:
+    pt: "O momento que todos esperávamos"
+    en: "The moment we've all been waiting for"
   photo: "photos/wedding-day-hero.jpg"
 
 - type: story
   photo: "photos/maayra.jpg"
-  title: "Maayra Ceremony"
-  text: |
-    The day began with the **Maayra** — a beautiful ritual where the maternal
-    uncle of the bride brings gifts and blessings.
+  title:
+    pt: "Cerimônia Maayra"
+    en: "Maayra Ceremony"
+  text:
+    pt: |
+      O dia começou com o **Maayra** — um belo ritual em que o tio materno
+      da noiva traz presentes e bênçãos.
 
-    It's a touching reminder of the love and support that surrounds the couple
-    as they begin their new life together.
+      É um lembrete comovente do amor e do apoio que cercam o casal
+      ao iniciarem sua nova vida juntos.
+    en: |
+      The day began with the **Maayra** — a beautiful ritual where the maternal
+      uncle of the bride brings gifts and blessings.
+
+      It's a touching reminder of the love and support that surrounds the couple
+      as they begin their new life together.
   layout: "photo-left"
   location: "Wedding Venue"
 
 - type: story
   photo: "photos/barat-arrival.jpg"
-  title: "The Barat"
-  text: |
-    The **Barat** — the groom's procession — arrived with all the fanfare
-    and energy you'd expect from an Indian wedding!
+  title:
+    pt: "O Barat"
+    en: "The Barat"
+  text:
+    pt: |
+      O **Barat** — o cortejo do noivo — chegou com toda a pompa e energia
+      que se espera de um casamento indiano!
 
-    Dancing through the streets with a live band, the groom made his grand
-    entrance on horseback, surrounded by family and friends celebrating
-    with dhol drums and fireworks.
+      Dançando pelas ruas com uma banda ao vivo, o noivo fez sua entrada triunfal
+      a cavalo, rodeado por família e amigos celebrando com tambores dhol e fogos de artifício.
+    en: |
+      The **Barat** — the groom's procession — arrived with all the fanfare
+      and energy you'd expect from an Indian wedding!
+
+      Dancing through the streets with a live band, the groom made his grand
+      entrance on horseback, surrounded by family and friends celebrating
+      with dhol drums and fireworks.
   layout: "photo-right"
   location: "Wedding Venue"
 
 - type: gallery
-  title: "Barat Celebrations"
+  title:
+    pt: "Celebrações do Barat"
+    en: "Barat Celebrations"
   photos:
     - src: "photos/barat-1.jpg"
-      caption: "The procession begins"
+      caption:
+        pt: "O cortejo começa"
+        en: "The procession begins"
     - src: "photos/barat-2.jpg"
-      caption: "Dancing in the streets"
+      caption:
+        pt: "Dançando nas ruas"
+        en: "Dancing in the streets"
     - src: "photos/barat-3.jpg"
-      caption: "The grand arrival"
+      caption:
+        pt: "A grande chegada"
+        en: "The grand arrival"
     - src: "photos/barat-4.jpg"
-      caption: "Welcome ceremonies"
-  caption: "The groom's joyful procession to the venue"
+      caption:
+        pt: "Cerimônias de boas-vindas"
+        en: "Welcome ceremonies"
+  caption:
+    pt: "O alegre cortejo do noivo até o local"
+    en: "The groom's joyful procession to the venue"
 
 - type: photo
   photo: "photos/wedding-ceremony.jpg"
-  caption: "The Wedding Ceremony"
-  subcaption: "Two families becoming one"
+  caption:
+    pt: "A Cerimônia de Casamento"
+    en: "The Wedding Ceremony"
+  subcaption:
+    pt: "Duas famílias se tornando uma"
+    en: "Two families becoming one"
   location: "Wedding Venue"
   notes: "This is THE photo — make sure it's a great one!"
 
 - type: gallery
-  title: "Sacred Rituals"
+  title:
+    pt: "Rituais Sagrados"
+    en: "Sacred Rituals"
   photos:
     - src: "photos/ceremony-fire.jpg"
-      caption: "The sacred fire"
+      caption:
+        pt: "O fogo sagrado"
+        en: "The sacred fire"
     - src: "photos/pheras.jpg"
-      caption: "The seven vows"
+      caption:
+        pt: "Os sete votos"
+        en: "The seven vows"
     - src: "photos/sindoor.jpg"
-      caption: "Sindoor ceremony"
+      caption:
+        pt: "Cerimônia do Sindoor"
+        en: "Sindoor ceremony"
     - src: "photos/mangalsutra.jpg"
-      caption: "Tying the mangalsutra"
-  caption: "Moments from the wedding rituals"
+      caption:
+        pt: "Amarrando o mangalsutra"
+        en: "Tying the mangalsutra"
+  caption:
+    pt: "Momentos dos rituais do casamento"
+    en: "Moments from the wedding rituals"
 
 - type: comparison
-  title: "Before & After"
+  title:
+    pt: "Antes e Depois"
+    en: "Before & After"
   photos:
     - src: "photos/outfit-before.jpg"
-      label: "Day 1"
+      label:
+        pt: "Dia 1"
+        en: "Day 1"
     - src: "photos/outfit-wedding.jpg"
-      label: "Wedding Day"
-  caption: "The transformation!"
+      label:
+        pt: "Dia do Casamento"
+        en: "Wedding Day"
+  caption:
+    pt: "A transformação!"
+    en: "The transformation!"
 
 - type: story
   photo: "photos/reception.jpg"
-  title: "The Grand Reception"
-  text: |
-    As evening fell, the **reception** began — a glamorous celebration
-    welcoming the newlyweds as a married couple.
+  title:
+    pt: "A Grande Recepção"
+    en: "The Grand Reception"
+  text:
+    pt: |
+      Ao cair da noite, a **recepção** começou — uma celebração glamorosa
+      dando as boas-vindas aos recém-casados como um casal.
 
-    Hundreds of guests gathered for dinner, dancing, and congratulations
-    in a beautifully decorated banquet hall.
+      Centenas de convidados se reuniram para jantar, dançar e parabenizar
+      em um salão de banquetes lindamente decorado.
+    en: |
+      As evening fell, the **reception** began — a glamorous celebration
+      welcoming the newlyweds as a married couple.
+
+      Hundreds of guests gathered for dinner, dancing, and congratulations
+      in a beautifully decorated banquet hall.
   layout: "photo-left"
   location: "Wedding Venue"
 
 - type: gallery
-  title: "Reception Highlights"
+  title:
+    pt: "Destaques da Recepção"
+    en: "Reception Highlights"
   photos:
     - src: "photos/reception-1.jpg"
-      caption: "The newlyweds"
+      caption:
+        pt: "Os recém-casados"
+        en: "The newlyweds"
     - src: "photos/reception-2.jpg"
-      caption: "Dinner celebration"
+      caption:
+        pt: "Jantar de celebração"
+        en: "Dinner celebration"
     - src: "photos/reception-3.jpg"
-      caption: "Dancing the night away"
-  caption: "Celebrating into the night"
+      caption:
+        pt: "Dançando a noite toda"
+        en: "Dancing the night away"
+  caption:
+    pt: "Celebrando até a madrugada"
+    en: "Celebrating into the night"
 
 # ============================================
 # DAY 7 - FEBRUARY 21, 2026
-# Post-Wedding & Journey to Agra
 # ============================================
 - type: divider
   day: 7
-  title: "Journey to Agra"
-  date: "February 21, 2026"
-  subtitle: "From one wonder to another"
+  title:
+    pt: "Viagem a Agra"
+    en: "Journey to Agra"
+  date:
+    pt: "21 de fevereiro de 2026"
+    en: "February 21, 2026"
+  subtitle:
+    pt: "De uma maravilha a outra"
+    en: "From one wonder to another"
   photo: "photos/day7-divider.jpg"
 
 - type: story
   photo: "photos/post-wedding.jpg"
-  title: "Morning After"
-  text: |
-    After the celebrations, we gathered one more time at the family home
-    for a post-wedding ceremony and final blessings.
+  title:
+    pt: "Manhã Seguinte"
+    en: "Morning After"
+  text:
+    pt: |
+      Após as celebrações, nos reunimos mais uma vez na casa da família
+      para uma cerimônia pós-casamento e bênçãos finais.
 
-    Saying goodbye was bittersweet, but the memories we made together
-    will last a lifetime.
+      A despedida foi agridoce, mas as memórias que criamos juntos
+      durarão para sempre.
+    en: |
+      After the celebrations, we gathered one more time at the family home
+      for a post-wedding ceremony and final blessings.
+
+      Saying goodbye was bittersweet, but the memories we made together
+      will last a lifetime.
   layout: "photo-right"
   location: "Family Home, Jaipur"
 
 - type: photo
   photo: "photos/road-to-agra.jpg"
-  caption: "On the Road to Agra"
-  subcaption: "A scenic drive through Rajasthan"
+  caption:
+    pt: "A Caminho de Agra"
+    en: "On the Road to Agra"
+  subcaption:
+    pt: "Um passeio cênico por Rajasthan"
+    en: "A scenic drive through Rajasthan"
   location: "NH 48"
 
 # ============================================
 # DAY 8 - FEBRUARY 22, 2026
-# Agra: Taj Mahal & More
 # ============================================
 - type: divider
   day: 8
   title: "Agra"
-  date: "February 22, 2026"
-  subtitle: "The city of the Taj"
+  date:
+    pt: "22 de fevereiro de 2026"
+    en: "February 22, 2026"
+  subtitle:
+    pt: "A cidade do Taj"
+    en: "The city of the Taj"
   photo: "photos/agra-divider.jpg"
 
 - type: story
   photo: "photos/taj-mahal-sunrise.jpg"
-  title: "The Taj Mahal"
-  text: |
-    No words can truly capture the experience of seeing the **Taj Mahal**
-    for the first time.
+  title:
+    pt: "O Taj Mahal"
+    en: "The Taj Mahal"
+  text:
+    pt: |
+      Nenhuma palavra pode verdadeiramente capturar a experiência de ver o **Taj Mahal**
+      pela primeira vez.
 
-    Built by Emperor Shah Jahan as a monument to his beloved wife Mumtaz Mahal,
-    it stands as one of the most beautiful expressions of love ever created.
-    In the soft morning light, the white marble seemed to glow from within.
+      Construído pelo Imperador Shah Jahan como um monumento à sua amada esposa Mumtaz Mahal,
+      ele se ergue como uma das mais belas expressões de amor já criadas.
+      Na suave luz da manhã, o mármore branco parecia brilhar de dentro para fora.
+    en: |
+      No words can truly capture the experience of seeing the **Taj Mahal**
+      for the first time.
+
+      Built by Emperor Shah Jahan as a monument to his beloved wife Mumtaz Mahal,
+      it stands as one of the most beautiful expressions of love ever created.
+      In the soft morning light, the white marble seemed to glow from within.
   layout: "photo-left"
   location: "Taj Mahal, Agra"
-  fun_fact: "It took 22 years and 20,000 workers to build the Taj Mahal!"
+  fun_fact:
+    pt: "Levou 22 anos e 20.000 trabalhadores para construir o Taj Mahal!"
+    en: "It took 22 years and 20,000 workers to build the Taj Mahal!"
 
 - type: gallery
   title: "Taj Mahal"
   photos:
     - src: "photos/taj-1.jpg"
-      caption: "The iconic view"
+      caption:
+        pt: "A vista icônica"
+        en: "The iconic view"
     - src: "photos/taj-2.jpg"
-      caption: "Intricate marble inlay"
+      caption:
+        pt: "Delicada incrustação de mármore"
+        en: "Intricate marble inlay"
     - src: "photos/taj-3.jpg"
-      caption: "Reflecting pool"
+      caption:
+        pt: "Lago espelhado"
+        en: "Reflecting pool"
     - src: "photos/taj-4.jpg"
-      caption: "Details up close"
-  caption: "A monument to eternal love"
+      caption:
+        pt: "Detalhes de perto"
+        en: "Details up close"
+  caption:
+    pt: "Um monumento ao amor eterno"
+    en: "A monument to eternal love"
   location: "Taj Mahal, Agra"
 
 - type: photo
   photo: "photos/agra-fort.jpg"
-  caption: "Agra Fort"
-  subcaption: "A UNESCO World Heritage Site with views of the Taj"
+  caption:
+    pt: "Forte de Agra"
+    en: "Agra Fort"
+  subcaption:
+    pt: "Patrimônio Mundial da UNESCO com vista para o Taj"
+    en: "A UNESCO World Heritage Site with views of the Taj"
   location: "Agra Fort"
-  fun_fact: "Shah Jahan spent his final years imprisoned here, gazing at his wife's tomb"
+  fun_fact:
+    pt: "Shah Jahan passou seus últimos anos preso aqui, contemplando o túmulo de sua esposa"
+    en: "Shah Jahan spent his final years imprisoned here, gazing at his wife's tomb"
 
 - type: story
   photo: "photos/baby-taj.jpg"
   title: "Baby Taj"
-  text: |
-    The **Itimad-ud-Daulah**, often called the "Baby Taj," is sometimes
-    overlooked by visitors, but it's a gem in its own right.
+  text:
+    pt: |
+      O **Itimad-ud-Daulah**, frequentemente chamado de "Baby Taj", é por vezes
+      ignorado pelos visitantes, mas é uma joia por direito próprio.
 
-    This delicate tomb was actually a predecessor to the Taj Mahal,
-    and many of the same design elements can be seen here — including
-    the beautiful pietra dura (marble inlay) work.
+      Este delicado mausoléu foi na verdade um precursor do Taj Mahal,
+      e muitos dos mesmos elementos de design podem ser vistos aqui — incluindo
+      o belo trabalho de pietra dura (incrustação de mármore).
+    en: |
+      The **Itimad-ud-Daulah**, often called the "Baby Taj," is sometimes
+      overlooked by visitors, but it's a gem in its own right.
+
+      This delicate tomb was actually a predecessor to the Taj Mahal,
+      and many of the same design elements can be seen here — including
+      the beautiful pietra dura (marble inlay) work.
   layout: "photo-right"
   location: "Itimad-ud-Daulah, Agra"
 
 - type: gallery
-  title: "Evening with Friends"
+  title:
+    pt: "Noite com Amigos"
+    en: "Evening with Friends"
   photos:
     - src: "photos/agra-dinner-1.jpg"
-      caption: "Local restaurant find"
+      caption:
+        pt: "Descoberta de restaurante local"
+        en: "Local restaurant find"
     - src: "photos/agra-shopping.jpg"
-      caption: "Souvenir shopping"
+      caption:
+        pt: "Compras de lembrancinha"
+        en: "Souvenir shopping"
     - src: "photos/agra-friends.jpg"
-      caption: "Cheers to the trip!"
-  caption: "Dinner and shopping in Agra with friends"
+      caption:
+        pt: "Brinde à viagem!"
+        en: "Cheers to the trip!"
+  caption:
+    pt: "Jantar e compras em Agra com amigos"
+    en: "Dinner and shopping in Agra with friends"
   location: "Agra"
 
 # ============================================
 # DAY 9 - FEBRUARY 23, 2026
-# Fatehpur Sikri & Departure
 # ============================================
 - type: divider
   day: 9
-  title: "Final Day"
-  date: "February 23, 2026"
-  subtitle: "One last adventure"
+  title:
+    pt: "Último Dia"
+    en: "Final Day"
+  date:
+    pt: "23 de fevereiro de 2026"
+    en: "February 23, 2026"
+  subtitle:
+    pt: "Uma última aventura"
+    en: "One last adventure"
   photo: "photos/day9-divider.jpg"
 
 - type: story
   photo: "photos/fatehpur-sikri.jpg"
   title: "Fatehpur Sikri"
-  text: |
-    On our final morning, we visited **Fatehpur Sikri** — the abandoned
-    Mughal capital that feels frozen in time.
+  text:
+    pt: |
+      Em nossa última manhã, visitamos **Fatehpur Sikri** — a capital mogol abandonada
+      que parece congelada no tempo.
 
-    Built by Emperor Akbar in the 16th century, this "City of Victory"
-    was mysteriously abandoned just 14 years after completion.
-    Walking through its empty palaces and courtyards was hauntingly beautiful.
+      Construída pelo Imperador Akbar no século XVI, essa "Cidade da Vitória"
+      foi misteriosamente abandonada apenas 14 anos após sua conclusão.
+      Caminhar por seus palácios e pátios vazios foi assombrosamente belo.
+    en: |
+      On our final morning, we visited **Fatehpur Sikri** — the abandoned
+      Mughal capital that feels frozen in time.
+
+      Built by Emperor Akbar in the 16th century, this "City of Victory"
+      was mysteriously abandoned just 14 years after completion.
+      Walking through its empty palaces and courtyards was hauntingly beautiful.
   layout: "photo-left"
   location: "Fatehpur Sikri"
-  fun_fact: "The city was abandoned due to lack of water — a problem still being studied today"
+  fun_fact:
+    pt: "A cidade foi abandonada por falta de água — um problema ainda estudado hoje"
+    en: "The city was abandoned due to lack of water — a problem still being studied today"
 
 - type: gallery
   title: "Fatehpur Sikri"
   photos:
     - src: "photos/fatehpur-1.jpg"
-      caption: "Buland Darwaza (Victory Gate)"
+      caption:
+        pt: "Buland Darwaza (Portão da Vitória)"
+        en: "Buland Darwaza (Victory Gate)"
     - src: "photos/fatehpur-2.jpg"
-      caption: "Palace courtyards"
+      caption:
+        pt: "Pátios do palácio"
+        en: "Palace courtyards"
     - src: "photos/fatehpur-3.jpg"
-      caption: "Architectural details"
-  caption: "The ghost city of the Mughals"
+      caption:
+        pt: "Detalhes arquitetônicos"
+        en: "Architectural details"
+  caption:
+    pt: "A cidade fantasma dos Mogóis"
+    en: "The ghost city of the Mughals"
   location: "Fatehpur Sikri"
 
 - type: photo
   photo: "photos/farewell.jpg"
-  caption: "Until Next Time"
-  subcaption: "Leaving India with full hearts and countless memories"
+  caption:
+    pt: "Até a Próxima"
+    en: "Until Next Time"
+  subcaption:
+    pt: "Deixando a Índia com o coração cheio e incontáveis memórias"
+    en: "Leaving India with full hearts and countless memories"
   location: "Jaipur Airport"
   notes: "This was an emotional goodbye!"
 
@@ -608,13 +1032,22 @@
 # CLOSING SLIDE
 # ============================================
 - type: closing
-  title: "Thank You"
-  text: |
-    For being part of this journey with us.
+  title:
+    pt: "Obrigado"
+    en: "Thank You"
+  text:
+    pt: |
+      Por fazer parte desta jornada conosco.
 
-    These memories will stay with us forever —
-    the colors, the celebrations, the love.
+      Essas memórias ficarão conosco para sempre —
+      as cores, as celebrações, o amor.
 
-    Here's to family, friendship, and the magic of India.
+      Aqui está para a família, a amizade e a magia da Índia.
+    en: |
+      For being part of this journey with us.
+
+      These memories will stay with us forever —
+      the colors, the celebrations, the love.
+
+      Here's to family, friendship, and the magic of India.
   photo: "photos/group-final.jpg"
-  # TIP: Use your favorite group photo here!

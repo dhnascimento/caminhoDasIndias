@@ -1,12 +1,14 @@
 import type { TitleSlide as TitleSlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface TitleSlideProps {
   slide: TitleSlideType;
 }
 
 export function TitleSlide({ slide }: TitleSlideProps) {
+  const { t } = useLanguage();
   const backgroundImage = slide.photo ? resolvePhotoPath(slide.photo) : null;
 
   return (
@@ -33,11 +35,11 @@ export function TitleSlide({ slide }: TitleSlideProps) {
       {/* Content */}
       <div className="relative z-10 text-center px-8 max-w-4xl animate-fade-in">
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold mb-6 text-gradient leading-tight">
-          {slide.title}
+          {t(slide.title)}
         </h1>
         {slide.subtitle && (
           <p className="text-xl md:text-2xl lg:text-3xl text-[var(--color-text-muted)] font-light tracking-wide">
-            {slide.subtitle}
+            {t(slide.subtitle)}
           </p>
         )}
       </div>

@@ -1,12 +1,14 @@
 import type { ClosingSlide as ClosingSlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface ClosingSlideProps {
   slide: ClosingSlideType;
 }
 
 export function ClosingSlide({ slide }: ClosingSlideProps) {
+  const { t } = useLanguage();
   const backgroundImage = slide.photo ? resolvePhotoPath(slide.photo) : null;
 
   return (
@@ -33,11 +35,11 @@ export function ClosingSlide({ slide }: ClosingSlideProps) {
       {/* Content */}
       <div className="relative z-10 text-center px-8 max-w-3xl animate-fade-in">
         <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold mb-8 text-gradient">
-          {slide.title}
+          {t(slide.title)}
         </h2>
         {slide.text && (
           <p className="text-xl md:text-2xl text-[var(--color-text-muted)] font-light leading-relaxed">
-            {slide.text}
+            {t(slide.text)}
           </p>
         )}
 

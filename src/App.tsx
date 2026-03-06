@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { LanguageProvider } from './context/LanguageContext';
 import slidesData from './content/slides.yaml';
 import { processSlides } from './utils/yamlLoader';
 import type { Slide } from './types/slides';
@@ -102,6 +103,7 @@ function App() {
   const currentSlideData = slides[currentSlide];
 
   return (
+    <LanguageProvider>
     <div className="min-h-screen bg-[var(--color-background)] overflow-hidden">
       {/* Main slide area */}
       <main className="relative w-full h-screen">
@@ -163,6 +165,7 @@ function App() {
         />
       )}
     </div>
+    </LanguageProvider>
   );
 }
 

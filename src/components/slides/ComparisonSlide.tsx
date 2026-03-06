@@ -2,12 +2,14 @@ import { useState } from 'react';
 import type { ComparisonSlide as ComparisonSlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
+import { useLanguage } from '../../context/LanguageContext';
 
 interface ComparisonSlideProps {
   slide: ComparisonSlideType;
 }
 
 export function ComparisonSlide({ slide }: ComparisonSlideProps) {
+  const { t } = useLanguage();
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
 
   const handleImageLoad = (index: number) => {
@@ -19,7 +21,7 @@ export function ComparisonSlide({ slide }: ComparisonSlideProps) {
       {/* Title */}
       {slide.title && (
         <h2 className="font-display text-3xl md:text-4xl text-[var(--color-text)] mb-8 text-center animate-fade-in">
-          {slide.title}
+          {t(slide.title)}
         </h2>
       )}
 
@@ -30,7 +32,7 @@ export function ComparisonSlide({ slide }: ComparisonSlideProps) {
             {/* Label */}
             {photo.label && (
               <p className="text-center text-[var(--color-primary)] font-medium mb-3 text-lg">
-                {photo.label}
+                {t(photo.label)}
               </p>
             )}
 
@@ -41,7 +43,7 @@ export function ComparisonSlide({ slide }: ComparisonSlideProps) {
               )}
               <img
                 src={resolvePhotoPath(photo.src)}
-                alt={photo.label || `Comparison ${index + 1}`}
+                alt={t(photo.label) || `Comparison ${index + 1}`}
                 className={`w-full h-full object-cover rounded transition-opacity duration-500 ${
                   loadedImages.has(index) ? 'opacity-100' : 'opacity-0'
                 }`}
@@ -64,7 +66,7 @@ export function ComparisonSlide({ slide }: ComparisonSlideProps) {
       {/* Caption */}
       {slide.caption && (
         <p className="mt-6 text-lg text-[var(--color-text-muted)] text-center max-w-2xl">
-          {slide.caption}
+          {t(slide.caption)}
         </p>
       )}
 

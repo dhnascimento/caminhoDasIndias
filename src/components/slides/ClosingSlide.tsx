@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { ClosingSlide as ClosingSlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
@@ -9,7 +10,8 @@ interface ClosingSlideProps {
 
 export function ClosingSlide({ slide }: ClosingSlideProps) {
   const { t } = useLanguage();
-  const backgroundImage = slide.photo ? resolvePhotoPath(slide.photo) : null;
+  const [imgError, setImgError] = useState(false);
+  const backgroundImage = slide.photo && !imgError ? resolvePhotoPath(slide.photo) : null;
 
   return (
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
@@ -20,6 +22,7 @@ export function ClosingSlide({ slide }: ClosingSlideProps) {
             src={backgroundImage}
             alt=""
             className="w-full h-full object-cover"
+            onError={() => setImgError(true)}
           />
           {/* Overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-background)] via-[var(--color-background)]/70 to-[var(--color-background)]/40" />
@@ -34,14 +37,14 @@ export function ClosingSlide({ slide }: ClosingSlideProps) {
 
       {/* Content */}
       <div className="relative z-10 text-center px-8 max-w-3xl animate-fade-in">
-        <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold mb-8 text-gradient">
+        <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold mb-8 text-gradient leading-[1.2] md:leading-[1.2] lg:leading-[1.2]">
           {t(slide.title)}
         </h2>
-        {slide.text && (
-          <p className="text-xl md:text-2xl text-[var(--color-text-muted)] font-light leading-relaxed">
-            {t(slide.text)}
+        {slide.text && t(slide.text).split('\n\n').filter(Boolean).map((para, i) => (
+          <p key={i} className="text-xl md:text-2xl text-[var(--color-text-muted)] font-light leading-relaxed mb-4 last:mb-0">
+            {para.replace(/\n/g, ' ')}
           </p>
-        )}
+        ))}
 
         {/* Decorative element */}
         <div className="mt-12 flex items-center justify-center gap-4">

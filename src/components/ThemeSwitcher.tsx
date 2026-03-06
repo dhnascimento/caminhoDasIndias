@@ -58,7 +58,7 @@ export function ThemeSwitcher({ onThemeChange }: ThemeSwitcherProps) {
 
       {/* Dropdown menu */}
       {isOpen && (
-        <div className="absolute bottom-full right-0 mb-2 w-64 glass rounded-lg overflow-hidden shadow-lg animate-scale-in origin-bottom-right">
+        <div className="absolute top-full right-0 mt-2 w-64 glass rounded-lg overflow-hidden shadow-lg animate-scale-in origin-top-right">
           <div className="p-3 border-b border-[var(--color-border)]">
             <p className="text-sm font-medium text-[var(--color-text)]">Theme</p>
             <p className="text-xs text-[var(--color-text-muted)]">

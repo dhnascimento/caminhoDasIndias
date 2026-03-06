@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { TitleSlide as TitleSlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
@@ -9,7 +10,8 @@ interface TitleSlideProps {
 
 export function TitleSlide({ slide }: TitleSlideProps) {
   const { t } = useLanguage();
-  const backgroundImage = slide.photo ? resolvePhotoPath(slide.photo) : null;
+  const [imgError, setImgError] = useState(false);
+  const backgroundImage = slide.photo && !imgError ? resolvePhotoPath(slide.photo) : null;
 
   return (
     <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
@@ -20,6 +22,7 @@ export function TitleSlide({ slide }: TitleSlideProps) {
             src={backgroundImage}
             alt=""
             className="w-full h-full object-cover"
+            onError={() => setImgError(true)}
           />
           {/* Overlay for text readability */}
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-background)] via-[var(--color-background)]/60 to-[var(--color-background)]/30" />

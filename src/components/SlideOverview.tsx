@@ -1,5 +1,7 @@
 import type { Slide } from '../types/slides';
 import { resolvePhotoPath } from '../utils/yamlLoader';
+import { useLanguage } from '../context/LanguageContext';
+import type { LocalizedString } from '../types/slides';
 
 interface SlideOverviewProps {
   slides: Slide[];
@@ -8,28 +10,31 @@ interface SlideOverviewProps {
   onClose: () => void;
 }
 
-function getSlidePreviewInfo(slide: Slide): { title: string; thumbnail?: string } {
+function getSlidePreviewInfo(
+  slide: Slide,
+  t: (field: LocalizedString | undefined) => string
+): { title: string; thumbnail?: string } {
   switch (slide.type) {
     case 'title':
-      return { title: slide.title, thumbnail: slide.photo };
+      return { title: t(slide.title), thumbnail: slide.photo };
     case 'divider':
-      return { title: slide.title, thumbnail: slide.photo };
+      return { title: t(slide.title), thumbnail: slide.photo };
     case 'photo':
-      return { title: slide.caption || 'Photo', thumbnail: slide.photo };
+      return { title: t(slide.caption) || 'Photo', thumbnail: slide.photo };
     case 'gallery':
       return {
-        title: slide.title || 'Gallery',
+        title: t(slide.title) || 'Gallery',
         thumbnail: slide.photos[0]?.src,
       };
     case 'story':
-      return { title: slide.title || 'Story', thumbnail: slide.photo };
+      return { title: t(slide.title) || 'Story', thumbnail: slide.photo };
     case 'video':
-      return { title: slide.caption || 'Video', thumbnail: slide.poster };
+      return { title: t(slide.caption) || 'Video', thumbnail: slide.poster };
     case 'closing':
-      return { title: slide.title, thumbnail: slide.photo };
+      return { title: t(slide.title), thumbnail: slide.photo };
     case 'comparison':
       return {
-        title: slide.title || 'Comparison',
+        title: t(slide.title) || 'Comparison',
         thumbnail: slide.photos[0]?.src,
       };
     default:
@@ -43,6 +48,7 @@ export function SlideOverview({
   onSlideSelect,
   onClose,
 }: SlideOverviewProps) {
+  const { t } = useLanguage();
   return (
     <div className="fixed inset-0 z-50 bg-[var(--color-background)]/95 backdrop-blur-sm overflow-auto custom-scrollbar">
       {/* Header */}
@@ -67,7 +73,7 @@ export function SlideOverview({
       <div className="max-w-7xl mx-auto px-6 py-8">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {slides.map((slide, index) => {
-            const { title, thumbnail } = getSlidePreviewInfo(slide);
+            const { title, thumbnail } = getSlidePreviewInfo(slide, t);
             const isActive = index === currentSlide;
 
             return (

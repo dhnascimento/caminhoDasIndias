@@ -15,7 +15,7 @@ function GalleryImage({ photo, onClick }: { photo: GalleryPhoto; onClick: () => 
 
   return (
     <div
-      className="relative aspect-square overflow-hidden rounded cursor-pointer group"
+      className="relative overflow-hidden rounded cursor-pointer group"
       onClick={onClick}
     >
       {!isLoaded && (
@@ -24,7 +24,7 @@ function GalleryImage({ photo, onClick }: { photo: GalleryPhoto; onClick: () => 
       <img
         src={resolvePhotoPath(photo.src)}
         alt={t(photo.caption)}
-        className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
+        className={`w-full h-full object-contain transition-all duration-500 group-hover:scale-105 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         onLoad={() => setIsLoaded(true)}

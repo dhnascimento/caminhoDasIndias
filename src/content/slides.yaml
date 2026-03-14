@@ -114,6 +114,34 @@ slides:
   layout: "photo-left"
   location: "Jaipur, Rajasthan"
 
+- type: video
+  src: "media/Jaipur - Arrival/Jaipur - Arrival 01 (video).mp4"
+  caption:
+    pt: "Primeiros momentos em Jaipur"
+    en: "First moments in Jaipur"
+  location: "Jaipur, Rajasthan"
+
+- type: video
+  src: "media/Jaipur - Arrival/Jaipur - Arrival 02 (video).mp4"
+  caption:
+    pt: "A recepção calorosa da família"
+    en: "The family's warm welcome"
+  location: "Jaipur, Rajasthan"
+
+- type: video
+  src: "media/Jaipur - Arrival/Jaipur - Arrival 03 (video).mp4"
+  caption:
+    pt: "Chegando à casa da família"
+    en: "Arriving at the family home"
+  location: "Jaipur, Rajasthan"
+
+- type: video
+  src: "media/Jaipur - Arrival/Jaipur - Arrival 04 (video).mp4"
+  caption:
+    pt: "Celebrando a chegada juntos"
+    en: "Celebrating the arrival together"
+  location: "Jaipur, Rajasthan"
+
 - type: gallery
   title:
     pt: "Compras para o Casamento"
@@ -375,15 +403,42 @@ slides:
   location: "Local School, Jaipur"
   notes: "Share any specific interactions or moments that stood out"
 
-- type: photo
-  photo: "photos/shiva-procession.jpg"
+- type: story
+  photo: "media/Jaipur - Govind Devji Temple/Jaipur - Govind Devji Temple 01.jpg"
+  title:
+    pt: "Templo Govind Devji"
+    en: "Govind Devji Temple"
+  text:
+    pt: |
+      O **Templo Govind Devji** fica no coração do complexo do Palácio da Cidade,
+      dedicado ao Senhor Krishna na forma de Govind Dev.
+
+      Construído no século XVIII pelo Maharaja Sawai Jai Singh II, o templo é um dos
+      locais de culto mais importantes de Jaipur. Milhares de devotos se reúnem diariamente
+      sob seus tetos ricamente decorados para participar das orações e cerimônias.
+    en: |
+      The **Govind Devji Temple** sits at the heart of the City Palace complex,
+      dedicated to Lord Krishna in the form of Govind Dev.
+
+      Built in the 18th century by Maharaja Sawai Jai Singh II, the temple is one of
+      Jaipur's most important places of worship. Thousands of devotees gather daily
+      beneath its richly decorated ceilings to join in prayers and ceremonies.
+  layout: "photo-left"
+  location: "City Palace Complex, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Templo Govind Devji"
+    en: "Govind Devji Temple"
+  photos:
+    - src: "media/Jaipur - Govind Devji Temple/Jaipur - Govind Devji Temple 10.jpg"
+    - src: "media/Jaipur - Govind Devji Temple/Jaipur - Govind Devji Temple 11.jpg"
+    - src: "media/Jaipur - Govind Devji Temple/Jaipur - Govind Devji Temple 12.jpg"
+    - src: "media/Jaipur - Govind Devji Temple/Jaipur - Govind Devji Temple 13.jpg"
   caption:
-    pt: "Procissão de Shiva"
-    en: "Shiva Procession"
-  subcaption:
-    pt: "Celebração de rua inesperada com tambores, dança e devoção"
-    en: "Unexpected street celebration with drums, dancing, and devotion"
-  location: "Jaipur Streets"
+    pt: "Arquitetura e devoção no templo mais visitado de Jaipur"
+    en: "Architecture and devotion at Jaipur's most visited temple"
+  location: "City Palace Complex, Jaipur"
 
 - type: gallery
   title:
@@ -683,58 +738,135 @@ slides:
     en: "A ceremony that's as fun as it is meaningful"
 
 - type: story
-  photo: "photos/sangeet-stage.jpg"
+  photo: "media/Wedding - Sangeet/Wedding - Sangeet 01.JPG"
   title:
     pt: "Noite do Sangeet"
     en: "Sangeet Night"
   text:
     pt: |
-      O **Sangeet** é a noite de música e dança — e que noite foi essa!
+      O **Sangeet** é a noite de música e dança que antecede o casamento —
+      e uma das celebrações mais esperadas.
 
-      As duas famílias prepararam apresentações, de danças folclóricas tradicionais
-      a números de Bollywood. A competição amistosa entre as famílias resultou em
-      uma noite inesquecível de entretenimento.
+      As duas famílias sobem ao palco para apresentações preparadas com semanas
+      de antecedência, de danças folclóricas tradicionais a coreografias de Bollywood.
     en: |
-      The **Sangeet** is the night of music and dance — and what a night it was!
+      The **Sangeet** is the pre-wedding night of music and dance —
+      and one of the most anticipated celebrations.
 
-      Both families prepared performances, from traditional folk dances to
-      Bollywood numbers. The friendly competition between families made for
-      an unforgettable evening of entertainment.
+      Both families take the stage with performances rehearsed weeks in advance,
+      from traditional folk dances to Bollywood choreographies.
+  layout: "photo-right"
+  location: "Wedding Venue"
+
+- type: story
+  photo: "media/Wedding - Sangeet/Wedding - Sangeet 02.JPG"
+  title:
+    pt: "A Competição Amistosa"
+    en: "The Friendly Competition"
+  text:
+    pt: |
+      A rivalidade entre as famílias do noivo e da noiva é parte da diversão.
+      Cada lado tenta superar o outro com apresentações cada vez mais elaboradas.
+
+      Entre uma performance e outra, risadas, aplausos e muita energia
+      sob um céu de luzes.
+    en: |
+      The rivalry between the groom's and bride's families is part of the fun.
+      Each side tries to outdo the other with increasingly elaborate performances.
+
+      Between acts, there's laughter, applause, and boundless energy
+      under a canopy of lights.
+  layout: "photo-left"
+  location: "Wedding Venue"
+
+- type: story
+  photo: "media/Wedding - Sangeet/Wedding - Sangeet 03.JPG"
+  title:
+    pt: "Todos na Pista"
+    en: "Everyone on the Floor"
+  text:
+    pt: |
+      Quando as apresentações terminam, a pista se abre para todos.
+      Convidados de todas as idades se juntam — não importa se você
+      sabe dançar ou não, o ritmo leva todo mundo.
+
+      É impossível ficar parado quando a música toca.
+    en: |
+      When the performances end, the floor opens up to everyone.
+      Guests of all ages join in — it doesn't matter if you know
+      how to dance, the rhythm carries you.
+
+      It's impossible to stand still when the music plays.
   layout: "photo-right"
   location: "Wedding Venue"
 
 - type: video
-  src: "videos/sangeet-dance.mp4"
+  src: "media/Wedding - Sangeet/Wedding - Sangeet 10 (video).mp4"
   caption:
-    pt: "O número de dança surpresa"
-    en: "The surprise dance number"
-  poster: "photos/sangeet-dance-thumb.jpg"
-  notes: "This was the highlight of the evening!"
+    pt: "Apresentação no palco"
+    en: "Stage performance"
+  location: "Wedding Venue"
+
+- type: video
+  src: "media/Wedding - Sangeet/Wedding - Sangeet 11 (video).mp4"
+  caption:
+    pt: "A energia contagiante do Sangeet"
+    en: "The contagious energy of the Sangeet"
+  location: "Wedding Venue"
+
+- type: video
+  src: "media/Wedding - Sangeet/Wedding - Sangeet 12 (video).mp4"
+  caption:
+    pt: "Coreografia das famílias"
+    en: "Family choreography"
+  location: "Wedding Venue"
+
+- type: video
+  src: "media/Wedding - Sangeet/Wedding - Sangeet 13 (video).mp4"
+  caption:
+    pt: "O grand finale da noite"
+    en: "The night's grand finale"
+  location: "Wedding Venue"
 
 - type: gallery
   title:
-    pt: "Apresentações do Sangeet"
-    en: "Sangeet Performances"
+    pt: "Retratos da Noite"
+    en: "Portraits of the Night"
   photos:
-    - src: "photos/sangeet-1.jpg"
+    - src: "media/Wedding - Sangeet/Wedding - Sangeet 20.jpg"
       caption:
-        pt: "Dança tradicional"
-        en: "Traditional dance"
-    - src: "photos/sangeet-2.jpg"
+        pt: "Amigos reunidos junto à escultura do pégaso"
+        en: "Friends gathered by the Pegasus sculpture"
+    - src: "media/Wedding - Sangeet/Wedding - Sangeet 21.jpg"
       caption:
-        pt: "Apresentação da família"
-        en: "Family performance"
-    - src: "photos/sangeet-3.jpg"
-      caption:
-        pt: "O grand final"
-        en: "The finale"
-    - src: "photos/sangeet-4.jpg"
-      caption:
-        pt: "Todos na pista"
-        en: "Everyone on the floor"
+        pt: "Casal diante do pégaso iluminado"
+        en: "Couple in front of the illuminated Pegasus"
   caption:
-    pt: "Uma noite de música, dança e celebração"
-    en: "An evening of music, dance, and celebration"
+    pt: "Momentos entre amigos na noite do Sangeet"
+    en: "Moments among friends on Sangeet night"
+  location: "Wedding Venue"
+
+- type: gallery
+  title:
+    pt: "Na Pista de Dança"
+    en: "On the Dance Floor"
+  photos:
+    - src: "media/Wedding - Sangeet/Wedding - Sangeet 30.JPG"
+      caption:
+        pt: "Perdido no ritmo"
+        en: "Lost in the rhythm"
+    - src: "media/Wedding - Sangeet/Wedding - Sangeet 31.JPG"
+      caption:
+        pt: "Dançando de olhos fechados"
+        en: "Dancing with eyes closed"
+    - src: "media/Wedding - Sangeet/Wedding - Sangeet 33.JPG"
+      caption:
+        pt: "Entregue à música"
+        en: "Surrendered to the music"
+  caption:
+    pt: "A pista de dança não parou a noite toda"
+    en: "The dance floor didn't stop all night"
+  location: "Wedding Venue"
 
 # ============================================
 # DAY 6 - FEBRUARY 20, 2026

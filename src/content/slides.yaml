@@ -60,9 +60,20 @@
 playlist:
   youtube: "PL_MTJhXNL63MGJ3TV-w-JtVDX1ZPBwwwY"
   tracks:
-    - slides: [2, 5]      # Track 1 plays during slides 0–5
-    - slides: [6, 12]     # Track 2 plays during slides 6–12
-    - slides: [13, 20]    # Track 3 plays during slides 13–20
+    - slides: [2, 7]       # Track 1: Day 1 — Arrival & Welcome
+    - slides: [8, 13]      # Track 2: Day 2 — Albert Hall Museum
+    - slides: [14, 19]     # Track 3: Day 2 — Pre-Wedding Ceremonies
+    - slides: [20, 31]     # Track 4: Day 3 — Jaipur sights (walking tour → Govind Devji)
+    - slides: [32, 50]     # Track 5: Day 3 — Amber Fort, Jantar Mantar, Jal Mahal
+    - slides: [51, 62]     # Track 6: Day 4 — Wedding Venue (Pooja, Roka, Mehendi)
+    - slides: [63, 69]     # Track 7: Day 5 — Haldi & Sangeet stories
+    - slides: [70, 75]     # Track 8: Day 5 — Sangeet performances & dance floor
+    - slides: [76, 84]     # Track 9: Day 6 — Maayra & Baraat
+    - slides: [85, 93]     # Track 10: Day 6 — Ceremony, Reception & Day 7
+    - slides: [94, 99]     # Track 11: Day 8 — Taj Mahal
+    - slides: [100, 108]   # Track 12: Day 8 — Agra Fort
+    - slides: [109, 115]   # Track 13: Day 8 — Baby Taj
+    - slides: [116, 123]   # Track 14: Day 9 — Fatehpur Sikri & Closing
 
 # ============================================
 # SLIDES
@@ -96,7 +107,6 @@ slides:
   photo: "photos/day1-arrival.jpg"
 
 - type: story
-  photo: "photos/family-reception.jpg"
   title:
     pt: "Recepção da Família"
     en: "Family Reception"
@@ -111,7 +121,6 @@ slides:
       The warmth of the greeting made all the travel fatigue disappear instantly.
 
       **Replace this text** with your own memories of arriving and meeting the family!
-  layout: "photo-left"
   location: "Jaipur, Rajasthan"
 
 - type: video
@@ -147,15 +156,15 @@ slides:
     pt: "Compras para o Casamento"
     en: "Shopping for Wedding Attire"
   photos:
-    - src: "photos/clothes-shop-1.jpg"
+    - src: "photos/Jaipur/Clothes 01.jpeg"
       caption:
         pt: "Explorando as opções de tecido"
         en: "Exploring the fabric options"
-    - src: "photos/clothes-shop-2.jpg"
+    - src: "photos/Jaipur/Clothes 02.jpeg"
       caption:
         pt: "Experimentando sherwanis"
         en: "Trying on sherwanis"
-    - src: "photos/clothes-shop-3.jpg"
+    - src: "photos/Jaipur/Clothes 03.jpeg"
       caption:
         pt: "Escolhendo o traje perfeito"
         en: "Selecting the perfect outfit"
@@ -163,16 +172,6 @@ slides:
     pt: "Alugando e comprando trajes tradicionais para as cerimônias do casamento"
     en: "Renting and purchasing traditional outfits for the wedding ceremonies"
   location: "Jaipur Markets"
-
-- type: photo
-  photo: "photos/bombay-house-dinner.jpg"
-  caption:
-    pt: "Primeiro jantar juntos no Bombay House"
-    en: "First dinner together at Bombay House"
-  subcaption:
-    pt: "Um banquete para receber os convidados"
-    en: "A feast to welcome the guests"
-  location: "Bombay House Restaurant"
 
 # ============================================
 # DAY 2 - FEBRUARY 16, 2026
@@ -191,7 +190,7 @@ slides:
   photo: "photos/day2-divider.jpg"
 
 - type: story
-  photo: "photos/albert-hall.jpg"
+  photo: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 01.jpg"
   title:
     pt: "Museu Albert Hall"
     en: "Albert Hall Museum"
@@ -214,9 +213,52 @@ slides:
     pt: "O Albert Hall foi projetado por Sir Samuel Swinton Jacob e inaugurado em 1887!"
     en: "Albert Hall was designed by Sir Samuel Swinton Jacob and opened in 1887!"
 
+- type: gallery
+  title:
+    pt: "Museu Albert Hall"
+    en: "Albert Hall Museum"
+  photos:
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 10.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 11.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 12.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 13.jpg"
+  location: "Albert Hall Museum, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Museu Albert Hall"
+    en: "Albert Hall Museum"
+  photos:
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 20.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 22.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 23.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 24.jpg"
+  location: "Albert Hall Museum, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Museu Albert Hall"
+    en: "Albert Hall Museum"
+  photos:
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 30.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 31.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 32.jpg"
+  location: "Albert Hall Museum, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Museu Albert Hall"
+    en: "Albert Hall Museum"
+  photos:
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 50.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 51.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 52.jpg"
+    - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 53.jpg"
+  location: "Albert Hall Museum, Jaipur"
+
 # --- Pre-Wedding Ceremony ---
 - type: story
-  photo: "photos/pre-wedding-ceremony.jpg"
+  photo: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 01.jpg"
   title:
     pt: "Cerimônias Pré-Casamento"
     en: "Pre-Wedding Ceremonies"
@@ -240,12 +282,42 @@ slides:
   layout: "photo-right"
   location: "Family Home, Jaipur"
 
+- type: gallery
+  title:
+    pt: "Cerimônias Pré-Casamento"
+    en: "Pre-Wedding Ceremonies"
+  photos:
+    - src: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 02.jpg"
+    - src: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 03.jpg"
+  location: "Family Home, Jaipur"
+
 - type: video
-  src: "videos/pre-wedding-ceremony.mp4"
+  src: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 04.mp4"
   caption:
     pt: "Momentos das cerimônias pré-casamento"
     en: "Pre-wedding ceremony moments"
-  poster: "photos/pre-wedding-ceremony-thumb.jpg"
+  location: "Family Home, Jaipur"
+
+- type: photo
+  photo: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 05.jpg"
+  caption:
+    pt: "Cerimônias Pré-Casamento"
+    en: "Pre-Wedding Ceremonies"
+  location: "Family Home, Jaipur"
+
+- type: video
+  src: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 06.mp4"
+  caption:
+    pt: "Rituais e orações"
+    en: "Rituals and prayers"
+  location: "Family Home, Jaipur"
+
+- type: photo
+  photo: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 07.jpg"
+  caption:
+    pt: "Cerimônias Pré-Casamento"
+    en: "Pre-Wedding Ceremonies"
+  location: "Family Home, Jaipur"
 
 # ============================================
 # DAY 3 - FEBRUARY 17, 2026
@@ -291,22 +363,10 @@ slides:
     pt: "Palácio da Cidade"
     en: "City Palace"
   photos:
-    - src: "photos/city-palace-1.jpg"
-      caption:
-        pt: "A grande entrada"
-        en: "The grand entrance"
-    - src: "photos/city-palace-2.jpg"
-      caption:
-        pt: "Portas elaboradas"
-        en: "Intricate doorways"
-    - src: "photos/city-palace-3.jpg"
-      caption:
-        pt: "Vistas do pátio"
-        en: "Courtyard views"
-    - src: "photos/city-palace-4.jpg"
-      caption:
-        pt: "Artefatos reais"
-        en: "Royal artifacts"
+    - src: "media/Jaipur - City Palace/Jaipur - City Palace 01.jpg"
+    - src: "media/Jaipur - City Palace/Jaipur - City Palace 02.jpg"
+    - src: "media/Jaipur - City Palace/Jaipur - City Palace 03.jpg"
+    - src: "media/Jaipur - City Palace/Jaipur - City Palace 04.jpg"
   caption:
     pt: "Uma residência real que é lar da família real de Jaipur desde 1727"
     en: "A royal residence that's been home to the Jaipur royal family since 1727"
@@ -368,18 +428,47 @@ slides:
     pt: "As cores, cheiros e sons dos mercados de Jaipur"
     en: "The colors, smells, and sounds of Jaipur's markets"
 
-- type: photo
-  photo: "photos/hawa-mahal.jpg"
-  caption:
+- type: story
+  photo: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 01.jpg"
+  title:
     pt: "Hawa Mahal — O Palácio dos Ventos"
     en: "Hawa Mahal — The Palace of Winds"
-  subcaption:
-    pt: "953 janelas pequenas projetadas para que as mulheres reais observassem a rua sem serem vistas"
-    en: "953 small windows designed to let royal women observe street life unseen"
+  text:
+    pt: |
+      O **Hawa Mahal** possui 953 janelas pequenas projetadas para que as mulheres reais
+      observassem a rua sem serem vistas.
+
+      Construído em 1799 pelo Maharaja Sawai Pratap Singh, tem o formato
+      da coroa do Senhor Krishna.
+    en: |
+      **Hawa Mahal** features 953 small windows designed to let royal women
+      observe street life unseen.
+
+      Built in 1799 by Maharaja Sawai Pratap Singh, it's shaped like
+      Lord Krishna's crown.
+  layout: "photo-right"
   location: "Hawa Mahal, Jaipur"
-  fun_fact:
-    pt: "Construído em 1799 pelo Maharaja Sawai Pratap Singh, tem o formato da coroa do Senhor Krishna!"
-    en: "Built in 1799 by Maharaja Sawai Pratap Singh, it's shaped like Lord Krishna's crown!"
+
+- type: gallery
+  title:
+    pt: "Hawa Mahal"
+    en: "Hawa Mahal"
+  photos:
+    - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 10.jpg"
+    - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 12.jpg"
+    - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 13.jpg"
+    - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 14.jpg"
+  location: "Hawa Mahal, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Hawa Mahal"
+    en: "Hawa Mahal"
+  photos:
+    - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 20.jpg"
+    - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 21.jpg"
+    - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 23.jpg"
+  location: "Hawa Mahal, Jaipur"
 
 - type: story
   photo: "photos/school-visit.jpg"
@@ -440,54 +529,206 @@ slides:
     en: "Architecture and devotion at Jaipur's most visited temple"
   location: "City Palace Complex, Jaipur"
 
-- type: gallery
+- type: story
+  photo: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 01.jpg"
   title:
     pt: "Forte Amber"
     en: "Amber Fort"
-  photos:
-    - src: "photos/amber-fort-1.jpg"
-      caption:
-        pt: "A aproximação do forte"
-        en: "The approach to the fort"
-    - src: "photos/amber-fort-2.jpg"
-      caption:
-        pt: "Delicado trabalho com espelhos"
-        en: "Intricate mirror work"
-    - src: "photos/amber-fort-3.jpg"
-      caption:
-        pt: "Vistas panorâmicas"
-        en: "Panoramic views"
-    - src: "photos/amber-fort-4.jpg"
-      caption:
-        pt: "Pôr do sol das muralhas"
-        en: "Sunset from the ramparts"
-  caption:
-    pt: "Um majestoso forte-palácio com vista para o Lago Maota"
-    en: "A majestic fort-palace overlooking Maota Lake"
+  text:
+    pt: |
+      O **Forte Amber** é um majestoso forte-palácio com vista para o Lago Maota,
+      uma das joias arquitetônicas do Rajasthan.
+
+      Construído ao longo de quase 100 anos a partir de 1592, o forte combina
+      elementos hindus e mogóis em seus palácios, pátios e jardins.
+    en: |
+      **Amber Fort** is a majestic fort-palace overlooking Maota Lake,
+      one of Rajasthan's architectural jewels.
+
+      Built over nearly 100 years starting in 1592, the fort blends
+      Hindu and Mughal elements across its palaces, courtyards, and gardens.
+  layout: "photo-left"
   location: "Amber Fort, Jaipur"
   fun_fact:
     pt: "O Forte Amber levou quase 100 anos para ser construído, de 1592 até os anos 1600!"
     en: "Amber Fort took nearly 100 years to build, from 1592 to 1600s!"
 
-- type: photo
-  photo: "photos/jantar-mantar.jpg"
-  caption: "Jantar Mantar"
-  subcaption:
-    pt: "O maior relógio solar de pedra do mundo — preciso a 2 segundos!"
-    en: "The world's largest stone sundial — accurate to 2 seconds!"
-  location: "Jantar Mantar, Jaipur"
-  fun_fact:
-    pt: "Construído pelo Maharaja Sawai Jai Singh II em 1734 para observações astronômicas"
-    en: "Built by Maharaja Sawai Jai Singh II in 1734 for astronomical observations"
+- type: gallery
+  title:
+    pt: "Forte Amber"
+    en: "Amber Fort"
+  photos:
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 10.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 11.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 12.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 13.jpg"
+  location: "Amber Fort, Jaipur"
 
-- type: photo
-  photo: "photos/jal-mahal.jpg"
+- type: gallery
+  title:
+    pt: "Forte Amber"
+    en: "Amber Fort"
+  photos:
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 20.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 21.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 22.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 23.jpg"
+  location: "Amber Fort, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Forte Amber"
+    en: "Amber Fort"
+  photos:
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 30.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 31.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 32.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 33.jpg"
+  location: "Amber Fort, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Forte Amber"
+    en: "Amber Fort"
+  photos:
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 40.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 41.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 43.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 44.jpg"
+  location: "Amber Fort, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Forte Amber"
+    en: "Amber Fort"
+  photos:
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 50.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 51.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 53.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 54.jpg"
+  location: "Amber Fort, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Forte Amber"
+    en: "Amber Fort"
+  photos:
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 60.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 61.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 63.jpg"
+  location: "Amber Fort, Jaipur"
+
+- type: video
+  src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 70 goat (video).mp4"
   caption:
+    pt: "Moradores do forte"
+    en: "Fort residents"
+  location: "Amber Fort, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Animais do Forte"
+    en: "Fort Animals"
+  photos:
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 71 goat.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 72 goat.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 73 squirrel.jpg"
+  location: "Amber Fort, Jaipur"
+
+- type: story
+  photo: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 01.jpg"
+  title: "Jantar Mantar"
+  text:
+    pt: |
+      O **Jantar Mantar** abriga o maior relógio solar de pedra do mundo —
+      preciso a 2 segundos.
+
+      Construído pelo Maharaja Sawai Jai Singh II em 1734 para observações
+      astronômicas, os instrumentos monumentais continuam funcionando até hoje.
+    en: |
+      **Jantar Mantar** houses the world's largest stone sundial —
+      accurate to 2 seconds.
+
+      Built by Maharaja Sawai Jai Singh II in 1734 for astronomical
+      observations, the monumental instruments still function today.
+  layout: "photo-left"
+  location: "Jantar Mantar, Jaipur"
+
+- type: gallery
+  title: "Jantar Mantar"
+  photos:
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 02.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 03.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 04.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 05.jpg"
+  location: "Jantar Mantar, Jaipur"
+
+- type: gallery
+  title: "Jantar Mantar"
+  photos:
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 10.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 11.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 12.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 14.jpg"
+  location: "Jantar Mantar, Jaipur"
+
+- type: gallery
+  title: "Jantar Mantar"
+  photos:
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 20.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 21.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 22.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 23.jpg"
+  location: "Jantar Mantar, Jaipur"
+
+- type: gallery
+  title: "Jantar Mantar"
+  photos:
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 31.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 32.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 33.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 34.jpg"
+  location: "Jantar Mantar, Jaipur"
+
+- type: gallery
+  title: "Jantar Mantar"
+  photos:
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 41.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 42.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 43.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 44.jpg"
+  location: "Jantar Mantar, Jaipur"
+
+- type: gallery
+  title: "Jantar Mantar"
+  photos:
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 50.jpg"
+  location: "Jantar Mantar, Jaipur"
+
+- type: story
+  photo: "media/Jaipur - Jal Mahal/Jaipur - Jal Mahal 01.jpg"
+  title:
     pt: "Jal Mahal — O Palácio das Águas"
     en: "Jal Mahal — The Water Palace"
-  subcaption:
-    pt: "Um sereno palácio flutuando no Lago Man Sagar"
-    en: "A serene palace floating in Man Sagar Lake"
+  text:
+    pt: |
+      Um sereno palácio flutuando no **Lago Man Sagar**.
+
+      Quatro dos cinco andares do palácio ficam submersos quando o lago está cheio,
+      criando a ilusão de que ele flutua sobre a água.
+    en: |
+      A serene palace floating on **Man Sagar Lake**.
+
+      Four of the palace's five stories are submerged when the lake is full,
+      creating the illusion that it floats on the water.
+  layout: "photo-right"
+  location: "Jal Mahal, Jaipur"
+
+- type: photo
+  photo: "media/Jaipur - Jal Mahal/Jaipur - Jal Mahal 02.jpg"
+  caption:
+    pt: "Jal Mahal"
+    en: "Jal Mahal"
   location: "Jal Mahal, Jaipur"
 
 - type: photo
@@ -1167,16 +1408,6 @@ slides:
     en: "Final blessings at the family home"
   location: "Family Home, Jaipur"
 
-- type: photo
-  photo: "photos/road-to-agra.jpg"
-  caption:
-    pt: "A Caminho de Agra"
-    en: "On the Road to Agra"
-  subcaption:
-    pt: "Um passeio cênico por Rajasthan"
-    en: "A scenic drive through Rajasthan"
-  location: "NH 48"
-
 # ============================================
 # DAY 8 - FEBRUARY 22, 2026
 # ============================================
@@ -1192,7 +1423,7 @@ slides:
   photo: "photos/agra-divider.jpg"
 
 - type: story
-  photo: "photos/taj-mahal-sunrise.jpg"
+  photo: "media/Agra - Taj Mahal/Agra - Taj Mahal 01.jpg"
   title:
     pt: "O Taj Mahal"
     en: "The Taj Mahal"
@@ -1220,42 +1451,161 @@ slides:
 - type: gallery
   title: "Taj Mahal"
   photos:
-    - src: "photos/taj-1.jpg"
-      caption:
-        pt: "A vista icônica"
-        en: "The iconic view"
-    - src: "photos/taj-2.jpg"
-      caption:
-        pt: "Delicada incrustação de mármore"
-        en: "Intricate marble inlay"
-    - src: "photos/taj-3.jpg"
-      caption:
-        pt: "Lago espelhado"
-        en: "Reflecting pool"
-    - src: "photos/taj-4.jpg"
-      caption:
-        pt: "Detalhes de perto"
-        en: "Details up close"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 10.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 11.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 12.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 13.jpg"
+  location: "Taj Mahal, Agra"
+
+- type: gallery
+  title: "Taj Mahal"
+  photos:
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 20.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 21.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 23.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 24.jpg"
+  location: "Taj Mahal, Agra"
+
+- type: gallery
+  title: "Taj Mahal"
+  photos:
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 30.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 31.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 32.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 33.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 34.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 35.jpg"
+  location: "Taj Mahal, Agra"
+
+- type: gallery
+  title: "Taj Mahal"
+  photos:
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 40.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 42.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 42 (1).jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 43.jpg"
   caption:
     pt: "Um monumento ao amor eterno"
     en: "A monument to eternal love"
   location: "Taj Mahal, Agra"
 
-- type: photo
-  photo: "photos/agra-fort.jpg"
-  caption:
+- type: story
+  photo: "media/Agra - Agra Fort/Agra - Agra Fort 01.jpg"
+  title:
     pt: "Forte de Agra"
     en: "Agra Fort"
-  subcaption:
-    pt: "Patrimônio Mundial da UNESCO com vista para o Taj"
-    en: "A UNESCO World Heritage Site with views of the Taj"
+  text:
+    pt: |
+      O **Forte de Agra** é um Patrimônio Mundial da UNESCO com vista para o Taj Mahal.
+
+      Shah Jahan passou seus últimos anos preso aqui, contemplando o túmulo
+      de sua amada esposa do outro lado do rio Yamuna.
+    en: |
+      **Agra Fort** is a UNESCO World Heritage Site with views of the Taj Mahal.
+
+      Shah Jahan spent his final years imprisoned here, gazing at his beloved
+      wife's tomb across the Yamuna River.
+  layout: "photo-right"
   location: "Agra Fort"
   fun_fact:
     pt: "Shah Jahan passou seus últimos anos preso aqui, contemplando o túmulo de sua esposa"
     en: "Shah Jahan spent his final years imprisoned here, gazing at his wife's tomb"
 
+- type: gallery
+  title:
+    pt: "Forte de Agra"
+    en: "Agra Fort"
+  photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 10.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 11.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 12.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 13.jpg"
+  location: "Agra Fort"
+
+- type: gallery
+  title:
+    pt: "Forte de Agra"
+    en: "Agra Fort"
+  photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 20.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 21.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 22.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 23.jpg"
+  location: "Agra Fort"
+
+- type: gallery
+  title:
+    pt: "Forte de Agra"
+    en: "Agra Fort"
+  photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 30.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 31.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 32.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 33.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 34.jpg"
+  location: "Agra Fort"
+
+- type: gallery
+  title:
+    pt: "Forte de Agra"
+    en: "Agra Fort"
+  photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 40.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 41 (1).jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 42.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 43.jpg"
+  location: "Agra Fort"
+
+- type: gallery
+  title:
+    pt: "Forte de Agra"
+    en: "Agra Fort"
+  photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 50.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 51.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 52.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 53.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 54.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 55.jpg"
+  location: "Agra Fort"
+
+- type: gallery
+  title:
+    pt: "Forte de Agra"
+    en: "Agra Fort"
+  photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 60.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 61.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 62.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 63.jpg"
+  location: "Agra Fort"
+
+- type: gallery
+  title:
+    pt: "Forte de Agra"
+    en: "Agra Fort"
+  photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 70.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 71.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 72.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 73.jpg"
+  location: "Agra Fort"
+
+- type: gallery
+  title:
+    pt: "Forte de Agra"
+    en: "Agra Fort"
+  photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 80.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 81.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 82.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 83.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 84.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 85.jpg"
+  location: "Agra Fort"
+
 - type: story
-  photo: "photos/baby-taj.jpg"
+  photo: "media/Agra - Baby Taj/Agra - Baby Taj 01.jpg"
   title: "Baby Taj"
   text:
     pt: |
@@ -1276,26 +1626,52 @@ slides:
   location: "Itimad-ud-Daulah, Agra"
 
 - type: gallery
-  title:
-    pt: "Noite com Amigos"
-    en: "Evening with Friends"
+  title: "Baby Taj"
   photos:
-    - src: "photos/agra-dinner-1.jpg"
-      caption:
-        pt: "Descoberta de restaurante local"
-        en: "Local restaurant find"
-    - src: "photos/agra-shopping.jpg"
-      caption:
-        pt: "Compras de lembrancinha"
-        en: "Souvenir shopping"
-    - src: "photos/agra-friends.jpg"
-      caption:
-        pt: "Brinde à viagem!"
-        en: "Cheers to the trip!"
-  caption:
-    pt: "Jantar e compras em Agra com amigos"
-    en: "Dinner and shopping in Agra with friends"
-  location: "Agra"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 02.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 03.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 04.jpg"
+  location: "Itimad-ud-Daulah, Agra"
+
+- type: gallery
+  title: "Baby Taj"
+  photos:
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 14.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 15.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 16.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 17.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 18.jpg"
+  location: "Itimad-ud-Daulah, Agra"
+
+- type: gallery
+  title: "Baby Taj"
+  photos:
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 21.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 22.jpg"
+  location: "Itimad-ud-Daulah, Agra"
+
+- type: gallery
+  title: "Baby Taj"
+  photos:
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 31.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 32.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 33.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 34.jpg"
+  location: "Itimad-ud-Daulah, Agra"
+
+- type: gallery
+  title: "Baby Taj"
+  photos:
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 40.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 41.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 42.jpg"
+  location: "Itimad-ud-Daulah, Agra"
+
+- type: gallery
+  title: "Baby Taj"
+  photos:
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 50.jpg"
+  location: "Itimad-ud-Daulah, Agra"
 
 # ============================================
 # DAY 9 - FEBRUARY 23, 2026
@@ -1314,7 +1690,7 @@ slides:
   photo: "photos/day9-divider.jpg"
 
 - type: story
-  photo: "photos/fatehpur-sikri.jpg"
+  photo: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 01.jpg"
   title: "Fatehpur Sikri"
   text:
     pt: |
@@ -1340,33 +1716,50 @@ slides:
 - type: gallery
   title: "Fatehpur Sikri"
   photos:
-    - src: "photos/fatehpur-1.jpg"
-      caption:
-        pt: "Buland Darwaza (Portão da Vitória)"
-        en: "Buland Darwaza (Victory Gate)"
-    - src: "photos/fatehpur-2.jpg"
-      caption:
-        pt: "Pátios do palácio"
-        en: "Palace courtyards"
-    - src: "photos/fatehpur-3.jpg"
-      caption:
-        pt: "Detalhes arquitetônicos"
-        en: "Architectural details"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 10.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 11.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 12 (1).jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 13.jpg"
+  location: "Fatehpur Sikri"
+
+- type: gallery
+  title: "Fatehpur Sikri"
+  photos:
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 20.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 21.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 22.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 23.jpg"
+  location: "Fatehpur Sikri"
+
+- type: gallery
+  title: "Fatehpur Sikri"
+  photos:
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 30.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 31.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 32.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 33.jpg"
+  location: "Fatehpur Sikri"
+
+- type: gallery
+  title: "Fatehpur Sikri"
+  photos:
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 40.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 41.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 42.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 43.jpg"
+  location: "Fatehpur Sikri"
+
+- type: gallery
+  title: "Fatehpur Sikri"
+  photos:
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 50.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 51.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 52.jpg"
+    - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 53.jpg"
   caption:
     pt: "A cidade fantasma dos Mogóis"
     en: "The ghost city of the Mughals"
   location: "Fatehpur Sikri"
-
-- type: photo
-  photo: "photos/farewell.jpg"
-  caption:
-    pt: "Até a Próxima"
-    en: "Until Next Time"
-  subcaption:
-    pt: "Deixando a Índia com o coração cheio e incontáveis memórias"
-    en: "Leaving India with full hearts and countless memories"
-  location: "Jaipur Airport"
-  notes: "This was an emotional goodbye!"
 
 # ============================================
 # CLOSING SLIDE

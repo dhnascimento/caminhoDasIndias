@@ -8,10 +8,17 @@
 // Bilingual string: either a plain string (no translation) or a locale object
 export type LocalizedString = string | { en: string; pt: string };
 
+// Music track for embedded player (Tidal or Spotify)
+export interface MusicTrack {
+  provider: 'tidal' | 'spotify';
+  /** Full track URL copied from the browser, e.g. https://tidal.com/browse/track/12345678 */
+  url: string;
+}
+
 // Common optional fields that any slide can have
 export interface SlideEnrichments {
-  /** Spotify track URL - shows a small embed or link */
-  music?: string;
+  /** Embedded music player (Tidal or Spotify) */
+  music?: MusicTrack;
   /** Location name - shows as a subtle tag */
   location?: string;
   /** Google Maps embed URL */

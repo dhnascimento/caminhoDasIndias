@@ -1,8 +1,8 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import slidesData from './content/slides.yaml';
 import { processSlides } from './utils/yamlLoader';
-import type { Slide } from './types/slides';
+import type { Slide, MusicTrack } from './types/slides';
 import {
   SlideRenderer,
   Navigation,
@@ -10,6 +10,7 @@ import {
   SlideOverview,
   PresenterNotes,
   Controls,
+  MusicPlayerOverlay,
 } from './components';
 import {
   useSlideNavigation,
@@ -25,6 +26,8 @@ const slides: Slide[] = processSlides(slidesData);
 function App() {
   const [showOverview, setShowOverview] = useState(false);
   const [showPresenterNotes, setShowPresenterNotes] = useState(false);
+  const [musicPlayerOpen, setMusicPlayerOpen] = useState(false);
+  const [activeMusic, setActiveMusic] = useState<MusicTrack | null>(null);
 
   const {
     currentSlide,
@@ -53,6 +56,19 @@ function App() {
   const togglePresenterMode = useCallback(() => {
     setShowPresenterNotes(prev => !prev);
   }, []);
+
+  const toggleMusicPlayer = useCallback(() => {
+    setMusicPlayerOpen(prev => !prev);
+  }, []);
+
+  // Persist music across slides: only update activeMusic when a slide has music assigned
+  useEffect(() => {
+    const slideMusic = (slides[currentSlide] as { music?: MusicTrack }).music;
+    if (slideMusic) {
+      setActiveMusic(slideMusic);
+      setMusicPlayerOpen(true);
+    }
+  }, [currentSlide]);
 
   const handleEscape = useCallback(() => {
     if (showOverview) {
@@ -130,6 +146,12 @@ function App() {
           canGoNext={!isLastSlide}
         />
 
+        {/* Music player overlay */}
+        <MusicPlayerOverlay
+          music={activeMusic ?? undefined}
+          isOpen={musicPlayerOpen}
+        />
+
         {/* Presenter notes */}
         <PresenterNotes
           slide={currentSlideData}
@@ -149,9 +171,12 @@ function App() {
           onToggleFullscreen={toggleFullscreen}
           onToggleAutoPlay={toggleAutoPlay}
           onTogglePresenterMode={togglePresenterMode}
+          onToggleMusicPlayer={toggleMusicPlayer}
           isAutoPlaying={isAutoPlaying}
           isPresenterMode={showPresenterNotes}
           isFullscreen={isFullscreen}
+          musicPlayerOpen={musicPlayerOpen}
+          hasMusicOnCurrentSlide={!!activeMusic}
         />
       </main>
 

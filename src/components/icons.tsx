@@ -58,3 +58,11 @@ export function NotesIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function MusicNoteIcon({ className }: IconProps) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="m9 19.5-1.5-1.5m1.5 1.5a2.25 2.25 0 1 1-3-2.121V7.5l9-2.25v9.871M9 19.5V7.5m9 5.25v3.871a2.25 2.25 0 1 1-3-2.121V12.75l3-.75Z" />
+    </svg>
+  );
+}

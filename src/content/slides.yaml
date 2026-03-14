@@ -65,6 +65,9 @@
     en: "The journey begins"
   photo: "photos/day1-arrival.jpg"
   notes: "Talk about the long flight and excitement of finally arriving"
+  music:
+    provider: tidal
+    url: "https://tidal.com/browse/track/12345678"
 
 - type: story
   photo: "photos/family-reception.jpg"
@@ -132,6 +135,9 @@
     pt: "Descobrindo o patrimônio de Jaipur"
     en: "Discovering Jaipur's heritage"
   photo: "photos/day2-divider.jpg"
+  music:
+    provider: tidal
+    url: "https://tidal.com/track/401354787"
 
 - type: story
   photo: "photos/albert-hall.jpg"

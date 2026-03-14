@@ -516,27 +516,40 @@ slides:
     en: "The celebrations begin"
   photo: "photos/wedding-venue.jpg"
 
-- type: story
-  photo: "photos/venue-checkin.jpg"
+- type: video
+  src: "media/Wedding - Arrival/Wedding - Arrival 01.mp4"
+  caption:
+    pt: "Chegada ao local do casamento"
+    en: "Arriving at the wedding venue"
+  location: "Wedding Venue, Jaipur"
+
+- type: gallery
   title:
-    pt: "Chegando ao Local"
-    en: "Arriving at the Venue"
-  text:
-    pt: |
-      Fazer o check-in no local do casamento foi como entrar em um sonho.
-      Os jardins já estavam sendo decorados com calêndulas e luzes,
-      e a animação no ar era palpável.
+    pt: "Chegada ao Local"
+    en: "Venue Arrival"
+  photos:
+    - src: "media/Wedding - Arrival/Wedding - Arrival 10.JPG"
+    - src: "media/Wedding - Arrival/Wedding - Arrival 11.JPG"
+    - src: "media/Wedding - Arrival/Wedding - Arrival 12.jpg"
+      caption:
+        pt: "Guirlandas de calêndula e bindi de boas-vindas"
+        en: "Welcome marigold garlands and bindi"
+  location: "Wedding Venue, Jaipur"
 
-      Nos próximos dias, esse seria nosso lar para uma das celebrações
-      mais memoráveis de nossas vidas.
-    en: |
-      Checking in at the wedding venue felt like stepping into a dream.
-      The grounds were already being decorated with marigolds and lights,
-      and the excitement in the air was palpable.
-
-      Over the next few days, this would be our home for one of the most
-      memorable celebrations of our lives.
-  layout: "photo-left"
+- type: gallery
+  title:
+    pt: "Dança de Boas-Vindas"
+    en: "Welcome Dance"
+  photos:
+    - src: "media/Wedding - Arrival/Wedding - Arrival 30.JPG"
+    - src: "media/Wedding - Arrival/Wedding - Arrival 31.JPG"
+    - src: "media/Wedding - Arrival/Wedding - Arrival 32.JPG"
+    - src: "media/Wedding - Arrival/Wedding - Arrival 33.JPG"
+    - src: "media/Wedding - Arrival/Wedding - Arrival 34.JPG"
+    - src: "media/Wedding - Arrival/Wedding - Arrival 35.JPG"
+  caption:
+    pt: "Dançarinas tradicionais recebendo os convidados com guirlandas"
+    en: "Traditional dancers welcoming guests with garlands"
   location: "Wedding Venue, Jaipur"
 
 # --- Pooja ---
@@ -631,7 +644,7 @@ slides:
       notes: "This was for the fiancée's brother"
 
 - type: story
-  photo: "photos/mehendi-1.jpg"
+  photo: "media/Wedding - Mehendi/Wedding - Mehendi 01.jpg"
   title:
     pt: "Noite do Mehendi"
     en: "Mehendi Night"
@@ -655,28 +668,44 @@ slides:
 
 - type: gallery
   title:
+    pt: "Hena nas Mãos"
+    en: "Henna on Hands"
+  photos:
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 10.JPG"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 11.jpg"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 13.jpg"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 14.jpg"
+  caption:
+    pt: "Todos exibindo seus designs de hena"
+    en: "Everyone showing off their henna designs"
+  location: "Wedding Venue"
+
+- type: gallery
+  title:
     pt: "Designs de Mehendi"
     en: "Mehendi Designs"
   photos:
-    - src: "photos/mehendi-hands-1.jpg"
-      caption:
-        pt: "Mehendi nupcial"
-        en: "Bridal mehendi"
-    - src: "photos/mehendi-hands-2.jpg"
-      caption:
-        pt: "Padrões elaborados"
-        en: "Intricate patterns"
-    - src: "photos/mehendi-hands-3.jpg"
-      caption:
-        pt: "Motivos tradicionais"
-        en: "Traditional motifs"
-    - src: "photos/mehendi-feet.jpg"
-      caption:
-        pt: "Designs nos pés"
-        en: "Feet designs"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 20.jpg"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 21.jpg"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 22.jpg"
   caption:
-    pt: "A arte da hena"
-    en: "The artistry of henna"
+    pt: "A arte da hena em detalhes"
+    en: "The artistry of henna up close"
+  location: "Wedding Venue"
+
+- type: gallery
+  title:
+    pt: "Celebrações do Mehendi"
+    en: "Mehendi Celebrations"
+  photos:
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 30.JPG"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 31.JPG"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 33.JPG"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 34.jpg"
+  caption:
+    pt: "Dança, música e retratos na noite do Mehendi"
+    en: "Dancing, music, and portraits on Mehendi night"
+  location: "Wedding Venue"
 
 # ============================================
 # DAY 5 - FEBRUARY 19, 2026
@@ -693,7 +722,7 @@ slides:
   photo: "photos/day5-divider.jpg"
 
 - type: story
-  photo: "photos/haldi-ceremony.jpg"
+  photo: "media/Wedding - Haldi/Wedding - Haldi 01.jpg"
   title:
     pt: "Cerimônia do Haldi"
     en: "Haldi Ceremony"
@@ -714,28 +743,32 @@ slides:
       laughing and celebrating together.
   layout: "photo-left"
   location: "Wedding Venue"
-  notes: "Warn people that turmeric stains everything!"
 
 - type: gallery
   title:
     pt: "Momentos do Haldi"
     en: "Haldi Moments"
   photos:
-    - src: "photos/haldi-1.jpg"
-      caption:
-        pt: "A pasta de cúrcuma"
-        en: "The turmeric paste"
-    - src: "photos/haldi-2.jpg"
-      caption:
-        pt: "Participação da família"
-        en: "Family participation"
-    - src: "photos/haldi-3.jpg"
-      caption:
-        pt: "Caos alegre"
-        en: "Joyful chaos"
+    - src: "media/Wedding - Haldi/Wedding - Haldi 10.JPG"
+    - src: "media/Wedding - Haldi/Wedding - Haldi 12.JPG"
+    - src: "media/Wedding - Haldi/Wedding - Haldi 11.jpg"
+  caption:
+    pt: "Todos vestidos de amarelo para a cerimônia"
+    en: "Everyone dressed in yellow for the ceremony"
+  location: "Wedding Venue"
+
+- type: gallery
+  title:
+    pt: "Rituais do Haldi"
+    en: "Haldi Rituals"
+  photos:
+    - src: "media/Wedding - Haldi/Wedding - Haldi 20.JPG"
+    - src: "media/Wedding - Haldi/Wedding - Haldi 23.JPG"
+    - src: "media/Wedding - Haldi/Wedding - Haldi 21.JPG"
   caption:
     pt: "Uma cerimônia tão divertida quanto significativa"
     en: "A ceremony that's as fun as it is meaningful"
+  location: "Wedding Venue"
 
 - type: story
   photo: "media/Wedding - Sangeet/Wedding - Sangeet 01.JPG"
@@ -886,7 +919,7 @@ slides:
   photo: "photos/wedding-day-hero.jpg"
 
 - type: story
-  photo: "photos/maayra.jpg"
+  photo: "media/Wedding - Maayra/Wedding - Maayra 01.JPG"
   title:
     pt: "Cerimônia Maayra"
     en: "Maayra Ceremony"
@@ -906,8 +939,24 @@ slides:
   layout: "photo-left"
   location: "Wedding Venue"
 
+- type: gallery
+  title:
+    pt: "Momentos da Maayra"
+    en: "Maayra Moments"
+  photos:
+    - src: "media/Wedding - Maayra/Wedding - Maayra 02.JPG"
+    - src: "media/Wedding - Maayra/Wedding - Maayra 03.jpg"
+  location: "Wedding Venue"
+
+- type: video
+  src: "media/Wedding - Maayra/Wedding - Maayra 04 (video).mp4"
+  caption:
+    pt: "Momentos da cerimônia Maayra"
+    en: "Maayra ceremony moments"
+  location: "Wedding Venue"
+
 - type: story
-  photo: "photos/barat-arrival.jpg"
+  photo: "media/Wedding - Baraat/Wedding - Baraat 01.JPG"
   title:
     pt: "O Barat"
     en: "The Barat"
@@ -928,97 +977,114 @@ slides:
   layout: "photo-right"
   location: "Wedding Venue"
 
+- type: video
+  src: "media/Wedding - Baraat/Wedding - Baraat 02 (video).mp4"
+  caption:
+    pt: "O cortejo do noivo"
+    en: "The groom's procession"
+  location: "Wedding Venue"
+
 - type: gallery
   title:
-    pt: "Celebrações do Barat"
-    en: "Barat Celebrations"
+    pt: "Preparativos do Barat"
+    en: "Barat Preparations"
   photos:
-    - src: "photos/barat-1.jpg"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 10.jpg"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 11.jpg"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 12.JPG"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 13.jpg"
       caption:
-        pt: "O cortejo começa"
-        en: "The procession begins"
-    - src: "photos/barat-2.jpg"
-      caption:
-        pt: "Dançando nas ruas"
-        en: "Dancing in the streets"
-    - src: "photos/barat-3.jpg"
-      caption:
-        pt: "A grande chegada"
-        en: "The grand arrival"
-    - src: "photos/barat-4.jpg"
-      caption:
-        pt: "Cerimônias de boas-vindas"
-        en: "Welcome ceremonies"
+        pt: "Com o elefante decorado do cortejo"
+        en: "With the decorated procession elephant"
+  location: "Wedding Venue"
+
+- type: gallery
+  title:
+    pt: "O Cortejo"
+    en: "The Procession"
+  photos:
+    - src: "media/Wedding - Baraat/Wedding - Baraat 30.JPG"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 31.JPG"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 32.JPG"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 33.JPG"
   caption:
     pt: "O alegre cortejo do noivo até o local"
     en: "The groom's joyful procession to the venue"
-
-- type: photo
-  photo: "photos/wedding-ceremony.jpg"
-  caption:
-    pt: "A Cerimônia de Casamento"
-    en: "The Wedding Ceremony"
-  subcaption:
-    pt: "Duas famílias se tornando uma"
-    en: "Two families becoming one"
   location: "Wedding Venue"
-  notes: "This is THE photo — make sure it's a great one!"
+
+- type: video
+  src: "media/Wedding - Baraat/Wedding - Baraat 40 (video).mp4"
+  caption:
+    pt: "Dançando no cortejo"
+    en: "Dancing in the procession"
+  location: "Wedding Venue"
 
 - type: gallery
   title:
-    pt: "Rituais Sagrados"
-    en: "Sacred Rituals"
+    pt: "A Cerimônia"
+    en: "The Ceremony"
   photos:
-    - src: "photos/ceremony-fire.jpg"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 41.jpg"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 42.jpg"
       caption:
-        pt: "O fogo sagrado"
-        en: "The sacred fire"
-    - src: "photos/pheras.jpg"
+        pt: "Os noivos"
+        en: "The newlyweds"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 43.JPG"
+  location: "Wedding Venue"
+
+- type: video
+  src: "media/Wedding - Baraat/Wedding - Baraat 50 Jai Mala (video).mp4"
+  caption:
+    pt: "Jai Mala — troca de guirlandas"
+    en: "Jai Mala — exchange of garlands"
+  location: "Wedding Venue"
+
+- type: gallery
+  title:
+    pt: "Momentos do Casamento"
+    en: "Wedding Moments"
+  photos:
+    - src: "media/Wedding - Baraat/Wedding - Baraat 60.jpg"
       caption:
-        pt: "Os sete votos"
-        en: "The seven vows"
-    - src: "photos/sindoor.jpg"
-      caption:
-        pt: "Cerimônia do Sindoor"
-        en: "Sindoor ceremony"
-    - src: "photos/mangalsutra.jpg"
-      caption:
-        pt: "Amarrando o mangalsutra"
-        en: "Tying the mangalsutra"
+        pt: "A noiva com suas damas de honra"
+        en: "The bride with her bridesmaids"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 61.jpg"
+    - src: "media/Wedding - Baraat/Wedding - Baraat 62.jpg"
   caption:
     pt: "Momentos dos rituais do casamento"
     en: "Moments from the wedding rituals"
+  location: "Wedding Venue"
 
 # --- Shoe Stealing ---
-- type: photo
-  photo: "photos/shoe-stealing.jpg"
-  caption:
-    pt: "O Roubo do Sapato — A Tradição Mais Engraçada 👟😂"
-    en: "The Shoe Stealing — The Funniest Tradition 👟😂"
-  subcaption:
-    pt: "Fique de olho nas damas de honra! É tradição elas roubarem o sapato do noivo durante a cerimônia — e ele só os recupera depois de pagar um \"resgate\". Tudo em família!"
-    en: "Watch out for the bridesmaids! It's tradition for them to steal the groom's shoes during the ceremony — and he only gets them back after paying a \"ransom\". All in good fun!"
+- type: story
+  title:
+    pt: "O Roubo do Sapato"
+    en: "The Shoe Stealing"
+  text:
+    pt: |
+      Fique de olho nas damas de honra e na família da noiva durante a cerimônia
+      — é aí que a travessura começa. **Elas realmente roubam os sapatos do noivo!**
+
+      Depois, exigem dinheiro para devolvê-los. Tudo gira em torno da negociação.
+      Às vezes também tentam impedir os noivos de saírem da cerimônia:
+      "Pague e leve a noiva com você!"
+
+      É uma tradição divertida que arranca risadas de todos os convidados.
+    en: |
+      Keep your eyes on the bridesmaids and the bride's side of the family during
+      the ceremony — that's where the mischief begins. **They do steal the groom's shoes!**
+
+      Then they'll demand money, and he'll have to pay up to get them back.
+      Everything is about the negotiation. They'll also try to stop the bride
+      and groom from leaving the ceremony: "Pay us, and you get to take
+      the bride with you!"
+
+      It's a lighthearted tradition that gets everyone laughing.
+  layout: "photo-right"
   location: "Wedding Venue, Jaipur"
 
-- type: comparison
-  title:
-    pt: "Antes e Depois"
-    en: "Before & After"
-  photos:
-    - src: "photos/outfit-before.jpg"
-      label:
-        pt: "Dia 1"
-        en: "Day 1"
-    - src: "photos/outfit-wedding.jpg"
-      label:
-        pt: "Dia do Casamento"
-        en: "Wedding Day"
-  caption:
-    pt: "A transformação!"
-    en: "The transformation!"
-
 - type: story
-  photo: "photos/reception.jpg"
+  photo: "media/Wedding - Reception/Wedding - Reception 01.JPG"
   title:
     pt: "A Grande Recepção"
     en: "The Grand Reception"
@@ -1043,21 +1109,13 @@ slides:
     pt: "Destaques da Recepção"
     en: "Reception Highlights"
   photos:
-    - src: "photos/reception-1.jpg"
-      caption:
-        pt: "Os recém-casados"
-        en: "The newlyweds"
-    - src: "photos/reception-2.jpg"
-      caption:
-        pt: "Jantar de celebração"
-        en: "Dinner celebration"
-    - src: "photos/reception-3.jpg"
-      caption:
-        pt: "Dançando a noite toda"
-        en: "Dancing the night away"
+    - src: "media/Wedding - Reception/Wedding - Reception 02.jpg"
+    - src: "media/Wedding - Reception/Wedding - Reception 03.jpg"
+    - src: "media/Wedding - Reception/Wedding - Reception 04.jpg"
   caption:
     pt: "Celebrando até a madrugada"
     en: "Celebrating into the night"
+  location: "Wedding Venue"
 
 # ============================================
 # DAY 7 - FEBRUARY 21, 2026
@@ -1076,7 +1134,7 @@ slides:
   photo: "photos/day7-divider.jpg"
 
 - type: story
-  photo: "photos/post-wedding.jpg"
+  photo: "media/Wedding - After/Wedding - After 10.JPG"
   title:
     pt: "Manhã Seguinte"
     en: "Morning After"
@@ -1094,6 +1152,19 @@ slides:
       Saying goodbye was bittersweet, but the memories we made together
       will last a lifetime.
   layout: "photo-right"
+  location: "Family Home, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Cerimônia Pós-Casamento"
+    en: "Post-Wedding Ceremony"
+  photos:
+    - src: "media/Wedding - After/Wedding - After 11.JPG"
+    - src: "media/Wedding - After/Wedding - After 12.JPG"
+    - src: "media/Wedding - After/Wedding - After 13.JPG"
+  caption:
+    pt: "Bênçãos finais na casa da família"
+    en: "Final blessings at the family home"
   location: "Family Home, Jaipur"
 
 - type: photo

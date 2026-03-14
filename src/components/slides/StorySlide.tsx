@@ -14,8 +14,28 @@ export function StorySlide({ slide }: StorySlideProps) {
   const { t } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-  const photoUrl = resolvePhotoPath(slide.photo);
+  const hasPhoto = !!slide.photo;
+  const photoUrl = hasPhoto ? resolvePhotoPath(slide.photo!) : '';
   const isPhotoLeft = slide.layout !== 'photo-right';
+
+  // Text-only layout (no photo)
+  if (!hasPhoto) {
+    return (
+      <div className="relative w-full h-full flex items-center justify-center p-4 md:p-8 lg:p-12 overflow-hidden">
+        <div className="max-w-3xl w-full text-center animate-fade-in">
+          {slide.title && (
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-[var(--color-text)] mb-6">
+              {t(slide.title)}
+            </h2>
+          )}
+          <div className="markdown-content text-lg md:text-xl text-[var(--color-text-muted)] leading-relaxed">
+            <ReactMarkdown>{t(slide.text)}</ReactMarkdown>
+          </div>
+        </div>
+        <SlideEnrichments slide={slide} />
+      </div>
+    );
+  }
 
   return (
     <div className="relative w-full h-full flex items-center justify-center p-4 md:p-8 lg:p-12 overflow-hidden">
@@ -52,7 +72,7 @@ export function StorySlide({ slide }: StorySlideProps) {
 
       {/* Lightbox */}
       <Lightbox
-        images={[{ src: slide.photo, caption: slide.title }]}
+        images={[{ src: slide.photo!, caption: slide.title }]}
         isOpen={isLightboxOpen}
         onClose={() => setIsLightboxOpen(false)}
       />

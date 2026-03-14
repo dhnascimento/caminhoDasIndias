@@ -11,13 +11,6 @@ interface GallerySlideProps {
 
 type Orientation = 'portrait' | 'landscape';
 
-interface GalleryImageProps {
-  photo: GalleryPhoto;
-  onClick: () => void;
-  isOutlier: boolean;
-  dominantOrientation: Orientation | null;
-}
-
 export function GallerySlide({ slide }: GallerySlideProps) {
   const { t } = useLanguage();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -39,7 +32,6 @@ export function GallerySlide({ slide }: GallerySlideProps) {
     const portraitCount = Object.values(orientations).filter(o => o === 'portrait').length;
     const landscapeCount = photoCount - portraitCount;
 
-    // Only normalize if there's a clear majority (not a 50/50 split)
     if (portraitCount !== landscapeCount) {
       dominantOrientation = portraitCount > landscapeCount ? 'portrait' : 'landscape';
       for (const [idx, orientation] of Object.entries(orientations)) {
@@ -50,23 +42,11 @@ export function GallerySlide({ slide }: GallerySlideProps) {
     }
   }
 
-  // Determine column count based on photo count
-  const getColumnsClass = () => {
-    switch (photoCount) {
-      case 1:
-        return 'columns-1';
-      case 2:
-        return 'columns-2';
-      case 3:
-        return 'columns-2 md:columns-3';
-      case 4:
-        return 'columns-2 md:columns-4';
-      case 5:
-      case 6:
-        return 'columns-2 md:columns-3';
-      default:
-        return 'columns-2 md:columns-3 lg:columns-4';
-    }
+  // Row height based on photo count and orientation mix
+  const getRowHeight = () => {
+    if (photoCount <= 2) return 'h-[50vh]';
+    if (photoCount <= 4) return 'h-[45vh]';
+    return 'h-[35vh]';
   };
 
   return (
@@ -78,10 +58,10 @@ export function GallerySlide({ slide }: GallerySlideProps) {
         </h2>
       )}
 
-      {/* Photo mosaic */}
-      <div className={`${getColumnsClass()} gap-3 md:gap-4 max-w-5xl w-full animate-scale-in`}>
+      {/* Photo row — all images same height */}
+      <div className={`flex gap-3 md:gap-4 ${getRowHeight()} max-w-6xl w-full justify-center animate-scale-in`}>
         {slide.photos.map((photo, index) => (
-          <GalleryImageWithLoad
+          <GalleryImage
             key={index}
             index={index}
             photo={photo}
@@ -114,37 +94,41 @@ export function GallerySlide({ slide }: GallerySlideProps) {
   );
 }
 
-// Wrapper that reports image dimensions to the parent
-function GalleryImageWithLoad({
+function GalleryImage({
   index,
   photo,
   onClick,
   isOutlier,
   dominantOrientation,
   onLoad,
-}: GalleryImageProps & {
+}: {
   index: number;
+  photo: GalleryPhoto;
+  onClick: () => void;
+  isOutlier: boolean;
+  dominantOrientation: Orientation | null;
   onLoad: (index: number, e: React.SyntheticEvent<HTMLImageElement>) => void;
 }) {
   const { t } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const outlierClass = isOutlier && dominantOrientation
-    ? `${dominantOrientation === 'portrait' ? 'aspect-[3/4]' : 'aspect-[4/3]'} object-cover`
-    : 'object-cover';
+  // Outliers get a forced aspect ratio to match the dominant orientation
+  const aspectClass = isOutlier && dominantOrientation
+    ? (dominantOrientation === 'portrait' ? 'aspect-[3/4]' : 'aspect-[4/3]')
+    : '';
 
   return (
     <div
-      className="relative overflow-hidden rounded cursor-pointer group break-inside-avoid mb-3 md:mb-4"
+      className={`relative overflow-hidden rounded cursor-pointer group h-full flex-shrink ${aspectClass}`}
       onClick={onClick}
     >
       {!isLoaded && (
-        <div className="aspect-square photo-loading rounded" />
+        <div className="h-full aspect-square photo-loading rounded" />
       )}
       <img
         src={resolvePhotoPath(photo.src)}
         alt={t(photo.caption)}
-        className={`w-full rounded transition-all duration-500 group-hover:scale-105 ${outlierClass} ${
+        className={`h-full w-auto object-cover rounded transition-all duration-500 group-hover:scale-105 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         onLoad={(e) => {

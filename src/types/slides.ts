@@ -89,7 +89,7 @@ export interface GallerySlide extends BaseSlide {
 // 5. Photo + Text Side by Side
 export interface StorySlide extends BaseSlide {
   type: 'story';
-  photo: string;
+  photo?: string;
   title?: LocalizedString;
   text: LocalizedString;
   layout?: 'photo-left' | 'photo-right';

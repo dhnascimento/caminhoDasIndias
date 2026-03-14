@@ -2,15 +2,16 @@ import { useState, useCallback, useEffect } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import slidesData from './content/slides.yaml';
 import { processSlides } from './utils/yamlLoader';
-import type { Slide, MusicTrack } from './types/slides';
+import type { MusicTrack } from './types/slides';
+import { buildSlideToTrackMap } from './utils/playlistMapping';
 import {
   SlideRenderer,
   Navigation,
   ProgressBar,
   SlideOverview,
-  PresenterNotes,
   Controls,
   MusicPlayerOverlay,
+  YouTubePlayerOverlay,
 } from './components';
 import {
   useSlideNavigation,
@@ -18,14 +19,16 @@ import {
   useSwipeGesture,
   useFullscreen,
   useLazyLoad,
+  useYouTubePlayer,
 } from './hooks';
 
 // Process slides from YAML
-const slides: Slide[] = processSlides(slidesData);
+const { slides, playlist } = processSlides(slidesData);
+const slideToTrackMap = playlist ? buildSlideToTrackMap(playlist, slides.length) : null;
+const YT_ELEMENT_ID = 'yt-playlist-player';
 
 function App() {
   const [showOverview, setShowOverview] = useState(false);
-  const [showPresenterNotes, setShowPresenterNotes] = useState(false);
   const [musicPlayerOpen, setMusicPlayerOpen] = useState(false);
   const [activeMusic, setActiveMusic] = useState<MusicTrack | null>(null);
 
@@ -53,22 +56,32 @@ function App() {
     setShowOverview(prev => !prev);
   }, []);
 
-  const togglePresenterMode = useCallback(() => {
-    setShowPresenterNotes(prev => !prev);
-  }, []);
-
   const toggleMusicPlayer = useCallback(() => {
     setMusicPlayerOpen(prev => !prev);
   }, []);
 
-  // Persist music across slides: only update activeMusic when a slide has music assigned
+  // Derive current track index for playlist mode
+  const currentTrackIndex = slideToTrackMap ? slideToTrackMap[currentSlide] : -1;
+
+  // Persist music across slides (per-slide mode only)
   useEffect(() => {
+    if (playlist) return; // playlist mode handles music separately
     const slideMusic = (slides[currentSlide] as { music?: MusicTrack }).music;
     if (slideMusic) {
       setActiveMusic(slideMusic);
       setMusicPlayerOpen(true);
     }
   }, [currentSlide]);
+
+  const hasMusicOnCurrentSlide = playlist
+    ? currentTrackIndex >= 0
+    : !!activeMusic;
+
+  // YouTube player (only active in playlist mode)
+  const ytPlayer = useYouTubePlayer({
+    playlistId: playlist?.youtube ?? '',
+    elementId: YT_ELEMENT_ID,
+  });
 
   const handleEscape = useCallback(() => {
     if (showOverview) {
@@ -84,7 +97,7 @@ function App() {
     onPrev: prevSlide,
     onToggleOverview: toggleOverview,
     onToggleFullscreen: toggleFullscreen,
-    onTogglePresenterMode: togglePresenterMode,
+    onToggleMusicPlayer: hasMusicOnCurrentSlide ? toggleMusicPlayer : undefined,
     onEscape: handleEscape,
     enabled: !showOverview,
   });
@@ -116,8 +129,6 @@ function App() {
     );
   }
 
-  const currentSlideData = slides[currentSlide];
-
   return (
     <LanguageProvider>
     <div className="min-h-screen bg-[var(--color-background)] overflow-hidden">
@@ -147,16 +158,21 @@ function App() {
         />
 
         {/* Music player overlay */}
-        <MusicPlayerOverlay
-          music={activeMusic ?? undefined}
-          isOpen={musicPlayerOpen}
-        />
-
-        {/* Presenter notes */}
-        <PresenterNotes
-          slide={currentSlideData}
-          isVisible={showPresenterNotes}
-        />
+        {playlist ? (
+          <YouTubePlayerOverlay
+            isOpen={musicPlayerOpen}
+            isReady={ytPlayer.isReady}
+            currentTrackIndex={currentTrackIndex}
+            playVideoAt={ytPlayer.playVideoAt}
+            play={ytPlayer.play}
+            elementId={YT_ELEMENT_ID}
+          />
+        ) : (
+          <MusicPlayerOverlay
+            music={activeMusic ?? undefined}
+            isOpen={musicPlayerOpen}
+          />
+        )}
 
         {/* Progress bar */}
         <ProgressBar
@@ -170,13 +186,13 @@ function App() {
           onToggleOverview={toggleOverview}
           onToggleFullscreen={toggleFullscreen}
           onToggleAutoPlay={toggleAutoPlay}
-          onTogglePresenterMode={togglePresenterMode}
           onToggleMusicPlayer={toggleMusicPlayer}
+          onToggleMute={playlist ? ytPlayer.toggleMute : undefined}
           isAutoPlaying={isAutoPlaying}
-          isPresenterMode={showPresenterNotes}
+          isMuted={playlist ? ytPlayer.isMuted : false}
           isFullscreen={isFullscreen}
           musicPlayerOpen={musicPlayerOpen}
-          hasMusicOnCurrentSlide={!!activeMusic}
+          hasMusicOnCurrentSlide={hasMusicOnCurrentSlide}
         />
       </main>
 

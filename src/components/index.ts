@@ -4,6 +4,6 @@ export { ProgressBar } from './ProgressBar';
 export { SlideOverview } from './SlideOverview';
 export { ThemeSwitcher } from './ThemeSwitcher';
 export { LanguageSwitcher } from './LanguageSwitcher';
-export { PresenterNotes } from './PresenterNotes';
 export { Controls } from './Controls';
 export { MusicPlayerOverlay } from './MusicPlayerOverlay';
+export { YouTubePlayerOverlay } from './YouTubePlayerOverlay';

@@ -5,18 +5,19 @@ import {
   ExpandIcon,
   PlayIcon,
   PauseIcon,
-  NotesIcon,
   MusicNoteIcon,
+  VolumeOnIcon,
+  VolumeOffIcon,
 } from './icons';
 
 interface ControlsProps {
   onToggleOverview: () => void;
   onToggleFullscreen: () => void;
   onToggleAutoPlay: () => void;
-  onTogglePresenterMode: () => void;
   onToggleMusicPlayer: () => void;
+  onToggleMute?: () => void;
   isAutoPlaying: boolean;
-  isPresenterMode: boolean;
+  isMuted: boolean;
   isFullscreen: boolean;
   musicPlayerOpen: boolean;
   hasMusicOnCurrentSlide: boolean;
@@ -26,25 +27,31 @@ export function Controls({
   onToggleOverview,
   onToggleFullscreen,
   onToggleAutoPlay,
-  onTogglePresenterMode,
   onToggleMusicPlayer,
+  onToggleMute,
   isAutoPlaying,
-  isPresenterMode,
+  isMuted,
   isFullscreen,
   musicPlayerOpen,
   hasMusicOnCurrentSlide,
 }: ControlsProps) {
   return (
     <div className="fixed top-4 right-4 z-40 flex items-center gap-2">
-      {/* Presenter mode toggle */}
-      <button
-        onClick={onTogglePresenterMode}
-        className={`btn-control ${isPresenterMode ? 'bg-[var(--color-primary)]/30' : ''}`}
-        aria-label={isPresenterMode ? 'Hide presenter notes' : 'Show presenter notes'}
-        title="Toggle presenter notes (P)"
-      >
-        <NotesIcon className="w-5 h-5" />
-      </button>
+      {/* Mute toggle */}
+      {hasMusicOnCurrentSlide && onToggleMute && (
+        <button
+          onClick={onToggleMute}
+          className={`btn-control ${isMuted ? 'bg-[var(--color-primary)]/30' : ''}`}
+          aria-label={isMuted ? 'Unmute' : 'Mute'}
+          title={isMuted ? 'Unmute' : 'Mute'}
+        >
+          {isMuted ? (
+            <VolumeOffIcon className="w-5 h-5" />
+          ) : (
+            <VolumeOnIcon className="w-5 h-5" />
+          )}
+        </button>
+      )}
 
       {/* Auto-play toggle */}
       <button

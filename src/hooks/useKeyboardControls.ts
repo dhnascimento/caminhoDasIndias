@@ -5,7 +5,7 @@ interface UseKeyboardControlsProps {
   onPrev: () => void;
   onToggleOverview: () => void;
   onToggleFullscreen: () => void;
-  onTogglePresenterMode?: () => void;
+  onToggleMusicPlayer?: () => void;
   onEscape?: () => void;
   enabled?: boolean;
 }
@@ -15,7 +15,7 @@ export function useKeyboardControls({
   onPrev,
   onToggleOverview,
   onToggleFullscreen,
-  onTogglePresenterMode,
+  onToggleMusicPlayer,
   onEscape,
   enabled = true,
 }: UseKeyboardControlsProps) {
@@ -68,12 +68,12 @@ export function useKeyboardControls({
         onToggleOverview();
         break;
 
-      case 'p':
-      case 'P':
-        // Presenter mode
-        if (onTogglePresenterMode) {
+      case 'm':
+      case 'M':
+        // Music player toggle
+        if (onToggleMusicPlayer) {
           event.preventDefault();
-          onTogglePresenterMode();
+          onToggleMusicPlayer();
         }
         break;
 
@@ -87,7 +87,7 @@ export function useKeyboardControls({
         // Go to last slide - handled externally
         break;
     }
-  }, [enabled, onNext, onPrev, onToggleOverview, onToggleFullscreen, onTogglePresenterMode, onEscape]);
+  }, [enabled, onNext, onPrev, onToggleOverview, onToggleFullscreen, onToggleMusicPlayer, onEscape]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);

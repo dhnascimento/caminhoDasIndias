@@ -4,7 +4,12 @@
  * Utilities for loading and validating slide content from YAML.
  */
 
-import type { Slide } from '../types/slides';
+import type { Slide, PlaylistConfig, PlaylistTrackMapping } from '../types/slides';
+
+export interface ProcessedContent {
+  slides: Slide[];
+  playlist: PlaylistConfig | null;
+}
 
 /**
  * Validates that a slide has all required fields for its type.
@@ -90,24 +95,68 @@ export function validateSlide(slide: unknown, index: number): Slide | null {
 }
 
 /**
- * Processes raw YAML content into validated slides array.
+ * Validates a playlist configuration object.
  */
-export function processSlides(rawContent: unknown): Slide[] {
-  if (!Array.isArray(rawContent)) {
-    console.error('Slides content must be an array');
-    return [];
+function validatePlaylist(raw: unknown): PlaylistConfig | null {
+  if (!raw || typeof raw !== 'object') return null;
+  const p = raw as Record<string, unknown>;
+  if (typeof p.youtube !== 'string' || !p.youtube) {
+    console.warn('Playlist: missing "youtube" field');
+    return null;
   }
+  if (!Array.isArray(p.tracks) || p.tracks.length === 0) {
+    console.warn('Playlist: missing or empty "tracks" array');
+    return null;
+  }
+  const tracks = (p.tracks as Record<string, unknown>[])
+    .map((t, i): PlaylistTrackMapping | null => {
+      if (
+        !Array.isArray(t.slides) ||
+        t.slides.length !== 2 ||
+        typeof t.slides[0] !== 'number' ||
+        typeof t.slides[1] !== 'number'
+      ) {
+        console.warn(`Playlist track ${i}: "slides" must be [startIndex, endIndex]`);
+        return null;
+      }
+      return { slides: t.slides as [number, number] };
+    })
+    .filter((t): t is PlaylistTrackMapping => t !== null);
 
-  const validSlides: Slide[] = [];
+  return { youtube: p.youtube, tracks };
+}
 
-  for (let i = 0; i < rawContent.length; i++) {
-    const slide = validateSlide(rawContent[i], i);
-    if (slide) {
-      validSlides.push(slide);
+/**
+ * Processes raw YAML content into validated slides and optional playlist config.
+ * Accepts either a plain array (backwards compatible) or an object with { playlist?, slides }.
+ */
+export function processSlides(rawContent: unknown): ProcessedContent {
+  // Backward compatibility: plain array = no playlist
+  if (Array.isArray(rawContent)) {
+    const validSlides: Slide[] = [];
+    for (let i = 0; i < rawContent.length; i++) {
+      const slide = validateSlide(rawContent[i], i);
+      if (slide) validSlides.push(slide);
     }
+    return { slides: validSlides, playlist: null };
   }
 
-  return validSlides;
+  // Object format: { playlist?, slides }
+  if (rawContent && typeof rawContent === 'object') {
+    const obj = rawContent as Record<string, unknown>;
+    const rawSlides = Array.isArray(obj.slides) ? obj.slides : [];
+    const playlist = obj.playlist ? validatePlaylist(obj.playlist) : null;
+
+    const validSlides: Slide[] = [];
+    for (let i = 0; i < rawSlides.length; i++) {
+      const slide = validateSlide(rawSlides[i], i);
+      if (slide) validSlides.push(slide);
+    }
+    return { slides: validSlides, playlist };
+  }
+
+  console.error('Slides content must be an array or an object with a "slides" key');
+  return { slides: [], playlist: null };
 }
 
 /**

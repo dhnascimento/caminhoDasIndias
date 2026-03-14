@@ -15,6 +15,19 @@ export interface MusicTrack {
   url: string;
 }
 
+// YouTube playlist configuration
+export interface PlaylistTrackMapping {
+  /** [startSlide, endSlide] inclusive range, 0-indexed */
+  slides: [number, number];
+}
+
+export interface PlaylistConfig {
+  /** YouTube playlist ID (e.g. "PLxxxxxxxx") or full URL */
+  youtube: string;
+  /** Maps each playlist track index to a slide range */
+  tracks: PlaylistTrackMapping[];
+}
+
 // Common optional fields that any slide can have
 export interface SlideEnrichments {
   /** Embedded music player (Tidal or Spotify) */
@@ -25,7 +38,7 @@ export interface SlideEnrichments {
   map_embed?: string;
   /** Fun fact shown as an overlay or callout */
   fun_fact?: LocalizedString;
-  /** Presenter notes - not shown in slides, only in presenter mode */
+  /** Notes (metadata only, not displayed in the UI) */
   notes?: string;
 }
 

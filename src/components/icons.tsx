@@ -59,6 +59,22 @@ export function NotesIcon({ className }: IconProps) {
   );
 }
 
+export function VolumeOnIcon({ className }: IconProps) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15.536 8.464a5 5 0 010 7.072M17.95 6.05a8 8 0 010 11.9M6.5 8.788l4.01-3.343A1 1 0 0112 6.28v11.44a1 1 0 01-1.49.835L6.5 15.212H4a1 1 0 01-1-1v-4.424a1 1 0 011-1h2.5z" />
+    </svg>
+  );
+}
+
+export function VolumeOffIcon({ className }: IconProps) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6.5 8.788l4.01-3.343A1 1 0 0112 6.28v11.44a1 1 0 01-1.49.835L6.5 15.212H4a1 1 0 01-1-1v-4.424a1 1 0 011-1h2.5zM16 9.5l5 5m0-5l-5 5" />
+    </svg>
+  );
+}
+
 export function MusicNoteIcon({ className }: IconProps) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

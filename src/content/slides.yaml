@@ -40,6 +40,36 @@
 # ============================================
 
 # ============================================
+# YOUTUBE PLAYLIST
+# ============================================
+# Configure a YouTube playlist that plays continuously during the presentation.
+# Tracks are synced to slide ranges — when you navigate to a slide in a different
+# range, the player automatically skips to the corresponding track.
+#
+# To use: create a YouTube playlist, paste the ID or URL below, then map each
+# track (in playlist order) to a range of slides [start, end] (0-indexed).
+#
+# Example:
+# playlist:
+#   youtube: "PLrAXtmErZgOeiKm4sgNOknGvNjby9efdf"
+#   tracks:
+#     - slides: [0, 5]     # Track 1 plays during slides 0–5
+#     - slides: [6, 12]    # Track 2 plays during slides 6–12
+#     - slides: [13, 20]   # Track 3 plays during slides 13–20
+
+playlist:
+  youtube: "PL_MTJhXNL63MGJ3TV-w-JtVDX1ZPBwwwY"
+  tracks:
+    - slides: [2, 5]      # Track 1 plays during slides 0–5
+    - slides: [6, 12]     # Track 2 plays during slides 6–12
+    - slides: [13, 20]    # Track 3 plays during slides 13–20
+
+# ============================================
+# SLIDES
+# ============================================
+slides:
+
+# ============================================
 # TITLE SLIDE
 # ============================================
 - type: title
@@ -65,9 +95,6 @@
     en: "The journey begins"
   photo: "photos/day1-arrival.jpg"
   notes: "Talk about the long flight and excitement of finally arriving"
-  music:
-    provider: tidal
-    url: "https://tidal.com/browse/track/12345678"
 
 - type: story
   photo: "photos/family-reception.jpg"
@@ -135,9 +162,6 @@
     pt: "Descobrindo o patrimônio de Jaipur"
     en: "Discovering Jaipur's heritage"
   photo: "photos/day2-divider.jpg"
-  music:
-    provider: tidal
-    url: "https://tidal.com/track/401354787"
 
 - type: story
   photo: "photos/albert-hall.jpg"

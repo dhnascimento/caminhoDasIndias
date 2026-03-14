@@ -91,10 +91,9 @@ slides:
     pt: "15 de fevereiro de 2026"
     en: "February 15, 2026"
   subtitle:
-    pt: "A jornada começa"
-    en: "The journey begins"
+    pt: "A viagem começa"
+    en: "The trip begins"
   photo: "photos/day1-arrival.jpg"
-  notes: "Talk about the long flight and excitement of finally arriving"
 
 - type: story
   photo: "photos/family-reception.jpg"
@@ -220,31 +219,6 @@ slides:
     en: "Pre-wedding ceremony moments"
   poster: "photos/pre-wedding-ceremony-thumb.jpg"
 
-- type: gallery
-  title:
-    pt: "Cerimônias Pré-Casamento"
-    en: "Pre-Wedding Ceremonies"
-  photos:
-    - src: "photos/graha-shanti.jpg"
-      caption:
-        pt: "Graha Shanti — purificação e bênçãos"
-        en: "Graha Shanti — purification and blessings"
-    - src: "photos/pooja.jpg"
-      caption:
-        pt: "Pooja — oração sagrada"
-        en: "Pooja — sacred prayer"
-    - src: "photos/roka.jpg"
-      caption:
-        pt: "Roka — o compromisso das famílias"
-        en: "Roka — the families' commitment"
-    - src: "photos/welcome-guests.jpg"
-      caption:
-        pt: "Boas-vindas aos convidados"
-        en: "Welcoming the guests"
-  caption:
-    pt: "Rituais que preparam o caminho para o grande dia"
-    en: "Rituals that pave the way for the big day"
-
 # ============================================
 # DAY 3 - FEBRUARY 17, 2026
 # ============================================
@@ -312,6 +286,28 @@ slides:
   fun_fact:
     pt: "Parte do palácio ainda é residência da família real nos dias de hoje!"
     en: "Part of the palace is still a residence for the royal family today!"
+
+- type: gallery
+  title:
+    pt: "Ram Chandra Ji Temple"
+    en: "Ram Chandra Ji Temple"
+  photos:
+    - src: "media/Jaipur - Ram Chandra Ji Temple and Kalki Temple/Jaipur - Ram Chandra Ji Temple 01.jpg"
+      caption:
+        pt: "Ram Chandra Ji Temple"
+        en: "Ram Chandra Ji Temple"
+    - src: "media/Jaipur - Ram Chandra Ji Temple and Kalki Temple/Jaipur - Ram Chandra Ji Temple 02.jpg"
+      caption:
+        pt: "Ram Chandra Ji Temple"
+        en: "Ram Chandra Ji Temple"
+    - src: "media/Jaipur - Ram Chandra Ji Temple and Kalki Temple/Jaipur - Ram Chandra Ji Temple 03.jpg"
+      caption:
+        pt: "Ram Chandra Ji Temple"
+        en: "Ram Chandra Ji Temple"
+  caption:
+    pt: "Uma residência real que é lar da família real de Jaipur desde 1727"
+    en: "A royal residence that's been home to the Jaipur royal family since 1727"
+
 
 - type: photo
   photo: "photos/flower-bazaar.jpg"
@@ -488,27 +484,96 @@ slides:
   layout: "photo-left"
   location: "Wedding Venue, Jaipur"
 
+# --- Pooja ---
+- type: story
+  photo: "media/Wedding - Pooja y Roka/Pooja 01.JPG"
+  title:
+    pt: "Pooja — Oração Sagrada"
+    en: "Pooja — Sacred Prayer"
+  text:
+    pt: |
+      A **Pooja** é um dos primeiros rituais pré-casamento, uma cerimônia de oração
+      sagrada que invoca as bênçãos divinas para o casal.
+
+      Diante de um altar decorado com flores e oferendas, o sacerdote conduz mantras
+      e rituais védicos enquanto a família se reúne em devoção. É um momento de
+      profunda espiritualidade que marca o início oficial das celebrações do casamento.
+    en: |
+      The **Pooja** is one of the first pre-wedding rituals, a sacred prayer ceremony
+      that invokes divine blessings for the couple.
+
+      Before an altar decorated with flowers and offerings, the priest chants mantras
+      and performs Vedic rituals while the family gathers in devotion. It's a moment of
+      deep spirituality that marks the official start of the wedding celebrations.
+  layout: "photo-right"
+  location: "Family Home, Jaipur"
+
 - type: gallery
   title:
-    pt: "Cerimônia de Pré-Noivado"
-    en: "Pre-Engagement Ceremony"
+    pt: "Momentos da Pooja"
+    en: "Pooja Moments"
   photos:
-    - src: "photos/pre-engagement-1.jpg"
+    - src: "media/Wedding - Pooja y Roka/Pooja 01.JPG"
       caption:
-        pt: "Bênçãos tradicionais"
-        en: "Traditional blessings"
-    - src: "photos/pre-engagement-2.jpg"
+        pt: "Início da cerimônia sagrada"
+        en: "Beginning of the sacred ceremony"
+    - src: "media/Wedding - Pooja y Roka/Pooja 02.JPG"
       caption:
-        pt: "Reunião da família"
-        en: "Family gathering"
-    - src: "photos/pre-engagement-3.jpg"
+        pt: "Rituais e mantras"
+        en: "Rituals and mantras"
+    - src: "media/Wedding - Pooja y Roka/Pooja 03.JPG"
       caption:
-        pt: "Momentos de alegria"
-        en: "Joyful moments"
+        pt: "Bênçãos para o casal"
+        en: "Blessings for the couple"
   caption:
-    pt: "Celebrando a próxima união"
-    en: "Celebrating the upcoming union"
-  notes: "This was for the fiancée's brother"
+    pt: "Invocando as bênçãos divinas para a jornada do casal"
+    en: "Invoking divine blessings for the couple's journey"
+  location: "Family Home, Jaipur"
+
+# --- Roka ---
+- type: story
+  photo: "media/Wedding - Pooja y Roka/Roka 01.jpg"
+  title:
+    pt: "Roka — O Compromisso das Famílias"
+    en: "Roka — The Families' Commitment"
+  text:
+    pt: |
+      A **Roka** é a cerimônia que sela oficialmente o compromisso entre as duas famílias.
+      Mais do que um noivado, é uma declaração pública de que ambas as famílias aceitam
+      e abençoam a união.
+
+      Presentes e doces são trocados entre os parentes, e os mais velhos oferecem
+      suas bênçãos ao casal. É um momento carregado de emoção — o primeiro passo
+      concreto rumo ao casamento.
+    en: |
+      The **Roka** is the ceremony that officially seals the commitment between the two families.
+      More than an engagement, it's a public declaration that both families accept
+      and bless the union.
+
+      Gifts and sweets are exchanged between relatives, and the elders offer
+      their blessings to the couple. It's a moment full of emotion — the first concrete
+      step toward the wedding.
+  layout: "photo-left"
+  location: "Family Home, Jaipur"
+
+- type: gallery
+  title:
+    pt: "Cerimônia da Roka"
+    en: "Roka Ceremony"
+  photos:
+    - src: "media/Wedding - Pooja y Roka/Roka 01.jpg"
+      caption:
+        pt: "O compromisso das famílias"
+        en: "The families' commitment"
+    - src: "media/Wedding - Pooja y Roka/Roka 02.jpg"
+      caption:
+        pt: "Troca de bênçãos e presentes"
+        en: "Exchange of blessings and gifts"
+    - src: "media/Wedding - Pooja y Roka/Wedding - Pooja y Roka 01.jpg"
+      caption:
+        pt: "Celebrando a próxima união"
+        en: "Celebrating the upcoming union"
+      notes: "This was for the fiancée's brother"
 
 - type: story
   photo: "photos/mehendi-1.jpg"

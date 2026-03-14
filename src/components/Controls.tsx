@@ -5,7 +5,7 @@ import {
   ExpandIcon,
   PlayIcon,
   PauseIcon,
-  MusicNoteIcon,
+  YouTubeIcon,
   VolumeOnIcon,
   VolumeOffIcon,
 } from './icons';
@@ -95,7 +95,7 @@ export function Controls({
           aria-label={musicPlayerOpen ? 'Hide music player' : 'Show music player'}
           title="Toggle music player (M)"
         >
-          <MusicNoteIcon className="w-5 h-5" />
+          <YouTubeIcon className="w-5 h-5" />
         </button>
       )}
 

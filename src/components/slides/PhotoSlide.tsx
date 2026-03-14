@@ -3,6 +3,7 @@ import type { PhotoSlide as PhotoSlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
 import { useLanguage } from '../../context/LanguageContext';
+import { Lightbox } from '../Lightbox';
 
 interface PhotoSlideProps {
   slide: PhotoSlideType;
@@ -11,6 +12,7 @@ interface PhotoSlideProps {
 export function PhotoSlide({ slide }: PhotoSlideProps) {
   const { t } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const photoUrl = resolvePhotoPath(slide.photo);
 
   return (
@@ -18,7 +20,7 @@ export function PhotoSlide({ slide }: PhotoSlideProps) {
       {/* Photo container */}
       <div className="relative max-w-full max-h-full flex flex-col items-center animate-scale-in">
         {/* Photo frame */}
-        <div className="photo-frame max-h-[70vh] md:max-h-[75vh]">
+        <div className="photo-frame max-h-[70vh] md:max-h-[75vh] cursor-pointer" onClick={() => setIsLightboxOpen(true)}>
           {/* Loading placeholder */}
           {!isLoaded && (
             <div className="absolute inset-0 photo-loading rounded" />
@@ -50,6 +52,13 @@ export function PhotoSlide({ slide }: PhotoSlideProps) {
           </div>
         )}
       </div>
+
+      {/* Lightbox */}
+      <Lightbox
+        images={[{ src: slide.photo, caption: slide.caption }]}
+        isOpen={isLightboxOpen}
+        onClose={() => setIsLightboxOpen(false)}
+      />
 
       {/* Optional enrichments */}
       <SlideEnrichments slide={slide} />

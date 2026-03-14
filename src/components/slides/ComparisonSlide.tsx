@@ -3,6 +3,7 @@ import type { ComparisonSlide as ComparisonSlideType } from '../../types/slides'
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
 import { useLanguage } from '../../context/LanguageContext';
+import { Lightbox } from '../Lightbox';
 
 interface ComparisonSlideProps {
   slide: ComparisonSlideType;
@@ -11,6 +12,7 @@ interface ComparisonSlideProps {
 export function ComparisonSlide({ slide }: ComparisonSlideProps) {
   const { t } = useLanguage();
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const handleImageLoad = (index: number) => {
     setLoadedImages(prev => new Set([...prev, index]));
@@ -37,7 +39,7 @@ export function ComparisonSlide({ slide }: ComparisonSlideProps) {
             )}
 
             {/* Photo */}
-            <div className="photo-frame aspect-[3/4] md:aspect-[4/5]">
+            <div className="photo-frame aspect-[3/4] md:aspect-[4/5] cursor-pointer" onClick={() => setLightboxIndex(index)}>
               {!loadedImages.has(index) && (
                 <div className="absolute inset-0 photo-loading rounded" />
               )}
@@ -69,6 +71,14 @@ export function ComparisonSlide({ slide }: ComparisonSlideProps) {
           {t(slide.caption)}
         </p>
       )}
+
+      {/* Lightbox */}
+      <Lightbox
+        images={slide.photos.map(p => ({ src: p.src, caption: p.label }))}
+        initialIndex={lightboxIndex ?? 0}
+        isOpen={lightboxIndex !== null}
+        onClose={() => setLightboxIndex(null)}
+      />
 
       {/* Optional enrichments */}
       <SlideEnrichments slide={slide} />

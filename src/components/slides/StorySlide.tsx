@@ -4,6 +4,7 @@ import type { StorySlide as StorySlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
 import { useLanguage } from '../../context/LanguageContext';
+import { Lightbox } from '../Lightbox';
 
 interface StorySlideProps {
   slide: StorySlideType;
@@ -12,6 +13,7 @@ interface StorySlideProps {
 export function StorySlide({ slide }: StorySlideProps) {
   const { t } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const photoUrl = resolvePhotoPath(slide.photo);
   const isPhotoLeft = slide.layout !== 'photo-right';
 
@@ -20,7 +22,7 @@ export function StorySlide({ slide }: StorySlideProps) {
       <div className={`flex flex-col ${isPhotoLeft ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-12 max-w-6xl w-full`}>
         {/* Photo */}
         <div className={`flex-1 w-full md:w-auto animate-slide-in-${isPhotoLeft ? 'left' : 'right'}`}>
-          <div className="photo-frame aspect-[4/3] md:aspect-auto md:h-[60vh]">
+          <div className="photo-frame aspect-[4/3] md:aspect-auto md:h-[60vh] cursor-pointer" onClick={() => setIsLightboxOpen(true)}>
             {!isLoaded && (
               <div className="absolute inset-0 photo-loading rounded" />
             )}
@@ -47,6 +49,13 @@ export function StorySlide({ slide }: StorySlideProps) {
           </div>
         </div>
       </div>
+
+      {/* Lightbox */}
+      <Lightbox
+        images={[{ src: slide.photo, caption: slide.title }]}
+        isOpen={isLightboxOpen}
+        onClose={() => setIsLightboxOpen(false)}
+      />
 
       {/* Optional enrichments */}
       <SlideEnrichments slide={slide} />

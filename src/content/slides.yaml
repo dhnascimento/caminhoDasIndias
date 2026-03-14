@@ -153,14 +153,14 @@ slides:
 - type: divider
   day: 2
   title:
-    pt: "Cultura e Cerimônia"
-    en: "Culture & Ceremony"
+    pt: "Cultura e Tradição"
+    en: "Culture & Tradition"
   date:
     pt: "16 de fevereiro de 2026"
     en: "February 16, 2026"
   subtitle:
-    pt: "Descobrindo o patrimônio de Jaipur"
-    en: "Discovering Jaipur's heritage"
+    pt: "Patrimônio de Jaipur e primeiras cerimônias"
+    en: "Jaipur's heritage and first ceremonies"
   photo: "photos/day2-divider.jpg"
 
 - type: story
@@ -187,32 +187,63 @@ slides:
     pt: "O Albert Hall foi projetado por Sir Samuel Swinton Jacob e inaugurado em 1887!"
     en: "Albert Hall was designed by Sir Samuel Swinton Jacob and opened in 1887!"
 
+# --- Pre-Wedding Ceremony ---
+- type: story
+  photo: "photos/pre-wedding-ceremony.jpg"
+  title:
+    pt: "Cerimônias Pré-Casamento"
+    en: "Pre-Wedding Ceremonies"
+  text:
+    pt: |
+      Casamento indiano não é um dia — é uma **experiência de vários dias**!
+      Antes da cerimônia principal, uma série de rituais tradicionais prepara o casal
+      e as famílias para a grande união.
+
+      Da **Pooja** (oração sagrada) ao **Graha Shanti** (purificação com cúrcuma),
+      cada cerimônia tem um propósito espiritual profundo. É a tradição milenar
+      guiando cada passo rumo ao casamento.
+    en: |
+      An Indian wedding isn't just a day — it's a **multi-day experience**!
+      Before the main ceremony, a series of traditional rituals prepare the couple
+      and families for the grand union.
+
+      From the **Pooja** (sacred prayer) to the **Graha Shanti** (turmeric purification),
+      each ceremony carries deep spiritual meaning. It's centuries-old tradition
+      guiding every step toward the wedding.
+  layout: "photo-right"
+  location: "Family Home, Jaipur"
+
+- type: video
+  src: "videos/pre-wedding-ceremony.mp4"
+  caption:
+    pt: "Momentos das cerimônias pré-casamento"
+    en: "Pre-wedding ceremony moments"
+  poster: "photos/pre-wedding-ceremony-thumb.jpg"
+
 - type: gallery
   title:
-    pt: "A Cerimônia"
-    en: "The Ceremony"
+    pt: "Cerimônias Pré-Casamento"
+    en: "Pre-Wedding Ceremonies"
   photos:
-    - src: "photos/ceremony-1.jpg"
+    - src: "photos/graha-shanti.jpg"
       caption:
-        pt: "Preparativos"
-        en: "Preparations"
-    - src: "photos/ceremony-2.jpg"
+        pt: "Graha Shanti — purificação e bênçãos"
+        en: "Graha Shanti — purification and blessings"
+    - src: "photos/pooja.jpg"
       caption:
-        pt: "Rituais tradicionais"
-        en: "Traditional rituals"
-    - src: "photos/ceremony-3.jpg"
+        pt: "Pooja — oração sagrada"
+        en: "Pooja — sacred prayer"
+    - src: "photos/roka.jpg"
       caption:
-        pt: "Bênçãos da família"
-        en: "Family blessings"
-    - src: "photos/ceremony-4.jpg"
+        pt: "Roka — o compromisso das famílias"
+        en: "Roka — the families' commitment"
+    - src: "photos/welcome-guests.jpg"
       caption:
-        pt: "Celebração"
-        en: "Celebration"
+        pt: "Boas-vindas aos convidados"
+        en: "Welcoming the guests"
   caption:
-    pt: "Uma bela cerimônia na casa da família"
-    en: "A beautiful ceremony at the family home"
-  location: "Family Home, Jaipur"
-  notes: "Mention the significance of each ritual if you remember"
+    pt: "Rituais que preparam o caminho para o grande dia"
+    en: "Rituals that pave the way for the big day"
 
 # ============================================
 # DAY 3 - FEBRUARY 17, 2026
@@ -760,6 +791,17 @@ slides:
   caption:
     pt: "Momentos dos rituais do casamento"
     en: "Moments from the wedding rituals"
+
+# --- Shoe Stealing ---
+- type: photo
+  photo: "photos/shoe-stealing.jpg"
+  caption:
+    pt: "O Roubo do Sapato — A Tradição Mais Engraçada 👟😂"
+    en: "The Shoe Stealing — The Funniest Tradition 👟😂"
+  subcaption:
+    pt: "Fique de olho nas damas de honra! É tradição elas roubarem o sapato do noivo durante a cerimônia — e ele só os recupera depois de pagar um \"resgate\". Tudo em família!"
+    en: "Watch out for the bridesmaids! It's tradition for them to steal the groom's shoes during the ceremony — and he only gets them back after paying a \"ransom\". All in good fun!"
+  location: "Wedding Venue, Jaipur"
 
 - type: comparison
   title:

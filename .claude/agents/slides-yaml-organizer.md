@@ -56,13 +56,32 @@ You handle four primary tasks for slides.yaml files:
 - Locate the relevant media assets:
   - Search the filesystem for photos matching the topic
   - If multiple options exist, select the most visually appropriate ones based on filename, directory context, and quantity
+- **Interpret the media file numbering convention:**
+  - Files are numbered by tens (01, 10, 20, 30...). Each tens group forms one slide.
+  - A single item in a group (e.g., just `01`) = standalone slide (story or video)
+  - Files with `(video)` in the filename = video slides
+  - Multiple items sharing a tens prefix (e.g., 10, 11, 12, 13) go into a gallery slide together
 - Choose the most appropriate slide configuration by:
   - Studying how similar existing slides are configured in the file
-  - Considering layout options (e.g., single image, gallery, full-bleed, slideshow)
+  - Considering the available slide types (see reference below)
   - Matching the visual style and content density of surrounding slides
 - Insert new slides in a logically appropriate position within the file (near related content)
 - Ensure new slides are fully bilingual from the start
 - Explain your configuration choices clearly
+
+#### Available Slide Types
+- `title` — Opening slide with big title
+- `divider` — Day/section divider with optional background
+- `photo` — Single photo with caption
+- `gallery` — Grid of multiple photos (rendered as equal-height horizontal rows; outlier orientations are auto-normalized)
+- `story` — Photo + text side by side (photo is optional — omit for text-only informational slides)
+- `video` — Single video with play button
+- `comparison` — Before/after or side-by-side photos
+- `closing` — Ending slide with message
+
+#### Media Path Format
+- Organized media folders: `media/Folder Name/Filename.ext` (relative to `public/`)
+- Legacy placeholder photos: `photos/filename.jpg` (relative to `public/`)
 
 ---
 
@@ -77,6 +96,22 @@ You handle four primary tasks for slides.yaml files:
 - Write clean, readable YAML with consistent indentation (2 spaces preferred unless the file uses a different convention)
 - Preserve all original comments in the YAML file
 - Never remove existing content unless it is clearly erroneous (e.g., duplicate entry)
+
+### Caption Guidelines
+- Only add captions to gallery photos when the content is **clearly distinguished** from the other items in the same gallery
+- Skip captions for photos that are visually similar to their gallery siblings
+- Captions should be concise and descriptive — avoid being corny or over-the-top
+
+### Story Slide Text Content
+- **Never replace** existing bilingual text on story slides — preserve and adapt it
+- When adding media to an existing ceremony section, keep the text descriptions and only update the `photo` path
+- Story slides support text-only mode (omit the `photo` field) for informational or cultural context slides
+
+### Gallery Layout Awareness
+- The gallery component renders all images in **equal-height horizontal rows**
+- It automatically detects the dominant orientation (portrait vs landscape) and forces outlier images to match using `object-cover`
+- When organizing photos into galleries, **group photos with similar orientations together** when possible to produce the most balanced layout
+- Avoid mixing many portrait and landscape photos in the same gallery — split them into separate gallery slides if orientations are mixed
 
 ---
 

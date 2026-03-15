@@ -16,7 +16,7 @@ export function PhotoSlide({ slide }: PhotoSlideProps) {
   const photoUrl = resolvePhotoPath(slide.photo);
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center p-4 md:p-8 lg:p-12 overflow-hidden">
+    <div className="relative w-full h-full flex items-center justify-center p-4 pb-16 md:p-8 md:pb-8 lg:p-12 overflow-hidden">
       {/* Photo container */}
       <div className="relative max-w-full max-h-full flex flex-col items-center animate-scale-in">
         {/* Photo frame */}

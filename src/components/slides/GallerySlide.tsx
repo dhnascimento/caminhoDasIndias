@@ -10,6 +10,7 @@ interface GallerySlideProps {
 }
 
 type Orientation = 'portrait' | 'landscape';
+type EffectiveMobileLayout = 'row' | 'scroll' | 'column' | 'grid-2';
 
 export function GallerySlide({ slide }: GallerySlideProps) {
   const { t } = useLanguage();
@@ -42,15 +43,38 @@ export function GallerySlide({ slide }: GallerySlideProps) {
     }
   }
 
-  // Row height based on photo count and orientation mix
+  // Row height based on photo count and orientation mix (desktop only)
   const getRowHeight = () => {
-    if (photoCount <= 2) return 'h-[50vh]';
-    if (photoCount <= 4) return 'h-[45vh]';
-    return 'h-[35vh]';
+    if (photoCount <= 2) return 'md:h-[50vh]';
+    if (photoCount <= 4) return 'md:h-[45vh]';
+    return 'md:h-[35vh]';
+  };
+
+  // Resolve effective mobile layout
+  const mobileLayout = slide.mobile_layout ?? 'auto';
+  const effectiveMobileLayout: EffectiveMobileLayout =
+    mobileLayout === 'auto'
+      ? (photoCount > 3 ? 'column' : 'row')
+      : mobileLayout;
+
+  // Mobile layout classes (below md breakpoint)
+  const getMobileClasses = (): string => {
+    switch (effectiveMobileLayout) {
+      case 'column':
+        return 'flex-col overflow-y-auto max-h-[65vh]';
+      case 'scroll':
+        return 'flex-row overflow-x-auto h-[35vh]';
+      case 'grid-2':
+        return 'flex-wrap overflow-y-auto max-h-[65vh]';
+      case 'row':
+      default:
+        // Keep original row height for small photo counts
+        return `flex-row ${photoCount <= 2 ? 'h-[50vh]' : photoCount <= 4 ? 'h-[45vh]' : 'h-[35vh]'}`;
+    }
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col items-center justify-center p-4 md:p-8 lg:p-12 overflow-hidden">
+    <div className="relative w-full h-full flex flex-col items-center justify-center p-4 pb-16 md:p-8 md:pb-8 lg:p-12 overflow-hidden">
       {/* Title */}
       {slide.title && (
         <h2 className="font-display text-3xl md:text-4xl text-[var(--color-text)] mb-6 text-center animate-fade-in">
@@ -58,8 +82,8 @@ export function GallerySlide({ slide }: GallerySlideProps) {
         </h2>
       )}
 
-      {/* Photo row — all images same height */}
-      <div className={`flex gap-3 md:gap-4 ${getRowHeight()} max-w-6xl w-full justify-center animate-scale-in`}>
+      {/* Photo grid — responsive layout */}
+      <div className={`flex gap-3 md:gap-4 ${getMobileClasses()} md:flex-row md:overflow-visible md:max-h-none ${getRowHeight()} max-w-6xl w-full justify-center animate-scale-in`}>
         {slide.photos.map((photo, index) => (
           <GalleryImage
             key={index}
@@ -69,6 +93,7 @@ export function GallerySlide({ slide }: GallerySlideProps) {
             isOutlier={outlierSet.has(index)}
             dominantOrientation={dominantOrientation}
             onLoad={handleImageLoad}
+            mobileMode={effectiveMobileLayout}
           />
         ))}
       </div>
@@ -101,6 +126,7 @@ function GalleryImage({
   isOutlier,
   dominantOrientation,
   onLoad,
+  mobileMode,
 }: {
   index: number;
   photo: GalleryPhoto;
@@ -108,27 +134,36 @@ function GalleryImage({
   isOutlier: boolean;
   dominantOrientation: Orientation | null;
   onLoad: (index: number, e: React.SyntheticEvent<HTMLImageElement>) => void;
+  mobileMode: EffectiveMobileLayout;
 }) {
   const { t } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Outliers get a forced aspect ratio to match the dominant orientation
+  // Outliers get a forced aspect ratio to match the dominant orientation (desktop)
   const aspectClass = isOutlier && dominantOrientation
-    ? (dominantOrientation === 'portrait' ? 'aspect-[3/4]' : 'aspect-[4/3]')
+    ? (dominantOrientation === 'portrait' ? 'md:aspect-[3/4]' : 'md:aspect-[4/3]')
     : '';
+
+  // Mobile-specific sizing
+  const mobileClasses =
+    mobileMode === 'column'
+      ? 'w-full h-auto flex-shrink-0'
+      : mobileMode === 'grid-2'
+        ? 'w-[calc(50%-0.375rem)] h-auto flex-shrink-0'
+        : 'h-full flex-shrink';
 
   return (
     <div
-      className={`relative overflow-hidden rounded cursor-pointer group h-full flex-shrink ${aspectClass}`}
+      className={`relative overflow-hidden rounded cursor-pointer group ${mobileClasses} md:h-full md:flex-shrink md:w-auto ${aspectClass}`}
       onClick={onClick}
     >
       {!isLoaded && (
-        <div className="h-full aspect-square photo-loading rounded" />
+        <div className={`${mobileMode === 'column' || mobileMode === 'grid-2' ? 'w-full aspect-video' : 'h-full aspect-square'} photo-loading rounded`} />
       )}
       <img
         src={resolvePhotoPath(photo.src)}
         alt={t(photo.caption)}
-        className={`h-full w-auto object-cover rounded transition-all duration-500 group-hover:scale-105 ${
+        className={`${mobileMode === 'column' || mobileMode === 'grid-2' ? 'w-full h-auto' : 'h-full w-auto'} md:h-full md:w-auto object-cover rounded transition-all duration-500 group-hover:scale-105 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         onLoad={(e) => {

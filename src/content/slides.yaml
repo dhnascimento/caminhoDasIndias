@@ -156,15 +156,15 @@ slides:
     pt: "Compras para o Casamento"
     en: "Shopping for Wedding Attire"
   photos:
-    - src: "photos/Jaipur/Clothes 01.jpeg"
+    - src: "media/Jaipur/Clothes 01.jpeg"
       caption:
         pt: "Explorando as opções de tecido"
         en: "Exploring the fabric options"
-    - src: "photos/Jaipur/Clothes 02.jpeg"
+    - src: "media/Jaipur/Clothes 02.jpeg"
       caption:
         pt: "Experimentando sherwanis"
         en: "Trying on sherwanis"
-    - src: "photos/Jaipur/Clothes 03.jpeg"
+    - src: "media/Jaipur/Clothes 03.jpeg"
       caption:
         pt: "Escolhendo o traje perfeito"
         en: "Selecting the perfect outfit"

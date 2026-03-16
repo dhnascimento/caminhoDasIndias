@@ -31,8 +31,6 @@ npm-debug.log*
 # TypeScript
 *.tsbuildinfo
 
-# Optional: Large media files (uncomment if you want to exclude from git)
-# public/photos/*.jpg
-# public/photos/*.jpeg
-# public/photos/*.png
-# public/videos/*.mp4
+# Media files (served from Cloudflare R2)
+public/media/
+public/media-compressed/

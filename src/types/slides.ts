@@ -84,6 +84,8 @@ export interface GallerySlide extends BaseSlide {
   title?: LocalizedString;
   photos: GalleryPhoto[];
   caption?: LocalizedString;
+  /** Mobile layout for gallery images: auto (default), scroll, column, grid-2 */
+  mobile_layout?: 'auto' | 'scroll' | 'column' | 'grid-2';
 }
 
 // 5. Photo + Text Side by Side

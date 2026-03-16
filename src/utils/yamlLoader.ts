@@ -171,6 +171,15 @@ export function resolvePhotoPath(path: string): string {
     return path;
   }
 
+  // Media paths served from Cloudflare R2
+  const R2_BASE = 'https://pub-701490c8c9ce4c37bd20940a64031785.r2.dev';
+  if (path.startsWith('media/')) {
+    let relativePath = path.slice('media/'.length);
+    // Normalize image extensions to .jpg (compression script converts all to .jpg)
+    relativePath = relativePath.replace(/\.(jpeg|JPG|JPEG|PNG)$/i, '.jpg');
+    return `${R2_BASE}/${encodeURI(relativePath)}`;
+  }
+
   // Already starts with /
   if (path.startsWith('/')) {
     return path;

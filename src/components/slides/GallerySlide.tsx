@@ -54,7 +54,7 @@ export function GallerySlide({ slide }: GallerySlideProps) {
   const mobileLayout = slide.mobile_layout ?? 'auto';
   const effectiveMobileLayout: EffectiveMobileLayout =
     mobileLayout === 'auto'
-      ? (photoCount > 3 ? 'column' : 'row')
+      ? (photoCount >= 3 ? 'column' : 'row')
       : mobileLayout;
 
   // Mobile layout classes (below md breakpoint)
@@ -69,12 +69,12 @@ export function GallerySlide({ slide }: GallerySlideProps) {
       case 'row':
       default:
         // Keep original row height for small photo counts
-        return `flex-row ${photoCount <= 2 ? 'h-[50vh]' : photoCount <= 4 ? 'h-[45vh]' : 'h-[35vh]'}`;
+        return `flex-row justify-center ${photoCount <= 2 ? 'h-[50vh]' : photoCount <= 4 ? 'h-[45vh]' : 'h-[35vh]'}`;
     }
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col items-center justify-center p-4 pb-16 md:p-8 md:pb-8 lg:p-12 overflow-hidden">
+    <div className="relative w-full h-full flex flex-col items-center justify-start md:justify-center p-4 pt-16 pb-16 md:p-8 md:pb-8 lg:p-12 overflow-hidden">
       {/* Title */}
       {slide.title && (
         <h2 className="font-display text-3xl md:text-4xl text-[var(--color-text)] mb-6 text-center animate-fade-in">
@@ -83,7 +83,7 @@ export function GallerySlide({ slide }: GallerySlideProps) {
       )}
 
       {/* Photo grid — responsive layout */}
-      <div className={`flex gap-3 md:gap-4 ${getMobileClasses()} md:flex-row md:overflow-visible md:max-h-none ${getRowHeight()} max-w-6xl w-full justify-center animate-scale-in`}>
+      <div className={`flex gap-3 md:gap-4 ${getMobileClasses()} md:flex-row md:overflow-visible md:max-h-none ${getRowHeight()} max-w-6xl w-full md:justify-center animate-scale-in`}>
         {slide.photos.map((photo, index) => (
           <GalleryImage
             key={index}

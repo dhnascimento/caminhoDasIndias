@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from 'react';
 import { ThemeSwitcher } from './ThemeSwitcher';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import {
@@ -8,6 +9,8 @@ import {
   YouTubeIcon,
   VolumeOnIcon,
   VolumeOffIcon,
+  MenuIcon,
+  CloseIcon,
 } from './icons';
 
 interface ControlsProps {
@@ -35,8 +38,23 @@ export function Controls({
   musicPlayerOpen,
   hasMusicOnCurrentSlide,
 }: ControlsProps) {
-  return (
-    <div className="fixed top-4 right-4 z-40 flex items-center gap-2">
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    if (!menuOpen) return;
+    const handleClick = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [menuOpen]);
+
+  const buttons = (
+    <>
       {/* Mute toggle */}
       {hasMusicOnCurrentSlide && onToggleMute && (
         <button
@@ -104,6 +122,36 @@ export function Controls({
 
       {/* Theme switcher */}
       <ThemeSwitcher />
-    </div>
+    </>
+  );
+
+  return (
+    <>
+      {/* Desktop: horizontal toolbar */}
+      <div className="hidden md:flex fixed top-4 right-4 z-40 items-center gap-2">
+        {buttons}
+      </div>
+
+      {/* Mobile: collapsible vertical menu */}
+      <div ref={menuRef} className="md:hidden fixed top-4 right-4 z-40">
+        <button
+          onClick={() => setMenuOpen(prev => !prev)}
+          className="btn-control"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        >
+          {menuOpen ? (
+            <CloseIcon className="w-5 h-5" />
+          ) : (
+            <MenuIcon className="w-5 h-5" />
+          )}
+        </button>
+
+        {menuOpen && (
+          <div className="absolute top-12 right-0 flex flex-col gap-2 animate-fade-in">
+            {buttons}
+          </div>
+        )}
+      </div>
+    </>
   );
 }

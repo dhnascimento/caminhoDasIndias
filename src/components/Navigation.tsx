@@ -12,7 +12,7 @@ export function Navigation({ onPrev, onNext, canGoPrev, canGoNext }: NavigationP
     <>
       {/* Left navigation zone */}
       <button
-        className="nav-zone left"
+        className="nav-zone left hidden md:flex"
         onClick={onPrev}
         disabled={!canGoPrev}
         aria-label="Previous slide"
@@ -24,7 +24,7 @@ export function Navigation({ onPrev, onNext, canGoPrev, canGoNext }: NavigationP
 
       {/* Right navigation zone */}
       <button
-        className="nav-zone right"
+        className="nav-zone right hidden md:flex"
         onClick={onNext}
         disabled={!canGoNext}
         aria-label="Next slide"

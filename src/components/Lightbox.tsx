@@ -59,15 +59,15 @@ export function Lightbox({ images, initialIndex = 0, isOpen, onClose }: Lightbox
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+      className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 md:p-8"
       onClick={onClose}
     >
       {hasMultiple && (
         <button
-          className="absolute left-4 top-1/2 -translate-y-1/2 btn-control"
+          className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 btn-control z-10"
           onClick={(e) => { e.stopPropagation(); prevPhoto(); }}
         >
-          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
@@ -76,23 +76,23 @@ export function Lightbox({ images, initialIndex = 0, isOpen, onClose }: Lightbox
       <img
         src={resolvePhotoPath(current.src)}
         alt={t(current.caption)}
-        className="max-w-[90vw] max-h-[90vh] object-contain"
+        className="max-w-[85vw] max-h-[75vh] md:max-w-[90vw] md:max-h-[85vh] object-contain"
         onClick={(e) => e.stopPropagation()}
       />
 
       {hasMultiple && (
         <button
-          className="absolute right-4 top-1/2 -translate-y-1/2 btn-control"
+          className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 btn-control z-10"
           onClick={(e) => { e.stopPropagation(); nextPhoto(); }}
         >
-          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
       )}
 
       <button
-        className="absolute top-4 right-4 btn-control"
+        className="absolute top-4 right-4 btn-control z-10"
         onClick={onClose}
       >
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -101,7 +101,7 @@ export function Lightbox({ images, initialIndex = 0, isOpen, onClose }: Lightbox
       </button>
 
       {current.caption && (
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 glass px-6 py-3 rounded-lg">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 glass px-6 py-3 rounded-lg max-w-[90vw]">
           <p className="text-white text-center">{t(current.caption)}</p>
         </div>
       )}

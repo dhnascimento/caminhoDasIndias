@@ -15,7 +15,7 @@ export function SlideEnrichments({ slide }: SlideEnrichmentsProps) {
     <>
       {/* Location tag */}
       {slide.location && (
-        <div className="absolute bottom-16 left-4 md:bottom-6 md:left-6 flex items-center gap-2 glass px-4 py-2 rounded-full text-sm">
+        <div className="absolute bottom-20 left-4 md:bottom-6 md:left-6 flex items-center gap-2 glass px-4 py-2 rounded-full text-sm max-w-[55%] md:max-w-none">
           <svg className="w-4 h-4 text-[var(--color-primary)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -26,7 +26,7 @@ export function SlideEnrichments({ slide }: SlideEnrichmentsProps) {
 
       {/* Fun fact callout */}
       {slide.fun_fact && (
-        <div className="absolute top-24 right-6 max-w-xs glass px-4 py-3 rounded-lg">
+        <div className="absolute bottom-28 right-4 md:top-24 md:bottom-auto md:right-6 max-w-[calc(100%-2rem)] md:max-w-xs glass px-4 py-3 rounded-lg z-[5]">
           <div className="flex items-start gap-2">
             <span className="text-lg">💡</span>
             <p className="text-sm text-[var(--color-text-muted)]">{t(slide.fun_fact)}</p>

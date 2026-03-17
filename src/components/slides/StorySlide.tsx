@@ -38,8 +38,8 @@ export function StorySlide({ slide }: StorySlideProps) {
   }
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center p-4 md:p-8 lg:p-12 overflow-hidden">
-      <div className={`flex flex-col ${isPhotoLeft ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-12 max-w-6xl w-full`}>
+    <div className="relative w-full h-full flex items-center justify-center p-4 pt-16 md:p-8 lg:p-12 overflow-hidden">
+      <div className={`flex flex-col ${isPhotoLeft ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-6 md:gap-12 max-w-6xl w-full`}>
         {/* Photo */}
         <div className={`flex-1 w-full md:w-auto animate-slide-in-${isPhotoLeft ? 'left' : 'right'}`}>
           <div className="photo-frame aspect-[4/3] md:aspect-auto md:h-[60vh] cursor-pointer" onClick={() => setIsLightboxOpen(true)}>

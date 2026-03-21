@@ -336,7 +336,7 @@ slides:
   photo: "photos/jaipur-skyline.jpg"
 
 - type: story
-  photo: "photos/walking-tour.jpg"
+  photo: "media/Jaipur/Jaipur 01.jpeg"
   title:
     pt: "Passeio a Pé pela Manhã"
     en: "Morning Walking Tour"
@@ -396,38 +396,6 @@ slides:
     pt: "Uma residência real que é lar da família real de Jaipur desde 1727"
     en: "A royal residence that's been home to the Jaipur royal family since 1727"
 
-
-- type: photo
-  photo: "photos/flower-bazaar.jpg"
-  caption:
-    pt: "O Bazar das Flores"
-    en: "The Flower Bazaar"
-  subcaption:
-    pt: "Calêndulas vibrantes por toda parte — a flor das celebrações"
-    en: "Vibrant marigolds everywhere — the flower of celebrations"
-  location: "Flower Market, Jaipur"
-
-- type: gallery
-  title:
-    pt: "Mercados Locais"
-    en: "Local Markets"
-  photos:
-    - src: "photos/produce-market.jpg"
-      caption:
-        pt: "Produtos frescos empilhados"
-        en: "Fresh produce stacked high"
-    - src: "photos/spice-stall.jpg"
-      caption:
-        pt: "Barracas de especiarias perfumando o ar"
-        en: "Spice stalls filling the air with fragrance"
-    - src: "photos/street-vendor.jpg"
-      caption:
-        pt: "Comida de rua que tínhamos que experimentar"
-        en: "Street food we had to try"
-  caption:
-    pt: "As cores, cheiros e sons dos mercados de Jaipur"
-    en: "The colors, smells, and sounds of Jaipur's markets"
-
 - type: story
   photo: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 01.jpg"
   title:
@@ -470,27 +438,6 @@ slides:
     - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 23.jpg"
   location: "Hawa Mahal, Jaipur"
 
-- type: story
-  photo: "photos/school-visit.jpg"
-  title:
-    pt: "Visita a uma Escola Local"
-    en: "Local School Visit"
-  text:
-    pt: |
-      Uma das partes mais memoráveis do dia foi uma visita improvisada a uma escola pública local.
-      A curiosidade e o entusiasmo das crianças eram contagiantes, e passamos um tempo
-      aprendendo sobre seus estudos e trocando histórias.
-
-      *Um lembrete de por que viajar é tão significativo.*
-    en: |
-      One of the most memorable parts of the day was an impromptu visit to a local public school.
-      The children's curiosity and enthusiasm were infectious, and we spent time
-      learning about their studies and sharing stories.
-
-      *A reminder of why travel is so meaningful.*
-  layout: "photo-right"
-  location: "Local School, Jaipur"
-  notes: "Share any specific interactions or moments that stood out"
 
 - type: story
   photo: "media/Jaipur - Govind Devji Temple/Jaipur - Govind Devji Temple 01.jpg"
@@ -730,16 +677,6 @@ slides:
     pt: "Jal Mahal"
     en: "Jal Mahal"
   location: "Jal Mahal, Jaipur"
-
-- type: photo
-  photo: "photos/day3-dinner.jpg"
-  caption:
-    pt: "Jantar na Casa da Família"
-    en: "Dinner at the Family Home"
-  subcaption:
-    pt: "Encerrando um dia perfeito com culinária rajastani caseira"
-    en: "Ending a perfect day with homemade Rajasthani cuisine"
-  location: "Family Home, Jaipur"
 
 # ============================================
 # DAY 4 - FEBRUARY 18, 2026

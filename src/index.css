@@ -1,4 +1,6 @@
 @import './themes/themes.css';
+@import './themes/transitions.css';
+@import './themes/cinematic-decorations.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

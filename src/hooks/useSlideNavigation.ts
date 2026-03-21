@@ -5,8 +5,11 @@ interface UseSlideNavigationProps {
   autoPlayInterval?: number;
 }
 
+export type SlideDirection = 'forward' | 'backward';
+
 interface UseSlideNavigationReturn {
   currentSlide: number;
+  direction: SlideDirection;
   isFirstSlide: boolean;
   isLastSlide: boolean;
   goToSlide: (index: number) => void;
@@ -22,6 +25,7 @@ export function useSlideNavigation({
   autoPlayInterval: initialInterval = 5000,
 }: UseSlideNavigationProps): UseSlideNavigationReturn {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [direction, setDirection] = useState<SlideDirection>('forward');
   const [isAutoPlaying, setIsAutoPlaying] = useState(false);
   const [autoPlayInterval, setAutoPlayInterval] = useState(initialInterval);
 
@@ -30,21 +34,25 @@ export function useSlideNavigation({
 
   const goToSlide = useCallback((index: number) => {
     if (index >= 0 && index < totalSlides) {
+      setDirection(index >= currentSlide ? 'forward' : 'backward');
       setCurrentSlide(index);
     }
-  }, [totalSlides]);
+  }, [totalSlides, currentSlide]);
 
   const nextSlide = useCallback(() => {
     if (!isLastSlide) {
+      setDirection('forward');
       setCurrentSlide(prev => prev + 1);
     } else if (isAutoPlaying) {
       // Loop back to start in autoplay mode
+      setDirection('forward');
       setCurrentSlide(0);
     }
   }, [isLastSlide, isAutoPlaying]);
 
   const prevSlide = useCallback(() => {
     if (!isFirstSlide) {
+      setDirection('backward');
       setCurrentSlide(prev => prev - 1);
     }
   }, [isFirstSlide]);
@@ -86,6 +94,7 @@ export function useSlideNavigation({
 
   return {
     currentSlide,
+    direction,
     isFirstSlide,
     isLastSlide,
     goToSlide,

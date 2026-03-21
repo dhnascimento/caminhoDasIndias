@@ -7,3 +7,4 @@ export { LanguageSwitcher } from './LanguageSwitcher';
 export { Controls } from './Controls';
 export { MusicPlayerOverlay } from './MusicPlayerOverlay';
 export { YouTubePlayerOverlay } from './YouTubePlayerOverlay';
+export { CinematicDecorations } from './CinematicDecorations';

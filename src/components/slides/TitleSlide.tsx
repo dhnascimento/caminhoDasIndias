@@ -37,7 +37,14 @@ export function TitleSlide({ slide }: TitleSlideProps) {
 
       {/* Content */}
       <div className="relative z-10 text-center px-8 max-w-4xl animate-fade-in">
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-semibold mb-6 text-gradient leading-tight">
+        {/* Soap opera logo — visible only on caminho-das-indias theme */}
+        <img
+          src="https://image.tmdb.org/t/p/original/bGlK5j1H3sQPApYYf0JUE3LIwRG.png"
+          alt={t(slide.title)}
+          className="cinematic-title-logo"
+        />
+        {/* Text title — hidden on caminho-das-indias theme */}
+        <h1 className="cinematic-title-text font-display text-5xl md:text-7xl lg:text-8xl font-semibold mb-6 text-gradient leading-tight">
           {t(slide.title)}
         </h1>
         {slide.subtitle && (

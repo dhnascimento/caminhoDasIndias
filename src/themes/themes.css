@@ -210,6 +210,67 @@
 }
 
 /* ============================================
+   CAMINHO DAS ÍNDIAS THEME
+   Cinematic Indian soap opera aesthetic
+   Inspired by the 2009 Globo opening sequence
+   ============================================ */
+[data-theme="caminho-das-indias"] {
+  /* Primary palette */
+  --color-primary: #D4A017;          /* Deep saffron/gold */
+  --color-secondary: #B91C3C;        /* Deep crimson */
+  --color-accent: #0F766E;           /* Rich teal */
+  --color-gold: #F5C842;             /* Bright gold */
+
+  /* Background colors */
+  --color-background: #1A0A1E;       /* Deep purple-black */
+  --color-surface: #2D1033;          /* Purple-tinged surface */
+  --color-surface-elevated: #3D1A45; /* Lighter purple surface */
+
+  /* Text colors */
+  --color-text: #FFF8E7;             /* Warm cream-white */
+  --color-text-muted: #C9A86C;       /* Gold-muted */
+  --color-text-accent: #F5C842;      /* Gold */
+
+  /* Decorative */
+  --color-border: rgba(212, 160, 23, 0.35);
+  --color-glow: rgba(245, 200, 66, 0.15);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #D4A017 0%, #B91C3C 50%, #DB2777 100%);
+  --gradient-overlay: linear-gradient(to top, rgba(26, 10, 30, 0.95) 0%, transparent 50%);
+  --gradient-subtle: linear-gradient(135deg, rgba(212, 160, 23, 0.08) 0%, rgba(185, 28, 60, 0.08) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 30px rgba(212, 160, 23, 0.3), 0 0 60px rgba(219, 39, 119, 0.15);
+
+  /* Typography */
+  --font-display: 'Cinzel Decorative', 'Playfair Display', serif;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+  --cinematic-transition-duration: 800ms;
+
+  /* Decorative elements visibility */
+  --decorative-opacity: 1;
+
+  /* Cinematic-specific variables */
+  --particle-count: 25;
+  --mandala-rotation-speed: 60s;
+
+  /* Specific element styles */
+  --caption-bg: rgba(26, 10, 30, 0.9);
+  --progress-bar-bg: rgba(255, 255, 255, 0.08);
+  --progress-bar-fill: linear-gradient(90deg, #D4A017, #B91C3C, #DB2777);
+  --button-bg: rgba(212, 160, 23, 0.12);
+  --button-hover-bg: rgba(212, 160, 23, 0.25);
+}
+
+/* ============================================
    DECORATIVE PATTERNS
    Mandala-inspired corner decorations
    ============================================ */

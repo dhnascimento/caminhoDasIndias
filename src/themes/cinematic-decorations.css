@@ -1,0 +1,304 @@
+/* ============================================
+   CINEMATIC DECORATIONS
+   Particles, rotating mandalas, animated border
+   Only active under caminho-das-indias theme
+   ============================================ */
+
+/* Container — hidden for non-cinematic themes */
+.cinematic-decorations {
+  display: none;
+}
+
+[data-theme="caminho-das-indias"] .cinematic-decorations {
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ---- Floating Particles ---- */
+.cinematic-particles {
+  position: absolute;
+  inset: 0;
+}
+
+.cinematic-particle {
+  position: absolute;
+  bottom: -10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #F5C842 0%, rgba(212, 160, 23, 0.6) 60%, transparent 100%);
+  box-shadow: 0 0 6px rgba(245, 200, 66, 0.4), 0 0 12px rgba(212, 160, 23, 0.2);
+  animation: floatParticle linear infinite;
+  will-change: transform;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--particle-opacity, 0.4);
+  }
+  50% {
+    transform: translateY(-50vh) translateX(20px);
+  }
+  90% {
+    opacity: var(--particle-opacity, 0.4);
+  }
+  100% {
+    transform: translateY(-105vh) translateX(-15px);
+    opacity: 0;
+  }
+}
+
+/* ---- Rotating Mandalas ---- */
+.cinematic-mandala {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  opacity: 0.6;
+  animation: rotateMandala var(--mandala-rotation-speed, 60s) linear infinite;
+  will-change: transform;
+}
+
+.cinematic-mandala-tl { top: -40px; left: -40px; }
+.cinematic-mandala-tr { top: -40px; right: -40px; animation-direction: reverse; }
+.cinematic-mandala-bl { bottom: -40px; left: -40px; animation-direction: reverse; }
+.cinematic-mandala-br { bottom: -40px; right: -40px; }
+
+@keyframes rotateMandala {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ---- Animated Border Frame ---- */
+.cinematic-border-frame {
+  position: absolute;
+  inset: 16px;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cinematic-border-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 160, 23, 0.5) 0%,
+    rgba(185, 28, 60, 0.3) 25%,
+    rgba(219, 39, 119, 0.3) 50%,
+    rgba(212, 160, 23, 0.5) 75%,
+    rgba(185, 28, 60, 0.3) 100%
+  );
+  background-size: 400% 400%;
+  animation: borderShimmer 8s ease infinite;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  will-change: background-position;
+}
+
+@keyframes borderShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---- Glow Pulse (ambient corner glow) ---- */
+[data-theme="caminho-das-indias"] .cinematic-mandala-tl::after,
+[data-theme="caminho-das-indias"] .cinematic-mandala-br::after {
+  content: '';
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 200, 66, 0.08) 0%, transparent 70%);
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+/* ============================================
+   PER-SLIDE-TYPE ENTRY ANIMATIONS
+   Cinematic overrides via CSS cascade
+   ============================================ */
+
+/* Title slides — text rises with golden glow */
+[data-theme="caminho-das-indias"] .animate-fade-in {
+  animation: cinematicFadeIn 0.8s ease-out both;
+}
+
+@keyframes cinematicFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+    filter: brightness(1);
+  }
+  60% {
+    filter: brightness(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: brightness(1);
+  }
+}
+
+/* Photo/gallery scale-in — slower, golden vignette */
+[data-theme="caminho-das-indias"] .animate-scale-in {
+  animation: cinematicScaleIn 0.7s ease-out both;
+}
+
+@keyframes cinematicScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Photo frames get a golden glow under cinematic theme */
+[data-theme="caminho-das-indias"] .photo-frame {
+  box-shadow:
+    var(--shadow-lg),
+    0 0 20px rgba(212, 160, 23, 0.15),
+    0 0 40px rgba(185, 28, 60, 0.08);
+}
+
+/* Gallery items stagger in */
+[data-theme="caminho-das-indias"] .photo-frame:nth-child(1) { animation-delay: 0ms; }
+[data-theme="caminho-das-indias"] .photo-frame:nth-child(2) { animation-delay: 100ms; }
+[data-theme="caminho-das-indias"] .photo-frame:nth-child(3) { animation-delay: 200ms; }
+[data-theme="caminho-das-indias"] .photo-frame:nth-child(4) { animation-delay: 300ms; }
+[data-theme="caminho-das-indias"] .photo-frame:nth-child(5) { animation-delay: 400ms; }
+[data-theme="caminho-das-indias"] .photo-frame:nth-child(6) { animation-delay: 500ms; }
+
+/* Golden metallic text — soap opera logo style (non-title uses) */
+[data-theme="caminho-das-indias"] .text-gradient {
+  background: linear-gradient(180deg,
+    #F5C842 0%, #D4A017 18%, #F5E6A3 35%,
+    #D4A017 48%, #B8860B 58%, #D4A017 75%, #F5C842 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter:
+    drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 0 20px rgba(212, 160, 23, 0.35))
+    drop-shadow(0 0 40px rgba(245, 200, 66, 0.15));
+}
+
+/* ---- Title Slide: Soap Opera Logo ---- */
+
+/* Logo image — hidden by default, shown only on cinematic theme */
+.cinematic-title-logo {
+  display: none;
+}
+
+[data-theme="caminho-das-indias"] .cinematic-title-logo {
+  display: block;
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 30px rgba(212, 160, 23, 0.3));
+  animation: cinematicFadeIn 0.8s ease-out both;
+}
+
+/* Text h1 — shown by default, hidden on cinematic theme */
+[data-theme="caminho-das-indias"] .cinematic-title-text {
+  display: none;
+}
+
+/* Title slide — purple radial gradient background (matching soap opera reference) */
+[data-theme="caminho-das-indias"] .bg-gradient-to-t.from-\[var\(--color-background\)\] {
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    rgba(107, 33, 168, 0.9) 0%,
+    rgba(76, 20, 130, 0.92) 25%,
+    rgba(46, 16, 101, 0.95) 50%,
+    rgba(26, 10, 30, 1) 80%
+  ) !important;
+}
+
+/* Title slide subtitle — warm gold tint */
+[data-theme="caminho-das-indias"] .text-\[var\(--color-text-muted\)\].tracking-wide {
+  color: #C9A86C;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   RESPONSIVE — Mobile
+   ============================================ */
+@media (max-width: 640px) {
+  .cinematic-mandala {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cinematic-mandala-tl { top: -25px; left: -25px; }
+  .cinematic-mandala-tr { top: -25px; right: -25px; }
+  .cinematic-mandala-bl { bottom: -25px; left: -25px; }
+  .cinematic-mandala-br { bottom: -25px; right: -25px; }
+
+  .cinematic-particle:nth-child(n+16) {
+    display: none;
+  }
+
+  .cinematic-border-frame {
+    inset: 8px;
+  }
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-particle {
+    animation: none;
+    display: none;
+  }
+
+  .cinematic-mandala {
+    animation: none;
+  }
+
+  .cinematic-border-frame::before {
+    animation: none;
+  }
+
+  [data-theme="caminho-das-indias"] .animate-fade-in {
+    animation: fadeIn 0.5s ease-out both;
+  }
+
+  [data-theme="caminho-das-indias"] .animate-scale-in {
+    animation: fadeIn 0.5s ease-out both;
+  }
+
+  .transition-enter,
+  .transition-exit {
+    animation-duration: 0.3s !important;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}

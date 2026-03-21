@@ -138,7 +138,7 @@ export type Slide =
   | ComparisonSlide;
 
 // Theme names
-export type ThemeName = 'festive' | 'minimal-light' | 'minimal-dark' | 'warm-documentary';
+export type ThemeName = 'festive' | 'minimal-light' | 'minimal-dark' | 'warm-documentary' | 'caminho-das-indias';
 
 // Theme configuration
 export interface Theme {
@@ -167,5 +167,10 @@ export const THEMES: Theme[] = [
     id: 'warm-documentary',
     name: 'Documentary',
     description: 'Muted earth tones, editorial feel'
+  },
+  {
+    id: 'caminho-das-indias',
+    name: 'Caminho das Índias',
+    description: 'Cinematic Indian soap opera aesthetic'
   },
 ];

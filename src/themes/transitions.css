@@ -1,0 +1,323 @@
+/* ============================================
+   SLIDE TRANSITIONS
+   Default fade + 6 cinematic transitions
+   ============================================ */
+
+/* ---- Fade (default for all themes) ---- */
+.transition-fade-enter {
+  animation: fadeEnter 500ms ease-out forwards;
+}
+.transition-fade-exit {
+  animation: fadeExit 500ms ease-out forwards;
+}
+@keyframes fadeEnter {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeExit {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ============================================
+   CINEMATIC TRANSITIONS
+   Only active under [data-theme="caminho-das-indias"]
+   ============================================ */
+
+/* ---- 1. Fabric Wipe ---- */
+/* A colored overlay sweeps across, revealing the next slide */
+.transition-fabric-wipe-enter-forward {
+  animation: fabricWipeEnterFwd 800ms ease-in-out forwards;
+}
+.transition-fabric-wipe-exit-forward {
+  animation: fabricWipeExitFwd 800ms ease-in-out forwards;
+}
+.transition-fabric-wipe-enter-backward {
+  animation: fabricWipeEnterBwd 800ms ease-in-out forwards;
+}
+.transition-fabric-wipe-exit-backward {
+  animation: fabricWipeExitBwd 800ms ease-in-out forwards;
+}
+
+@keyframes fabricWipeEnterFwd {
+  0% { clip-path: inset(0 100% 0 0); opacity: 1; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+@keyframes fabricWipeExitFwd {
+  0% { clip-path: inset(0 0 0 0); opacity: 1; }
+  100% { clip-path: inset(0 0 0 100%); opacity: 1; }
+}
+@keyframes fabricWipeEnterBwd {
+  0% { clip-path: inset(0 0 0 100%); opacity: 1; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+@keyframes fabricWipeExitBwd {
+  0% { clip-path: inset(0 0 0 0); opacity: 1; }
+  100% { clip-path: inset(0 100% 0 0); opacity: 1; }
+}
+
+/* Fabric overlay — colored leading edge */
+.transition-fabric-wipe-enter-forward::before,
+.transition-fabric-wipe-enter-backward::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.4) 0%, rgba(185, 28, 60, 0.4) 100%);
+  z-index: 1;
+  animation: fabricOverlayFlash 800ms ease-in-out forwards;
+  pointer-events: none;
+}
+
+@keyframes fabricOverlayFlash {
+  0% { opacity: 0; }
+  40% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ---- 2. Mandala Reveal ---- */
+/* Circle expands from center */
+.transition-mandala-reveal-enter-forward,
+.transition-mandala-reveal-enter-backward {
+  animation: mandalaRevealEnter 800ms ease-out forwards;
+}
+.transition-mandala-reveal-exit-forward,
+.transition-mandala-reveal-exit-backward {
+  animation: mandalaRevealExit 800ms ease-in forwards;
+}
+
+@keyframes mandalaRevealEnter {
+  0% { clip-path: circle(0% at 50% 50%); opacity: 1; }
+  100% { clip-path: circle(75% at 50% 50%); opacity: 1; }
+}
+@keyframes mandalaRevealExit {
+  0% { clip-path: circle(75% at 50% 50%); opacity: 1; }
+  60% { clip-path: circle(75% at 50% 50%); opacity: 1; }
+  100% { clip-path: circle(75% at 50% 50%); opacity: 0; }
+}
+
+/* ---- 3. Kaleidoscope ---- */
+/* Tiled dissolve with rotation */
+.transition-kaleidoscope-enter-forward,
+.transition-kaleidoscope-enter-backward {
+  animation: kaleidoscopeEnter 800ms ease-out forwards;
+}
+.transition-kaleidoscope-exit-forward,
+.transition-kaleidoscope-exit-backward {
+  animation: kaleidoscopeExit 800ms ease-in forwards;
+}
+
+@keyframes kaleidoscopeEnter {
+  0% {
+    opacity: 0;
+    transform: scale(1.1) rotate(3deg);
+    -webkit-mask-image: repeating-conic-gradient(
+      transparent 0deg, transparent 30deg, black 30deg, black 60deg
+    );
+    mask-image: repeating-conic-gradient(
+      transparent 0deg, transparent 30deg, black 30deg, black 60deg
+    );
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+@keyframes kaleidoscopeExit {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.97) rotate(-1deg);
+    -webkit-mask-image: repeating-conic-gradient(
+      black 0deg, black 30deg, transparent 30deg, transparent 60deg
+    );
+    mask-image: repeating-conic-gradient(
+      black 0deg, black 30deg, transparent 30deg, transparent 60deg
+    );
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9) rotate(-3deg);
+  }
+}
+
+/* ---- 4. Color Wash ---- */
+/* Full-screen color overlay fades in, new slide appears, overlay fades out */
+.transition-color-wash-enter-forward,
+.transition-color-wash-enter-backward {
+  animation: colorWashEnter 800ms ease-in-out forwards;
+}
+.transition-color-wash-exit-forward,
+.transition-color-wash-exit-backward {
+  animation: colorWashExit 800ms ease-in-out forwards;
+}
+
+@keyframes colorWashEnter {
+  0% { opacity: 0; }
+  40% { opacity: 0; }
+  60% { opacity: 1; }
+  100% { opacity: 1; }
+}
+@keyframes colorWashExit {
+  0% { opacity: 1; }
+  40% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Color wash overlay rendered via .transition-color-wash-overlay */
+.transition-color-wash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+  background: linear-gradient(135deg, #D4A017 0%, #B91C3C 50%, #DB2777 100%);
+  animation: colorWashOverlay 800ms ease-in-out forwards;
+}
+
+@keyframes colorWashOverlay {
+  0% { opacity: 0; }
+  30% { opacity: 0.85; }
+  60% { opacity: 0.85; }
+  100% { opacity: 0; }
+}
+
+/* ---- 5. Portal Doors ---- */
+/* Two halves slide apart from center */
+.transition-portal-doors-enter-forward,
+.transition-portal-doors-enter-backward {
+  animation: portalEnter 800ms ease-in-out forwards;
+}
+.transition-portal-doors-exit-forward,
+.transition-portal-doors-exit-backward {
+  animation: portalExit 800ms ease-in-out forwards;
+}
+
+@keyframes portalEnter {
+  0% { opacity: 0; }
+  45% { opacity: 0; }
+  55% { opacity: 1; }
+  100% { opacity: 1; }
+}
+@keyframes portalExit {
+  0% { opacity: 1; }
+  45% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Portal door panels — rendered via .transition-portal-overlay */
+.transition-portal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.transition-portal-door-left,
+.transition-portal-door-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: linear-gradient(180deg, #1A0A1E 0%, #2D1033 50%, #1A0A1E 100%);
+  border: 2px solid rgba(212, 160, 23, 0.5);
+}
+
+.transition-portal-door-left {
+  left: 0;
+  border-right: 3px solid rgba(245, 200, 66, 0.8);
+  animation: portalDoorLeft 800ms ease-in-out forwards;
+}
+
+.transition-portal-door-right {
+  right: 0;
+  border-left: 3px solid rgba(245, 200, 66, 0.8);
+  animation: portalDoorRight 800ms ease-in-out forwards;
+}
+
+@keyframes portalDoorLeft {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+  100% { transform: translateX(-105%); }
+}
+@keyframes portalDoorRight {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(0); }
+  100% { transform: translateX(105%); }
+}
+
+/* Gold glow at the center seam */
+.transition-portal-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  transform: translateX(-50%);
+  background: rgba(245, 200, 66, 0.9);
+  box-shadow: 0 0 30px rgba(245, 200, 66, 0.6), 0 0 60px rgba(212, 160, 23, 0.4);
+  animation: portalGlow 800ms ease-in-out forwards;
+}
+
+@keyframes portalGlow {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  50% { opacity: 1; }
+  70% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ---- 6. Zoom Dissolve ---- */
+/* Outgoing scales up + fades, incoming scales from small */
+.transition-zoom-dissolve-enter-forward,
+.transition-zoom-dissolve-enter-backward {
+  animation: zoomDissolveEnter 800ms ease-out forwards;
+}
+.transition-zoom-dissolve-exit-forward,
+.transition-zoom-dissolve-exit-backward {
+  animation: zoomDissolveExit 800ms ease-in forwards;
+}
+
+@keyframes zoomDissolveEnter {
+  0% { opacity: 0; transform: scale(0.88); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes zoomDissolveExit {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.15); }
+}
+
+/* ============================================
+   TRANSITION UTILITY CLASSES
+   ============================================ */
+.transition-enter,
+.transition-exit {
+  will-change: transform, opacity, clip-path;
+}
+
+/* ============================================
+   REDUCED MOTION — fallback all transitions to fade
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .transition-enter {
+    animation: fadeEnter 300ms ease-out forwards !important;
+    will-change: auto;
+  }
+  .transition-exit {
+    animation: fadeExit 300ms ease-out forwards !important;
+    will-change: auto;
+  }
+  .transition-color-wash-overlay,
+  .transition-portal-overlay {
+    display: none !important;
+  }
+}

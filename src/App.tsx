@@ -12,9 +12,11 @@ import {
   Controls,
   MusicPlayerOverlay,
   YouTubePlayerOverlay,
+  CinematicDecorations,
 } from './components';
 import {
   useSlideNavigation,
+  useSlideTransition,
   useKeyboardControls,
   useSwipeGesture,
   useFullscreen,
@@ -35,6 +37,7 @@ function App() {
 
   const {
     currentSlide,
+    direction,
     isFirstSlide,
     isLastSlide,
     goToSlide,
@@ -43,6 +46,11 @@ function App() {
     isAutoPlaying,
     toggleAutoPlay,
   } = useSlideNavigation({ totalSlides: slides.length });
+
+  const { previousSlide, isTransitioning, getSlideClassName } = useSlideTransition({
+    currentSlide,
+    direction,
+  });
 
   const { isFullscreen, toggleFullscreen } = useFullscreen();
 
@@ -154,19 +162,24 @@ function App() {
     <div className="min-h-screen bg-[var(--color-background)] overflow-hidden">
       {/* Main slide area */}
       <main className="relative w-full h-screen">
+        {/* Cinematic decorations (self-gates by theme) */}
+        <CinematicDecorations />
+
         {/* Slides container with transitions */}
         <div className="w-full h-full">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-opacity duration-500 ${
-                index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-              }`}
-              aria-hidden={index !== currentSlide}
-            >
-              {shouldLoad(index) && <SlideRenderer slide={slide} isActive={index === currentSlide} onVideoPlayChange={handleVideoPlayChange} />}
-            </div>
-          ))}
+          {slides.map((slide, index) => {
+            const isVisible = shouldLoad(index) || (index === previousSlide && isTransitioning);
+            const className = getSlideClassName(index);
+            return (
+              <div
+                key={index}
+                className={`absolute inset-0 ${className}`}
+                aria-hidden={index !== currentSlide}
+              >
+                {isVisible && <SlideRenderer slide={slide} isActive={index === currentSlide} onVideoPlayChange={handleVideoPlayChange} />}
+              </div>
+            );
+          })}
         </div>
 
         {/* Navigation zones */}

@@ -107,6 +107,13 @@ export function ThemeSwitcher({ onThemeChange }: ThemeSwitcherProps) {
                       <div className="w-3 h-3 rounded-full bg-stone-500" />
                     </>
                   )}
+                  {theme.id === 'caminho-das-indias' && (
+                    <>
+                      <div className="w-3 h-3 rounded-full bg-yellow-600" />
+                      <div className="w-3 h-3 rounded-full bg-rose-700" />
+                      <div className="w-3 h-3 rounded-full bg-pink-600" />
+                    </>
+                  )}
                 </div>
 
                 <div className="flex-1">

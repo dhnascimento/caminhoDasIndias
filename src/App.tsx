@@ -31,6 +31,7 @@ function App() {
   const [showOverview, setShowOverview] = useState(false);
   const [musicPlayerOpen, setMusicPlayerOpen] = useState(false);
   const [activeMusic, setActiveMusic] = useState<MusicTrack | null>(null);
+  const [videoPlaying, setVideoPlaying] = useState(false);
 
   const {
     currentSlide,
@@ -73,6 +74,15 @@ function App() {
     }
   }, [currentSlide]);
 
+  // Reset video playing state on slide change
+  useEffect(() => {
+    setVideoPlaying(false);
+  }, [currentSlide]);
+
+  const handleVideoPlayChange = useCallback((playing: boolean) => {
+    setVideoPlaying(playing);
+  }, []);
+
   const hasMusicOnCurrentSlide = playlist
     ? currentTrackIndex >= 0
     : !!activeMusic;
@@ -82,6 +92,16 @@ function App() {
     playlistId: playlist?.youtube ?? '',
     elementId: YT_ELEMENT_ID,
   });
+
+  // Pause YouTube when HTML5 video plays, resume when it stops
+  useEffect(() => {
+    if (!playlist) return;
+    if (videoPlaying) {
+      ytPlayer.pause();
+    } else {
+      ytPlayer.play();
+    }
+  }, [videoPlaying, playlist, ytPlayer.pause, ytPlayer.play]);
 
   const handleEscape = useCallback(() => {
     if (showOverview) {
@@ -144,7 +164,7 @@ function App() {
               }`}
               aria-hidden={index !== currentSlide}
             >
-              {shouldLoad(index) && <SlideRenderer slide={slide} />}
+              {shouldLoad(index) && <SlideRenderer slide={slide} isActive={index === currentSlide} onVideoPlayChange={handleVideoPlayChange} />}
             </div>
           ))}
         </div>

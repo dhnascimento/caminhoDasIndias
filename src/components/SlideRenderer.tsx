@@ -12,9 +12,11 @@ import {
 
 interface SlideRendererProps {
   slide: Slide;
+  isActive?: boolean;
+  onVideoPlayChange?: (playing: boolean) => void;
 }
 
-export function SlideRenderer({ slide }: SlideRendererProps) {
+export function SlideRenderer({ slide, isActive, onVideoPlayChange }: SlideRendererProps) {
   switch (slide.type) {
     case 'title':
       return <TitleSlide slide={slide} />;
@@ -27,7 +29,7 @@ export function SlideRenderer({ slide }: SlideRendererProps) {
     case 'story':
       return <StorySlide slide={slide} />;
     case 'video':
-      return <VideoSlide slide={slide} />;
+      return <VideoSlide slide={slide} isActive={isActive} onVideoPlayChange={onVideoPlayChange} />;
     case 'closing':
       return <ClosingSlide slide={slide} />;
     case 'comparison':

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import type { VideoSlide as VideoSlideType } from '../../types/slides';
 import { resolvePhotoPath } from '../../utils/yamlLoader';
 import { SlideEnrichments } from './SlideEnrichments';
@@ -6,12 +6,26 @@ import { useLanguage } from '../../context/LanguageContext';
 
 interface VideoSlideProps {
   slide: VideoSlideType;
+  isActive?: boolean;
+  onVideoPlayChange?: (playing: boolean) => void;
 }
 
-export function VideoSlide({ slide }: VideoSlideProps) {
+export function VideoSlide({ slide, isActive, onVideoPlayChange }: VideoSlideProps) {
   const { t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  // Pause video when navigating away from this slide
+  useEffect(() => {
+    if (!isActive && videoRef.current && !videoRef.current.paused) {
+      videoRef.current.pause();
+    }
+  }, [isActive]);
+
+  // Notify parent of play state changes
+  useEffect(() => {
+    onVideoPlayChange?.(isPlaying);
+  }, [isPlaying, onVideoPlayChange]);
   const videoUrl = resolvePhotoPath(slide.src);
   const posterUrl = slide.poster ? resolvePhotoPath(slide.poster) : undefined;
 

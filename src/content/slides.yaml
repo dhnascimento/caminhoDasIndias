@@ -61,19 +61,19 @@ playlist:
   youtube: "PL_MTJhXNL63MGJ3TV-w-JtVDX1ZPBwwwY"
   tracks:
     - slides: [2, 7]       # Track 1: Day 1 — Arrival & Welcome
-    - slides: [8, 13]      # Track 2: Day 2 — Albert Hall Museum
-    - slides: [14, 19]     # Track 3: Day 2 — Pre-Wedding Ceremonies
-    - slides: [20, 31]     # Track 4: Day 3 — Jaipur sights (walking tour → Govind Devji)
-    - slides: [32, 50]     # Track 5: Day 3 — Amber Fort, Jantar Mantar, Jal Mahal
-    - slides: [51, 62]     # Track 6: Day 4 — Wedding Venue (Pooja, Roka, Mehendi)
-    - slides: [63, 69]     # Track 7: Day 5 — Haldi & Sangeet stories
-    - slides: [70, 75]     # Track 8: Day 5 — Sangeet performances & dance floor
-    - slides: [76, 84]     # Track 9: Day 6 — Maayra & Baraat
-    - slides: [85, 93]     # Track 10: Day 6 — Ceremony, Reception & Day 7
-    - slides: [94, 99]     # Track 11: Day 8 — Taj Mahal
-    - slides: [100, 108]   # Track 12: Day 8 — Agra Fort
-    - slides: [109, 115]   # Track 13: Day 8 — Baby Taj
-    - slides: [116, 123]   # Track 14: Day 9 — Fatehpur Sikri & Closing
+    - slides: [8, 11]      # Track 2: Day 2 — Albert Hall Museum
+    - slides: [12, 15]     # Track 3: Day 2 — Pre-Wedding Ceremonies
+    - slides: [16, 23]     # Track 4: Day 3 — Jaipur sights (walking tour → Govind Devji)
+    - slides: [24, 36]     # Track 5: Day 3 — Amber Fort, Jantar Mantar, Jal Mahal
+    - slides: [37, 46]     # Track 6: Day 4 — Wedding Venue (Pooja, Roka, Mehendi)
+    - slides: [47, 52]     # Track 7: Day 5 — Haldi & Sangeet stories
+    - slides: [53, 57]     # Track 8: Day 5 — Sangeet performances & dance floor
+    - slides: [58, 66]     # Track 9: Day 6 — Maayra & Baraat
+    - slides: [67, 74]     # Track 10: Day 6 — Ceremony, Reception & Day 7
+    - slides: [75, 79]     # Track 11: Day 8 — Taj Mahal
+    - slides: [80, 86]     # Track 12: Day 8 — Agra Fort
+    - slides: [87, 90]     # Track 13: Day 8 — Baby Taj
+    - slides: [91, 97]     # Track 14: Day 9 — Fatehpur Sikri & Closing
 
 # ============================================
 # SLIDES
@@ -222,13 +222,6 @@ slides:
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 11.jpg"
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 12.jpg"
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 13.jpg"
-  location: "Albert Hall Museum, Jaipur"
-
-- type: gallery
-  title:
-    pt: "Museu Albert Hall"
-    en: "Albert Hall Museum"
-  photos:
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 20.jpg"
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 22.jpg"
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 23.jpg"
@@ -243,13 +236,6 @@ slides:
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 30.jpg"
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 31.jpg"
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 32.jpg"
-  location: "Albert Hall Museum, Jaipur"
-
-- type: gallery
-  title:
-    pt: "Museu Albert Hall"
-    en: "Albert Hall Museum"
-  photos:
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 50.jpg"
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 51.jpg"
     - src: "media/Jaipur - Albert Hall Museum/Jaipur - Albert Hall Museum 52.jpg"
@@ -289,6 +275,8 @@ slides:
   photos:
     - src: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 02.jpg"
     - src: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 03.jpg"
+    - src: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 05.jpg"
+    - src: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 07.jpg"
   location: "Family Home, Jaipur"
 
 - type: video
@@ -298,25 +286,11 @@ slides:
     en: "Pre-wedding ceremony moments"
   location: "Family Home, Jaipur"
 
-- type: photo
-  photo: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 05.jpg"
-  caption:
-    pt: "Cerimônias Pré-Casamento"
-    en: "Pre-Wedding Ceremonies"
-  location: "Family Home, Jaipur"
-
 - type: video
   src: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 06.mp4"
   caption:
     pt: "Rituais e orações"
     en: "Rituals and prayers"
-  location: "Family Home, Jaipur"
-
-- type: photo
-  photo: "media/Wedding - Pre-ceremonies/Wedding - Pre-ceremonies Day 01 07.jpg"
-  caption:
-    pt: "Cerimônias Pré-Casamento"
-    en: "Pre-Wedding Ceremonies"
   location: "Family Home, Jaipur"
 
 # ============================================
@@ -426,13 +400,6 @@ slides:
     - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 12.jpg"
     - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 13.jpg"
     - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 14.jpg"
-  location: "Hawa Mahal, Jaipur"
-
-- type: gallery
-  title:
-    pt: "Hawa Mahal"
-    en: "Hawa Mahal"
-  photos:
     - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 20.jpg"
     - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 21.jpg"
     - src: "media/Jaipur - Hawa Mahal/Jaipur - Hawa Mahal 23.jpg"
@@ -509,17 +476,8 @@ slides:
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 11.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 12.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 13.jpg"
-  location: "Amber Fort, Jaipur"
-
-- type: gallery
-  title:
-    pt: "Forte Amber"
-    en: "Amber Fort"
-  photos:
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 20.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 21.jpg"
-    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 22.jpg"
-    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 23.jpg"
   location: "Amber Fort, Jaipur"
 
 - type: gallery
@@ -527,6 +485,8 @@ slides:
     pt: "Forte Amber"
     en: "Amber Fort"
   photos:
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 22.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 23.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 30.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 31.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 32.jpg"
@@ -542,17 +502,8 @@ slides:
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 41.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 43.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 44.jpg"
-  location: "Amber Fort, Jaipur"
-
-- type: gallery
-  title:
-    pt: "Forte Amber"
-    en: "Amber Fort"
-  photos:
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 50.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 51.jpg"
-    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 53.jpg"
-    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 54.jpg"
   location: "Amber Fort, Jaipur"
 
 - type: gallery
@@ -560,6 +511,8 @@ slides:
     pt: "Forte Amber"
     en: "Amber Fort"
   photos:
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 53.jpg"
+    - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 54.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 60.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 61.jpg"
     - src: "media/Jaipur - Amber Fort/Jaipur - Amber Fort 63.jpg"
@@ -608,20 +561,15 @@ slides:
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 03.jpg"
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 04.jpg"
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 05.jpg"
-  location: "Jantar Mantar, Jaipur"
-
-- type: gallery
-  title: "Jantar Mantar"
-  photos:
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 10.jpg"
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 11.jpg"
-    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 12.jpg"
-    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 14.jpg"
   location: "Jantar Mantar, Jaipur"
 
 - type: gallery
   title: "Jantar Mantar"
   photos:
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 12.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 14.jpg"
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 20.jpg"
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 21.jpg"
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 22.jpg"
@@ -635,20 +583,15 @@ slides:
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 32.jpg"
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 33.jpg"
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 34.jpg"
-  location: "Jantar Mantar, Jaipur"
-
-- type: gallery
-  title: "Jantar Mantar"
-  photos:
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 41.jpg"
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 42.jpg"
-    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 43.jpg"
-    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 44.jpg"
   location: "Jantar Mantar, Jaipur"
 
 - type: gallery
   title: "Jantar Mantar"
   photos:
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 43.jpg"
+    - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 44.jpg"
     - src: "media/Jaipur - Jantar Mantar/Jaipur - Jantar Mantar 50.jpg"
   location: "Jantar Mantar, Jaipur"
 
@@ -669,13 +612,6 @@ slides:
       Four of the palace's five stories are submerged when the lake is full,
       creating the illusion that it floats on the water.
   layout: "photo-right"
-  location: "Jal Mahal, Jaipur"
-
-- type: photo
-  photo: "media/Jaipur - Jal Mahal/Jaipur - Jal Mahal 02.jpg"
-  caption:
-    pt: "Jal Mahal"
-    en: "Jal Mahal"
   location: "Jal Mahal, Jaipur"
 
 # ============================================
@@ -756,8 +692,8 @@ slides:
 
 - type: gallery
   title:
-    pt: "Momentos da Pooja"
-    en: "Pooja Moments"
+    pt: "Pooja e Roka"
+    en: "Pooja & Roka"
   photos:
     - src: "media/Wedding - Pooja y Roka/Pooja 01.JPG"
       caption:
@@ -771,6 +707,19 @@ slides:
       caption:
         pt: "Bênçãos para o casal"
         en: "Blessings for the couple"
+    - src: "media/Wedding - Pooja y Roka/Roka 01.jpg"
+      caption:
+        pt: "O compromisso das famílias"
+        en: "The families' commitment"
+    - src: "media/Wedding - Pooja y Roka/Roka 02.jpg"
+      caption:
+        pt: "Troca de bênçãos e presentes"
+        en: "Exchange of blessings and gifts"
+    - src: "media/Wedding - Pooja y Roka/Wedding - Pooja y Roka 01.jpg"
+      caption:
+        pt: "Celebrando a próxima união"
+        en: "Celebrating the upcoming union"
+      notes: "This was for the fiancée's brother"
   caption:
     pt: "Invocando as bênçãos divinas para a jornada do casal"
     en: "Invoking divine blessings for the couple's journey"
@@ -801,25 +750,6 @@ slides:
       step toward the wedding.
   layout: "photo-left"
   location: "Family Home, Jaipur"
-
-- type: gallery
-  title:
-    pt: "Cerimônia da Roka"
-    en: "Roka Ceremony"
-  photos:
-    - src: "media/Wedding - Pooja y Roka/Roka 01.jpg"
-      caption:
-        pt: "O compromisso das famílias"
-        en: "The families' commitment"
-    - src: "media/Wedding - Pooja y Roka/Roka 02.jpg"
-      caption:
-        pt: "Troca de bênçãos e presentes"
-        en: "Exchange of blessings and gifts"
-    - src: "media/Wedding - Pooja y Roka/Wedding - Pooja y Roka 01.jpg"
-      caption:
-        pt: "Celebrando a próxima união"
-        en: "Celebrating the upcoming union"
-      notes: "This was for the fiancée's brother"
 
 - type: story
   photo: "media/Wedding - Mehendi/Wedding - Mehendi 01.jpg"
@@ -853,6 +783,8 @@ slides:
     - src: "media/Wedding - Mehendi/Wedding - Mehendi 11.jpg"
     - src: "media/Wedding - Mehendi/Wedding - Mehendi 13.jpg"
     - src: "media/Wedding - Mehendi/Wedding - Mehendi 14.jpg"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 20.jpg"
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 21.jpg"
   caption:
     pt: "Todos exibindo seus designs de hena"
     en: "Everyone showing off their henna designs"
@@ -860,22 +792,10 @@ slides:
 
 - type: gallery
   title:
-    pt: "Designs de Mehendi"
-    en: "Mehendi Designs"
-  photos:
-    - src: "media/Wedding - Mehendi/Wedding - Mehendi 20.jpg"
-    - src: "media/Wedding - Mehendi/Wedding - Mehendi 21.jpg"
-    - src: "media/Wedding - Mehendi/Wedding - Mehendi 22.jpg"
-  caption:
-    pt: "A arte da hena em detalhes"
-    en: "The artistry of henna up close"
-  location: "Wedding Venue"
-
-- type: gallery
-  title:
     pt: "Celebrações do Mehendi"
     en: "Mehendi Celebrations"
   photos:
+    - src: "media/Wedding - Mehendi/Wedding - Mehendi 22.jpg"
     - src: "media/Wedding - Mehendi/Wedding - Mehendi 30.JPG"
     - src: "media/Wedding - Mehendi/Wedding - Mehendi 31.JPG"
     - src: "media/Wedding - Mehendi/Wedding - Mehendi 33.JPG"
@@ -930,22 +850,12 @@ slides:
     - src: "media/Wedding - Haldi/Wedding - Haldi 10.JPG"
     - src: "media/Wedding - Haldi/Wedding - Haldi 12.JPG"
     - src: "media/Wedding - Haldi/Wedding - Haldi 11.jpg"
-  caption:
-    pt: "Todos vestidos de amarelo para a cerimônia"
-    en: "Everyone dressed in yellow for the ceremony"
-  location: "Wedding Venue"
-
-- type: gallery
-  title:
-    pt: "Rituais do Haldi"
-    en: "Haldi Rituals"
-  photos:
     - src: "media/Wedding - Haldi/Wedding - Haldi 20.JPG"
     - src: "media/Wedding - Haldi/Wedding - Haldi 23.JPG"
     - src: "media/Wedding - Haldi/Wedding - Haldi 21.JPG"
   caption:
-    pt: "Uma cerimônia tão divertida quanto significativa"
-    en: "A ceremony that's as fun as it is meaningful"
+    pt: "Todos vestidos de amarelo — uma cerimônia tão divertida quanto significativa"
+    en: "Everyone dressed in yellow — a ceremony as fun as it is meaningful"
   location: "Wedding Venue"
 
 - type: story
@@ -1041,8 +951,8 @@ slides:
 
 - type: gallery
   title:
-    pt: "Retratos da Noite"
-    en: "Portraits of the Night"
+    pt: "Noite do Sangeet"
+    en: "Sangeet Night"
   photos:
     - src: "media/Wedding - Sangeet/Wedding - Sangeet 20.jpg"
       caption:
@@ -1052,16 +962,6 @@ slides:
       caption:
         pt: "Casal diante do pégaso iluminado"
         en: "Couple in front of the illuminated Pegasus"
-  caption:
-    pt: "Momentos entre amigos na noite do Sangeet"
-    en: "Moments among friends on Sangeet night"
-  location: "Wedding Venue"
-
-- type: gallery
-  title:
-    pt: "Na Pista de Dança"
-    en: "On the Dance Floor"
-  photos:
     - src: "media/Wedding - Sangeet/Wedding - Sangeet 30.JPG"
       caption:
         pt: "Perdido no ritmo"
@@ -1075,8 +975,8 @@ slides:
         pt: "Entregue à música"
         en: "Surrendered to the music"
   caption:
-    pt: "A pista de dança não parou a noite toda"
-    en: "The dance floor didn't stop all night"
+    pt: "Momentos entre amigos e na pista de dança"
+    en: "Moments among friends and on the dance floor"
   location: "Wedding Venue"
 
 # ============================================
@@ -1208,20 +1108,6 @@ slides:
         pt: "Os noivos"
         en: "The newlyweds"
     - src: "media/Wedding - Baraat/Wedding - Baraat 43.JPG"
-  location: "Wedding Venue"
-
-- type: video
-  src: "media/Wedding - Baraat/Wedding - Baraat 50 Jai Mala (video).mp4"
-  caption:
-    pt: "Jai Mala — troca de guirlandas"
-    en: "Jai Mala — exchange of garlands"
-  location: "Wedding Venue"
-
-- type: gallery
-  title:
-    pt: "Momentos do Casamento"
-    en: "Wedding Moments"
-  photos:
     - src: "media/Wedding - Baraat/Wedding - Baraat 60.jpg"
       caption:
         pt: "A noiva com suas damas de honra"
@@ -1231,6 +1117,13 @@ slides:
   caption:
     pt: "Momentos dos rituais do casamento"
     en: "Moments from the wedding rituals"
+  location: "Wedding Venue"
+
+- type: video
+  src: "media/Wedding - Baraat/Wedding - Baraat 50 Jai Mala (video).mp4"
+  caption:
+    pt: "Jai Mala — troca de guirlandas"
+    en: "Jai Mala — exchange of garlands"
   location: "Wedding Venue"
 
 # --- Shoe Stealing ---
@@ -1392,31 +1285,26 @@ slides:
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 11.jpg"
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 12.jpg"
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 13.jpg"
-  location: "Taj Mahal, Agra"
-
-- type: gallery
-  title: "Taj Mahal"
-  photos:
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 20.jpg"
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 21.jpg"
-    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 23.jpg"
-    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 24.jpg"
   location: "Taj Mahal, Agra"
 
 - type: gallery
   title: "Taj Mahal"
   photos:
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 23.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 24.jpg"
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 30.jpg"
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 31.jpg"
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 32.jpg"
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 33.jpg"
-    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 34.jpg"
-    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 35.jpg"
   location: "Taj Mahal, Agra"
 
 - type: gallery
   title: "Taj Mahal"
   photos:
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 34.jpg"
+    - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 35.jpg"
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 40.jpg"
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 42.jpg"
     - src: "media/Agra - Taj Mahal/Agra - Taj Mahal 42 (1).jpg"
@@ -1457,17 +1345,8 @@ slides:
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 11.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 12.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 13.jpg"
-  location: "Agra Fort"
-
-- type: gallery
-  title:
-    pt: "Forte de Agra"
-    en: "Agra Fort"
-  photos:
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 20.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 21.jpg"
-    - src: "media/Agra - Agra Fort/Agra - Agra Fort 22.jpg"
-    - src: "media/Agra - Agra Fort/Agra - Agra Fort 23.jpg"
   location: "Agra Fort"
 
 - type: gallery
@@ -1475,11 +1354,12 @@ slides:
     pt: "Forte de Agra"
     en: "Agra Fort"
   photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 22.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 23.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 30.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 31.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 32.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 33.jpg"
-    - src: "media/Agra - Agra Fort/Agra - Agra Fort 34.jpg"
   location: "Agra Fort"
 
 - type: gallery
@@ -1487,10 +1367,12 @@ slides:
     pt: "Forte de Agra"
     en: "Agra Fort"
   photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 34.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 40.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 41 (1).jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 42.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 43.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 50.jpg"
   location: "Agra Fort"
 
 - type: gallery
@@ -1498,12 +1380,12 @@ slides:
     pt: "Forte de Agra"
     en: "Agra Fort"
   photos:
-    - src: "media/Agra - Agra Fort/Agra - Agra Fort 50.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 51.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 52.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 53.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 54.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 55.jpg"
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 60.jpg"
   location: "Agra Fort"
 
 - type: gallery
@@ -1511,21 +1393,12 @@ slides:
     pt: "Forte de Agra"
     en: "Agra Fort"
   photos:
-    - src: "media/Agra - Agra Fort/Agra - Agra Fort 60.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 61.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 62.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 63.jpg"
-  location: "Agra Fort"
-
-- type: gallery
-  title:
-    pt: "Forte de Agra"
-    en: "Agra Fort"
-  photos:
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 70.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 71.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 72.jpg"
-    - src: "media/Agra - Agra Fort/Agra - Agra Fort 73.jpg"
   location: "Agra Fort"
 
 - type: gallery
@@ -1533,6 +1406,7 @@ slides:
     pt: "Forte de Agra"
     en: "Agra Fort"
   photos:
+    - src: "media/Agra - Agra Fort/Agra - Agra Fort 73.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 80.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 81.jpg"
     - src: "media/Agra - Agra Fort/Agra - Agra Fort 82.jpg"
@@ -1568,45 +1442,30 @@ slides:
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 02.jpg"
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 03.jpg"
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 04.jpg"
-  location: "Itimad-ud-Daulah, Agra"
-
-- type: gallery
-  title: "Baby Taj"
-  photos:
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 14.jpg"
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 15.jpg"
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 16.jpg"
+  location: "Itimad-ud-Daulah, Agra"
+
+- type: gallery
+  title: "Baby Taj"
+  photos:
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 17.jpg"
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 18.jpg"
-  location: "Itimad-ud-Daulah, Agra"
-
-- type: gallery
-  title: "Baby Taj"
-  photos:
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 21.jpg"
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 22.jpg"
-  location: "Itimad-ud-Daulah, Agra"
-
-- type: gallery
-  title: "Baby Taj"
-  photos:
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 31.jpg"
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 32.jpg"
-    - src: "media/Agra - Baby Taj/Agra - Baby Taj 33.jpg"
-    - src: "media/Agra - Baby Taj/Agra - Baby Taj 34.jpg"
   location: "Itimad-ud-Daulah, Agra"
 
 - type: gallery
   title: "Baby Taj"
   photos:
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 33.jpg"
+    - src: "media/Agra - Baby Taj/Agra - Baby Taj 34.jpg"
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 40.jpg"
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 41.jpg"
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 42.jpg"
-  location: "Itimad-ud-Daulah, Agra"
-
-- type: gallery
-  title: "Baby Taj"
-  photos:
     - src: "media/Agra - Baby Taj/Agra - Baby Taj 50.jpg"
   location: "Itimad-ud-Daulah, Agra"
 
@@ -1657,11 +1516,6 @@ slides:
     - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 11.jpg"
     - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 12 (1).jpg"
     - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 13.jpg"
-  location: "Fatehpur Sikri"
-
-- type: gallery
-  title: "Fatehpur Sikri"
-  photos:
     - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 20.jpg"
     - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 21.jpg"
     - src: "media/Agra - Fatehpur Sikri/Agra - Fatehpur Sikri 22.jpg"

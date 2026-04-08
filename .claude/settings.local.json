@@ -14,7 +14,12 @@
       "Bash(git remote set-url:*)",
       "Bash(git push:*)",
       "WebSearch",
-      "Bash(npx vite build)"
+      "Bash(npx vite build)",
+      "Bash(find . -maxdepth 1 -type d ! -name '.' -exec bash -c 'echo \"{}: $\\(find \\\\\"{}\\\\\" -type f | wc -l\\) files\"' \\\\;)",
+      "Bash(sed 's/src: \"//')",
+      "Bash(sed 's/\"//g')",
+      "Bash(npx -y yaml -e ':*)",
+      "Bash(node -e ':*)"
     ]
   }
 }

@@ -8,7 +8,7 @@ interface ThemeSwitcherProps {
 }
 
 export function ThemeSwitcher({ onThemeChange }: ThemeSwitcherProps) {
-  const [currentTheme, setCurrentTheme] = useState<ThemeName>('festive');
+  const [currentTheme, setCurrentTheme] = useState<ThemeName>('caminho-das-indias');
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -18,6 +18,8 @@ export function ThemeSwitcher({ onThemeChange }: ThemeSwitcherProps) {
     if (stored && THEMES.some(t => t.id === stored)) {
       setCurrentTheme(stored);
       document.documentElement.setAttribute('data-theme', stored);
+    } else {
+      document.documentElement.setAttribute('data-theme', 'caminho-das-indias');
     }
   }, []);
 
@@ -71,11 +73,10 @@ export function ThemeSwitcher({ onThemeChange }: ThemeSwitcherProps) {
               <button
                 key={theme.id}
                 onClick={() => changeTheme(theme.id)}
-                className={`w-full px-3 py-2 rounded-md text-left transition-colors flex items-center gap-3 ${
-                  currentTheme === theme.id
+                className={`w-full px-3 py-2 rounded-md text-left transition-colors flex items-center gap-3 ${currentTheme === theme.id
                     ? 'bg-[var(--color-primary)]/20 text-[var(--color-text)]'
                     : 'hover:bg-[var(--button-hover-bg)] text-[var(--color-text-muted)]'
-                }`}
+                  }`}
               >
                 {/* Theme color preview */}
                 <div className="flex gap-1">

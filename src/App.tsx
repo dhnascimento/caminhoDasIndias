@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { useState, useCallback, useEffect } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import slidesData from './content/slides.yaml';
@@ -159,86 +160,87 @@ function App() {
 
   return (
     <LanguageProvider>
-    <div className="min-h-screen bg-[var(--color-background)] overflow-hidden">
-      {/* Main slide area */}
-      <main className="relative w-full h-screen">
-        {/* Cinematic decorations (self-gates by theme) */}
-        <CinematicDecorations />
+      <div className="min-h-screen bg-[var(--color-background)] overflow-hidden">
+        {/* Main slide area */}
+        <main className="relative w-full h-screen">
+          {/* Cinematic decorations (self-gates by theme) */}
+          <CinematicDecorations />
 
-        {/* Slides container with transitions */}
-        <div className="w-full h-full">
-          {slides.map((slide, index) => {
-            const isVisible = shouldLoad(index) || (index === previousSlide && isTransitioning);
-            const className = getSlideClassName(index);
-            return (
-              <div
-                key={index}
-                className={`absolute inset-0 ${className}`}
-                aria-hidden={index !== currentSlide}
-              >
-                {isVisible && <SlideRenderer slide={slide} isActive={index === currentSlide} onVideoPlayChange={handleVideoPlayChange} />}
-              </div>
-            );
-          })}
-        </div>
+          {/* Slides container with transitions */}
+          <div className="w-full h-full">
+            {slides.map((slide, index) => {
+              const isVisible = shouldLoad(index) || (index === previousSlide && isTransitioning);
+              const className = getSlideClassName(index);
+              return (
+                <div
+                  key={index}
+                  className={`absolute inset-0 ${className}`}
+                  aria-hidden={index !== currentSlide}
+                >
+                  {isVisible && <SlideRenderer slide={slide} isActive={index === currentSlide} onVideoPlayChange={handleVideoPlayChange} />}
+                </div>
+              );
+            })}
+          </div>
 
-        {/* Navigation zones */}
-        <Navigation
-          onPrev={prevSlide}
-          onNext={nextSlide}
-          canGoPrev={!isFirstSlide}
-          canGoNext={!isLastSlide}
-        />
-
-        {/* Music player overlay */}
-        {playlist ? (
-          <YouTubePlayerOverlay
-            isOpen={musicPlayerOpen}
-            isReady={ytPlayer.isReady}
-            currentTrackIndex={currentTrackIndex}
-            playVideoAt={ytPlayer.playVideoAt}
-            play={ytPlayer.play}
-            elementId={YT_ELEMENT_ID}
+          {/* Navigation zones */}
+          <Navigation
+            onPrev={prevSlide}
+            onNext={nextSlide}
+            canGoPrev={!isFirstSlide}
+            canGoNext={!isLastSlide}
           />
-        ) : (
-          <MusicPlayerOverlay
-            music={activeMusic ?? undefined}
-            isOpen={musicPlayerOpen}
+
+          {/* Music player overlay */}
+          {playlist ? (
+            <YouTubePlayerOverlay
+              isOpen={musicPlayerOpen}
+              isReady={ytPlayer.isReady}
+              currentTrackIndex={currentTrackIndex}
+              playVideoAt={ytPlayer.playVideoAt}
+              play={ytPlayer.play}
+              elementId={YT_ELEMENT_ID}
+            />
+          ) : (
+            <MusicPlayerOverlay
+              music={activeMusic ?? undefined}
+              isOpen={musicPlayerOpen}
+            />
+          )}
+
+          {/* Progress bar */}
+          <ProgressBar
+            current={currentSlide}
+            total={slides.length}
+            onSlideClick={goToSlide}
+          />
+
+          {/* Controls */}
+          <Controls
+            onToggleOverview={toggleOverview}
+            onToggleFullscreen={toggleFullscreen}
+            onToggleAutoPlay={toggleAutoPlay}
+            onToggleMusicPlayer={toggleMusicPlayer}
+            onToggleMute={playlist ? ytPlayer.toggleMute : undefined}
+            isAutoPlaying={isAutoPlaying}
+            isMuted={playlist ? ytPlayer.isMuted : false}
+            isFullscreen={isFullscreen}
+            musicPlayerOpen={musicPlayerOpen}
+            hasMusicOnCurrentSlide={hasMusicOnCurrentSlide}
+          />
+        </main>
+
+        {/* Slide overview modal */}
+        {showOverview && (
+          <SlideOverview
+            slides={slides}
+            currentSlide={currentSlide}
+            onSlideSelect={goToSlide}
+            onClose={() => setShowOverview(false)}
           />
         )}
-
-        {/* Progress bar */}
-        <ProgressBar
-          current={currentSlide}
-          total={slides.length}
-          onSlideClick={goToSlide}
-        />
-
-        {/* Controls */}
-        <Controls
-          onToggleOverview={toggleOverview}
-          onToggleFullscreen={toggleFullscreen}
-          onToggleAutoPlay={toggleAutoPlay}
-          onToggleMusicPlayer={toggleMusicPlayer}
-          onToggleMute={playlist ? ytPlayer.toggleMute : undefined}
-          isAutoPlaying={isAutoPlaying}
-          isMuted={playlist ? ytPlayer.isMuted : false}
-          isFullscreen={isFullscreen}
-          musicPlayerOpen={musicPlayerOpen}
-          hasMusicOnCurrentSlide={hasMusicOnCurrentSlide}
-        />
-      </main>
-
-      {/* Slide overview modal */}
-      {showOverview && (
-        <SlideOverview
-          slides={slides}
-          currentSlide={currentSlide}
-          onSlideSelect={goToSlide}
-          onClose={() => setShowOverview(false)}
-        />
-      )}
-    </div>
+      </div>
+      <Analytics />
     </LanguageProvider>
   );
 }
